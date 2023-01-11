@@ -1,5 +1,5 @@
 # what the fuck
-- pip换源：`pip install xxx -i https://pypi.tuna.tsinghua.edu.cn/simple`
+- pip换清华源：`pip install 'package' -i https://pypi.tuna.tsinghua.edu.cn/simple`
 - |模块名称|安装方式|备注|参考链接|
   |:-:|:-:|:-:|:-:|
   |pyperclip|`pip install pyperclip`|把代码的输出复制到剪贴板（主要是因为懒）|[官网](https://pypi.org/project/pyperclip/)|
