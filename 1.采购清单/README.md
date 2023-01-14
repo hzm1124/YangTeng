@@ -1,22 +1,22 @@
 # 采购清单（Update: 2023.01.09）
 ## 1. 产品链接
 1. 把`url`改成自己要爬取的链接
-    - ![alt pic_01](./pic/pic_01.png)
-    - ![alt pic_02](./pic/pic_02.png)
+    - ![alt pic_01](./pic/pic_1_1_1.png)
+    - ![alt pic_02](./pic/pic_1_1_2.png)
 2. 根据实际情况忽略不符的产品
-    - ![alt pic_03](./pic/pic_03.png)
-    - ![alt pic_04](./pic/pic_04.png)
+    - ![alt pic_03](./pic/pic_1_2_1.png)
+    - ![alt pic_04](./pic/pic_1_2_2.png)
 3. 输出：
     - 链接；标题；售价
 
 ## 2. 产品详情
 1. 把`url`改成具体的产品链接
-    - ![alt pic_05](./pic/pic_05.png)
+    - ![alt pic_05](./pic/pic_2_1.png)
 2. 根据实际情况，调整网页表格的其他参数（暂时未发现需要更改）
-    - ![alt pic_06](./pic/pic_06.png)
+    - ![alt pic_06](./pic/pic_2_2.png)
 3. 输出：
     - 图片链接；车型
 
-## 3. 继续
-- 手动获取：
+## 备注
+- 继续手动获取：
     - 品牌；品牌号；OE；位置；销量；备注
