@@ -18,7 +18,7 @@
         - 只比较`Brand New`，忽略二手产品
 6. `Exchange Rate列`
     - 按照主市场确定，us：6.5，欧洲：6.8
-7. 其他注意事项
+7. 其他注意事项：
     - 外饰件在填写Amazon市场的时候，只写在`Amazon-YHT列`
     - Amazon <= eBay
     - ca市场参考us，且除去2000年之前和稀有车型
