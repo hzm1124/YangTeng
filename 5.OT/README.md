@@ -46,5 +46,5 @@
 ## 2. Description
 1. 复制车型信息并手动调整顺序，然后根据实际修改`category`和`note`
     - ![alt pic_2_1](./pic/pic_2_1.png)
-2. 输出：
+2. 输出：符合规范的Description
     - ![alt pic_2_2](./pic/pic_2_2.png)
