@@ -21,9 +21,10 @@
 7. 其他注意事项：
     - 外饰件在填写Amazon市场的时候，只写在`Amazon-YHT列`
     - Amazon <= eBay
-    - ca市场参考us，且除去2000年之前和稀有车型
+    - ca市场参考us，并除去2000年之前和稀有车型
     - au和uk市场投入量较少
     - 注意`QTY列`的数量规范
+    - Excel内容不要有超链接
 
 ## 1. 车型
 1. 复制`品牌号`到[PartsGeek](https://www.partsgeek.com/)并搜索
