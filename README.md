@@ -10,3 +10,17 @@
 - [正则表达式测试](https://www.whatsmyip.org/regular-expression-tester/)
 - [图片压缩](https://docsmall.com/image-compress)
 - [ChatGPT](https://chat.openai.com/chat)
+
+# software
+- |序号|名称|来源|
+  |:-:|:-:|:-|
+  |01.|7-Zip|<https://www.7-zip.org/>|
+  |02.|xiyou||
+  |03.|Clash||
+  |04.|git|<https://www.liaoxuefeng.com/wiki/896043488029600>|
+  |05.|Snipate|<https://www.snipaste.com/>|
+  |06.|向日葵|<https://sunlogin.oray.com/download?categ=personal>|
+  |07.|QtScrcpy|<https://github.com/barry-ran/QtScrcpy>|
+  
+  
+
