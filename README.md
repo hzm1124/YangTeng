@@ -15,8 +15,8 @@
 - |序号|名称|来源|
   |:-:|:-:|:-|
   |01.|7-Zip|<https://www.7-zip.org/>|
-  |02.|xiyou||
-  |03.|Clash||
+  |02.|xiyou|（<https://9188pos.com/xiyou_2.9.4.1.crx>）|
+  |03.|Clash|（<https://down.downloadserver.cyou/download/Clash.for.Windows.new.zip>）|
   |04.|Git|<https://www.liaoxuefeng.com/wiki/896043488029600>|
   |05.|Snipate|<https://www.snipaste.com/>|
   |06.|向日葵|<https://sunlogin.oray.com/download?categ=personal>|
