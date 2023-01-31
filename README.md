@@ -22,3 +22,4 @@
   |05.|Snipaste|<https://www.snipaste.com/>|
   |06.|向日葵|<https://sunlogin.oray.com/download?categ=personal>|
   |07.|QtScrcpy|<https://github.com/barry-ran/QtScrcpy>|
+  |08.|拖把更名器|腾讯电脑管家 -> 软件管理|
