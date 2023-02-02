@@ -1,4 +1,4 @@
-# OT（Update: 2023.01.14）
+# OT（Update: 2023.02.02）
 ## 0. 流程及注意事项
 1. `Ref No.#`列
     - 复制`OE号`到[RockAuto](https://www.rockauto.com/en/partsearch/)，将可能遗漏的`dorman号`补充进去
@@ -35,11 +35,11 @@
     - ![alt pic_1_2](./pic/pic_1_2.png)
 3. 把`html`改成复制好的网页代码
     - ![alt pic_1_3](./pic/pic_1_3.png)
-4. 确认`auto`的值为`True`
+4. 确认`list_vehicle`为空
     - ![alt pic_1_4](./pic/pic_1_4.png)
 5. 运行所有代码，得到网页所有车型
     - ![alt pic_1_5](./pic/pic_1_5.png)
-6. 根据实际情况，只复制目标产品对应的车型，然后将`auto`的值改为`False`并重新运行所有代码
+6. 根据实际情况，只复制目标产品对应的车型到`list_vehicle`并重新运行所有代码
     - ![alt pic_1_6_1](./pic/pic_1_6_1.png)
     - ![alt pic_1_6_2](./pic/pic_1_6_2.png)
     - ![alt pic_1_6_3](./pic/pic_1_6_3.png)
