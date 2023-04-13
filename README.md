@@ -1,5 +1,5 @@
-# what the fuck
-- pip换清华源：`pip install 'package' -i https://pypi.tuna.tsinghua.edu.cn/simple`
+# 1. Package
+- pip换清华源：`pip install -i https://pypi.tuna.tsinghua.edu.cn/simple 'package'`
 - |库名称|安装方式|备注|参考链接|
   |:-:|:-|:-|:-:|
   |jupyter notebook|`pip install notebook`|优化：`pip install jupyter_contrib_nbextensions` -> `jupyter contrib nbextension install --user` -> `Hinterland`、`Highlight selected word`、`AddBefore`、`AutoSaveTime`、`Go to Current Running Cells`<br>换主题：`pip install jupyterthemes` -> `!jt -h` -> `!jt -t chesterish -f roboto -fs 11 -ofs 10 -T -N -kl`|[官网](http://jupyter.org/install)|
@@ -12,14 +12,13 @@
 - [图片压缩](https://docsmall.com/image-compress)
 - [ChatGPT](https://chat.openai.com/chat)
 
-# software
+# 2. Software
 - |序号|名称|来源|
   |:-:|:-:|:-|
   |01.|7-Zip|<https://www.7-zip.org/>|
-  |02.|xiyou|（<https://9188pos.com/xiyou_2.9.4.1.crx>）|
-  |03.|Clash|（<https://down.downloadserver.cyou/download/Clash.for.Windows.new.zip>）|
-  |04.|Git|<https://www.liaoxuefeng.com/wiki/896043488029600><br>（<https://git-scm.com/downloads>）|
+  |02.|OfficeBox|<http://www.wofficebox.com/>|
+  |03.|QtScrcpy|<https://github.com/barry-ran/QtScrcpy>|
+  |04.|向日葵|<https://sunlogin.oray.com/download?categ=personal>|
   |05.|Snipaste|<https://www.snipaste.com/>|
-  |06.|向日葵|<https://sunlogin.oray.com/download?categ=personal>|
-  |07.|QtScrcpy|<https://github.com/barry-ran/QtScrcpy>|
-  |08.|拖把更名器|腾讯电脑管家 -> 软件管理|
+  |06.|Git|<https://www.liaoxuefeng.com/wiki/896043488029600><br>（<https://git-scm.com/downloads>）|
+  |07.|Postman|<https://www.postman.com/downloads/>|
