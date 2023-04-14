@@ -1,5 +1,7 @@
 # 1. Package
-- pip换清华源：`pip install -i https://pypi.tuna.tsinghua.edu.cn/simple 'package'`
+- pip换清华源：`pip install 'package' -i https://pypi.tuna.tsinghua.edu.cn/simple`
+- ...中科大：`pip install 'package' -i http://pypi.mirrors.ustc.edu.cn/simple`
+- ...阿里云：`pip install 'package' -i http://mirrors.aliyun.com/pypi/simple`
 - |库名称|安装方式|备注|参考链接|
   |:-:|:-|:-|:-:|
   |jupyter notebook|`pip install notebook`|优化：`pip install jupyter_contrib_nbextensions` -> `jupyter contrib nbextension install --user` -> `Hinterland`、`Highlight selected word`、`AddBefore`、`AutoSaveTime`、`Go to Current Running Cells`<br>换主题：`pip install jupyterthemes` -> `!jt -h` -> `!jt -t chesterish -f roboto -fs 11 -ofs 10 -T -N -kl`|[官网](http://jupyter.org/install)|
