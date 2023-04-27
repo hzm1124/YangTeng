@@ -13,7 +13,9 @@
   |numpy|`pip install numpy`|[官网](https://numpy.org/install/)|1.24.3|
   |openpyxl|`pip install openpyxl`|[官网](https://openpyxl.readthedocs.io/en/stable/tutorial.html)|3.1.2|
   |selenium|`pip install selenium`|[官网](https://www.selenium.dev/zh-cn/documentation/webdriver/getting_started/)|4.9.0|
+  |requests|`pip install requests`|[廖雪峰](https://www.liaoxuefeng.com/wiki/1016959663602400/1183249464292448)|2.29.0|
   |BeautifulSoup|`pip install bs4`|[b站教程](https://www.bilibili.com/video/BV1bL4y1V7q1?p=29)|0.0.1|
+  |gevent|`pip install gevent`|[csdn](https://blog.csdn.net/qq_45476428/article/details/108782593)|22.10.2|
 - 升级：`pip install 'package' --upgrade`
 - [正则表达式测试](https://www.whatsmyip.org/regular-expression-tester/)
 - [drawio](https://app.diagrams.net/)
