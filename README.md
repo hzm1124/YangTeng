@@ -31,4 +31,6 @@
   |04.|向日葵|<https://sunlogin.oray.com/download?categ=personal>|
   |05.|Snipaste|<https://www.snipaste.com/>|
   |06.|Git|<https://www.liaoxuefeng.com/wiki/896043488029600><br>（<https://git-scm.com/downloads>）|
-  |07.|Postman|<https://www.postman.com/downloads/>|
+  |07.|python|<https://www.python.org/>|
+  |08.|PyCharm|<https://www.jetbrains.com/pycharm/download/#section=windows>|
+  |09.|Postman|<https://www.postman.com/downloads/>|
