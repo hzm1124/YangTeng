@@ -11,6 +11,7 @@
   |jupyter_contrib_nbextensions|`pip install jupyter_contrib_nbextensions`|`jupyter contrib nbextension install --user` -> `Hinterland`、`Highlight selected word`、`AddBefore`、`AutoSaveTime`、`Go to Current Running Cells`<br><br>`pip install jupyterthemes` -> `!jt -h` -> `!jt -t chesterish -f roboto -fs 11 -ofs 10 -T -N -kl`<br><br>[官网](https://numpy.org/install/)|0.7.0|
   |pandas|`pip install pandas`|[官网](https://pandas.pydata.org/getting_started.html)|2.0.1|
   |openpyxl|`pip install openpyxl`|[官网](https://openpyxl.readthedocs.io/en/stable/tutorial.html)|3.1.2|
+  |playwright|`pip install playwright`|[官网](https://playwright.dev/python/docs/api/class-playwright)|1.33.0|
   |selenium|`pip install selenium`|[官网](https://www.selenium.dev/zh-cn/documentation/webdriver/getting_started/)<br>[chromedriver](http://chromedriver.storage.googleapis.com/index.html)|4.9.0|
   |requests|`pip install requests`|[廖雪峰](https://www.liaoxuefeng.com/wiki/1016959663602400/1183249464292448)|2.29.0|
   |BeautifulSoup|`pip install bs4`|[b站教程](https://www.bilibili.com/video/BV1bL4y1V7q1?p=29)|0.0.1|
