@@ -65,5 +65,5 @@ for url, part_number in zip(list_url, list_part_number):
 
 # = = = = = = = = = = = = = = = = = =
 
-df.to_excel('./payload_out.xlsx', index=False)
+df.to_excel('./ajax.xlsx', index=False)
 browser.close()
