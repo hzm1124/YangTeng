@@ -10,7 +10,7 @@ df = pd.DataFrame(columns=['url',
 
 # = = = = = = = = = = = = = = = = = =
 
-df_menu = pd.read_excel('./payload_in.xlsx', header=0)
+df_menu = pd.read_excel('./ajax_in.xlsx', header=0)
 list_url = df_menu['url'].to_list()
 list_part_number = df_menu['part_number'].tolist()
 
@@ -65,5 +65,5 @@ for url, part_number in zip(list_url, list_part_number):
 
 # = = = = = = = = = = = = = = = = = =
 
-df.to_excel('./ajax.xlsx', index=False)
+df.to_excel('./ajax_out.xlsx', index=False)
 browser.close()
