@@ -33,9 +33,12 @@ print(len(list_url))
 
 # = = = = = = = = = = = = = = = = = =
 
+browser.close()
+
+# = = = = = = = = = = = = = = = = = =
+
 import pandas as pd
 
 # = = = = = = = = = = = = = = = = = =
 
 pd.DataFrame({'url': list_url}).to_excel('./url.xlsx', index=False)
-browser.close()
