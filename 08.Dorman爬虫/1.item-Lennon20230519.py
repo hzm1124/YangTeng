@@ -29,7 +29,7 @@ list_url = []
 list_product = page.query_selector_all('xpath=//div[@class="searchItems-img"]/a')
 for product in list_product:
     list_url.append('https://www.dormanproducts.com/' + product.get_attribute('href'))
-print(len(list_url))
+print(list_url)
 
 # = = = = = = = = = = = = = = = = = =
 
@@ -41,4 +41,4 @@ import pandas as pd
 
 # = = = = = = = = = = = = = = = = = =
 
-pd.DataFrame({'url': list_url}).to_excel('./url.xlsx', index=False)
+pd.DataFrame({'Url': list_url}).to_excel('./url.xlsx', index=False)
