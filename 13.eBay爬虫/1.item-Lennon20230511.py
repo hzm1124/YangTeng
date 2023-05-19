@@ -20,6 +20,8 @@ page = context.new_page()
 page.goto('https://www.ebay.com/', timeout=0)
 page.wait_for_load_state(state='networkidle')
 # USA - 91710
+# _sop=16
+# _ipg=240
 
 # = = = = = = = = = = = = = = = = = =
 
@@ -29,7 +31,9 @@ list_item = []
 
 list_product = page.query_selector_all('xpath=//div[@class="s-item__image-section"]')[1:]
 list_url = [product.query_selector('xpath=./div/a').get_attribute('href') for product in list_product]
-list_item = [str(url[:37][-12:]) for url in list_url]
+for url in list_url:
+    list_item.append(str(url[:37][-12:]))
+print(len(list_item))
 
 # = = = = = = = = = = = = = = = = = =
 
@@ -37,5 +41,5 @@ import pandas as pd
 
 # = = = = = = = = = = = = = = = = = =
 
-pd.DataFrame({'item': list_item}).to_excel('./item.xlsx', index=False)
+pd.DataFrame({'Item': list_item}).to_excel('./item.xlsx', index=False)
 browser.close()
