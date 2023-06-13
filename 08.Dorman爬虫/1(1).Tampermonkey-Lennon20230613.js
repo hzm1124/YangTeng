@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Dorman爬虫sch
+// @name         Dorman爬虫-sch
 // @namespace    https://github.com/lennon1124/YangTeng
 // @version      2023.06.13
 // @description  爬虫系列
