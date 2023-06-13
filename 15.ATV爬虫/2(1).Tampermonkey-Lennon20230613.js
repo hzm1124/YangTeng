@@ -84,6 +84,6 @@
         }
         console.log('index：' + para_index);
 
-        window.location.href = 'http://localhost:8080/crawler/17.UTV%E7%88%AC%E8%99%AB.html?index=' + (Number(para_index)+1);
+        window.location.href = 'http://localhost:8080/crawler/16.ATV%E7%88%AC%E8%99%AB.html?index=' + (Number(para_index)+1);
     }
 })();
