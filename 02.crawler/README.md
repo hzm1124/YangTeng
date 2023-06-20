@@ -1,12 +1,15 @@
-# 爬虫任务 - 2023.06.20
+# 爬虫任务 - 2023.06.20（临时指北）
 ## 1. 常见爬虫
-### 1.0. `JavaScript`
+### 1.0. 篡改猴
+- [Tampermonkey](https://www.tampermonkey.net/)
+
+### 1.1. `JavaScript`
 - [菜鸟教程](https://www.runoob.com/js/js-tutorial.html)
 
-### 1.1. <a id="requests">`requests`</a> & 2.2. <a id="Selenium">`selenium`</a>
+### 1.2. <a id="requests">`requests`</a> & 1.3. <a id="Selenium">`selenium`</a>
 - [b站](https://www.bilibili.com/video/BV1bL4y1V7q1)
 
-### 1.3. <a id="tomcat">`Tomcat`</a>
+### 1.4. <a id="tomcat">`Tomcat`</a>
 - [菜鸟教程](https://www.runoob.com/html/html-tutorial.html)
 
 ## 2. 常爬网站
