@@ -2,7 +2,7 @@
 // @name         CARiD爬虫-sch
 // @namespace    https://github.com/lennon1124/YangTeng
 // @version      2023.06.17
-// @description  爬虫系列
+// @description  爬虫
 // @author       Lennon
 // @match        *://www.carid.com/search/*
 // @icon         https://www.carid.com/domain-specific/carid/favicon.ico

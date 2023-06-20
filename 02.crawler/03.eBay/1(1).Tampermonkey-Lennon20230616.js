@@ -2,7 +2,7 @@
 // @name         eBay爬虫-sch
 // @namespace    https://github.com/lennon1124/YangTeng
 // @version      2023.06.16
-// @description  爬虫系列
+// @description  爬虫
 // @author       Lennon
 // @match        *://www.ebay.com/sch/*
 // @match        *://www.ebay.de/sch/*
