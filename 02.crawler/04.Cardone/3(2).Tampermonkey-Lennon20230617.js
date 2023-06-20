@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Cardone爬虫-OE
+// @name         Cardone爬虫-itm
 // @namespace    https://github.com/lennon1124/YangTeng
 // @version      2023.06.17
 // @description  爬虫
