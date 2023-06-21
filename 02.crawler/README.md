@@ -1,4 +1,4 @@
-# 爬虫任务 - 2023.06.20（临时指北）
+# 爬虫任务 - 2023.06.21（临时指北）
 ## 1. 常见爬虫
 ### 1.0. 篡改猴
 - [Tampermonkey](https://www.tampermonkey.net/)
@@ -6,7 +6,7 @@
 ### 1.1. `JavaScript`
 - [菜鸟教程](https://www.runoob.com/js/js-tutorial.html)
 
-### 1.2. <a id="requests">`requests`</a> & 1.3. <a id="Selenium">`selenium`</a>
+### 1.2. <a id="requests">`requests`</a> & 1.3. <a id="selenium">`Selenium`</a>
 - [b站](https://www.bilibili.com/video/BV1bL4y1V7q1)
 
 ### 1.4. <a id="tomcat">`Tomcat`</a>
@@ -25,12 +25,25 @@
   |08. [SpectraPremium](https://ecat.spectrapremium.com/en/parts?line=oil_pans&year=&make=&model=&submodel=&universal=0&hide-exclusives-canadian-market=0&sort=part-number&limit=50)|1. `Sort by part #`</br>2. `Number of results` -> `50`|`Part_Number`、***`Url`***|1. ***`Url`***、`Src`、`其他Part_Specifications`</br>2. ***`Url`***、`Vehicle`|[requests](#requests)|
   |09. [Denniskirk](https://www.denniskirk.com/atv/cv-axle/brandasc.srt/100.ipp)|1. `Results per Page` -> `100`</br>2. `Sort by` -> `Brand: A-Z`|`Title`、`Brand`、`Price`、***`Url`***|***`Url`***、`OE`、`Vehicle`、`Src`、`其他Specifications`|[Tomcat](#tomcat)|
 
-## 3. 代理池
-- [快代理](https://www.kuaidaili.com/) -> 隧道代理
-### 3.1. 使用代理池
-- [代码样例](https://www.kuaidaili.com/doc/dev/sdk_tps_http/)
+## 3. 反爬手段
+### 3.1. 请求头
+#### 3.1.1. `User-Agent`
+- |爬取方法|代码示例|
+  |:-:|:-|
+  |[requests](#requests)|`headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'}`</br></br>`requests.get(url, headers=headers)`|
+  |[Selenium](#selenium)|`from selenium.webdriver import ChromeOptions`</br></br>`option = ChromeOptions()`</br>`option.add_argument('user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36')`</br></br>`from selenium.webdriver import Chrome`</br>`from selenium.webdriver.chrome.service import Service`</br></br>`browser = Chrome(service=Service('chromedriver'), options=option)`|
 
-### 3.2. 发票申请
+#### 3.1.2. `Referer`
+
+### 3.2. 代理池
+- [快代理](https://www.kuaidaili.com/) -> 隧道代理
+#### 3.2.1. 使用代理池
+- |爬取方法|代码示例|
+  |:-:|:-|
+  |[requests](#requests)|`proxies = {'http': 'http://username:password@tunnelhost:tunnelport',`</br>&emsp;&emsp;&emsp;&emsp;&emsp;`'https': 'http://username:password@tunnelhost:tunnelport'}`</br></br>`requests.get(url, proxies=proxies)`|
+  |[Selenium](#selenium)|`from selenium.webdriver import ChromeOptions`</br></br>`option = ChromeOptions()`</br>`option.add_argument('--proxy-server=http://tunnelhost:tunnelport')`</br></br>`from selenium.webdriver import Chrome`</br>`from selenium.webdriver.chrome.service import Service`</br></br>`browser = Chrome(service=Service('chromedriver'), options=option)`|
+
+#### 3.2.2. 发票申请
 - |发票类型|发票抬头|纳税人识别号|
   |:-:|:-:|:-:|
   |企业增值税普通发票/电子普通发票|福建扬腾创新信息科技有限公司|91350100MA338EEKXY|
