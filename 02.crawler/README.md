@@ -15,7 +15,7 @@
 ## 2. 常爬网站
 - |网址|爬前操作|目录字段|内容字段|爬取方法|
   |:-|:-|:-|:-|:-:|
-  |01. [RockAuto](https://www.rockauto.com/en/parts/STANDARD%20MOTOR%20PRODUCTS,Speed%20Sensor,10634)||`Part_Number`、***`Url`***|`Part_Number`、`Manufacturer`、`Vehicle`、`Note_1`、`Info`、`Note_2`、`Alternate_OE_Part_Numbers`、`Src`|[Selenium](#selenium)|
+  |01. [RockAuto](https://www.rockauto.com/en/parts/STANDARD%20MOTOR%20PRODUCTS,Speed%20Sensor,10634)||`Part_Number`、***`Url`***|1. `Part_Number`、`Manufacturer`、`Vehicle`、`Note_1`、***`Info`***、`Note_2`、`Alternate_OE_Part_Numbers`、`Src`</br>2. ***`Info`***、`Specifications`|[Selenium](#selenium)|
   |02. [Dorman](https://www.dormanproducts.com/gsearch.aspx?type=keyword&origin=keyword&q=Climate%2520Control%2520Module&start=0&num=100)|`100 records per page`|`Part_Number`、`Part_Type`、`Application_Summary`、***`Url`***|1. ***`Url`***、`OE_Numbers`、***`vehicle_url`***、`Src`、`其他Specifications`</br>2. ***`vehicle_url`***、`Vehicle`|[requests](#requests)|
   |03. [eBay](https://www.ebay.de/sch/i.html?_dkr=1&iconV2Request=true&_blrs=recall_filtering&_ssn=nb-parts-de&store_cat=0&store_name=nbpartsersatzteile&_oac=1&_nkw=bremsscheiben)|1. `Items per page` -> `240`</br>2. `Sort` -> `Price + Shipping: highest first`|***`Item_Number`***、`Url`|***`Item_Number`***、`Title`、`Price`、`Sold`、`Vehicle`、`Src`、`其他ItemSpecifics`|[requests](#requests)|
   |04. [Cardone](https://www.cardone.com/motors/wiper-and-washer/windshield-wiper-motor/?limit=96&sort=alphaasc)|1. `Show` -> `96`</br>2. `Sort By:` -> `A to Z`|`Title`、`Vehicle`、***`Url`***|1. ***`Url`***、***`Part_Number`***、`Src`、`其他General`</br>2. ***`Part_Number`***、`OE_Numbers`|[requests](#requests) + [Tomcat](#tomcat)|
