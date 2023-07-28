@@ -148,6 +148,8 @@
   |11. [Amazon](https://www.amazon.com/stores/page/0195C224-966C-45B3-8971-DF02D7217AEC/search?ingress=2&visitId=65dccac2-1687-4d2f-962e-024be8560dcb&ref_=ast_bln&terms=blower)|`Sort by:` -> `Price: High to Low`|`Title`、`Star`、`Count`、`Price`、***`Url`***、`Src`|***`Url`***、`其他productDetails`|selenium|
   |12. [AutoteileDirekt](https://www.autoteiledirekt.de/suche.html?keyword=NISSENS&categories%5B%5D=447)||`Part_Number`、`Title`、`Price`、***`Url`***|***`Url`***、`OE`、`Vehicle`、`Src`、`tecdoc`|Tomcat|
   |13. [1AAuto](https://www.1aauto.com/search?q=brake+calipers)|`A-Z`|`Title`、***`Url`***、`Brand`|1. ***`Url`***、***`vehicle_url`***、`Src`<br />2. ***`vehicle_url`***、`OE`、`Vehicle`|requests|
+  |14. [Rotomaster](https://rotomaster.com/search.php?search_query=Turbocharger&section=product&_bc_fsnf=1&Part+Type=Turbocharger)|1. `VIEW AS` -> `3`<br />2. `SHOW` -> `30 items per page`<br />3. `SORT BY` -> `A to Z`|***`Url`***|`Title`、`Price`、***`Url`***、`Src`|selenium|
+  |15. [TurbochargerPros](https://www.turbochargerpros.com/search_result.asp?w=garrett#/filter:brand:Garrett)||***`Url`***|`Title`、`Price`、`Vehicle`、***`Url`***、`Src`|selenium|
 
 ## 4. 附录
 1. [selenium常用配置](https://blog.csdn.net/m0_56676945/article/details/129215165)
