@@ -27,7 +27,7 @@
   |pillow|`pip install pillow`|[官网](https://pillow.readthedocs.io/en/latest)|
   |requests|`pip install requests`|[教程](https://www.liaoxuefeng.com/wiki/1016959663602400/1183249464292448)|
   |BeautifulSoup|`pip install bs4`||
-  |selenium|`pip install selenium`|[官网](https://www.selenium.dev/zh-cn/documentation/webdriver/getting_started)<br>[chromedriver](https://chromedriver.storage.googleapis.com/index.html)|
+  |selenium|`pip install selenium`|[官网](https://www.selenium.dev/zh-cn/documentation/webdriver/getting_started)<br>[chromedriver](https://chromedriver.chromium.org/home)<br>[下载](https://chromedriver.storage.googleapis.com/index.html)|
   |gevent|`pip install gevent`||
   |tqdm|`pip install tqdm`|[官网](https://pypi.org/project/tqdm/)|
 - 升级：`pip install 'package' --upgrade`
@@ -136,7 +136,7 @@
 ### 3.6. 常爬网站
 - |网址|爬前操作|目录字段|内容字段|爬取方法|
   |:-|:-|:-|:-|:-:|
-  |01. [RockAuto](https://www.rockauto.com/en/parts/STANDARD%20MOTOR%20PRODUCTS,Speed%20Sensor,10634)||`Part_Number`、***`Url`***|1. `Part_Number`、`Manufacturer`、`Vehicle`、`Note_1`、***`Info`***、`Note_2`、`Alternate_OE_Part_Numbers`、`Src`<br />2. ***`Info`***、`Specifications`|selenium|
+  |01. [RockAuto](https://www.rockauto.com/en/parts/STANDARD%20MOTOR%20PRODUCTS,Speed%20Sensor,10634)||***`Url`***、`Part_Number`|1. `Manufacturer`、`Vehicle`、`Alternate_OE_Part_Numbers`、`Note_1`、`Note_2`、`Pic`、***`Url`***、`Info`、`Src`<br />2. ***`Info`***、`Specifications`|selenium|
   |02. [Dorman](https://www.dormanproducts.com/gsearch.aspx?type=keyword&origin=keyword&q=Climate%2520Control%2520Module&start=0&num=100)|`100 records per page`|`Part_Number`、`Part_Type`、`Application_Summary`、***`Url`***|1. ***`Url`***、`OE_Numbers`、***`vehicle_url`***、`Src`、`其他Specifications`<br />2. ***`vehicle_url`***、`Vehicle`|requests|
   |03. [eBay](https://www.ebay.de/sch/i.html?_dkr=1&iconV2Request=true&_blrs=recall_filtering&_ssn=nb-parts-de&store_cat=0&store_name=nbpartsersatzteile&_oac=1&_nkw=bremsscheiben)|1. `Items per page` -> `240`<br />2. `Sort` -> `Price + Shipping: highest first`|***`Item_Number`***、`Url`|***`Item_Number`***、`Title`、`Price`、`Sold`、`Vehicle`、`Src`、`其他ItemSpecifics`|requests|
   |04. [Cardone](https://www.cardone.com/motors/wiper-and-washer/windshield-wiper-motor/?limit=96&sort=alphaasc)|1. `Show` -> `96`<br />2. `Sort By:` -> `A to Z`|`Title`、`Vehicle`、***`Url`***|1. ***`Url`***、***`Part_Number`***、`Src`、`其他General`<br />2. ***`Part_Number`***、`OE_Numbers`|requests + Tomcat|
