@@ -29,6 +29,7 @@
   |BeautifulSoup|`pip install bs4`||
   |selenium|`pip install selenium`|[官网](https://www.selenium.dev/zh-cn/documentation/webdriver/getting_started)<br>[chromedriver](https://chromedriver.storage.googleapis.com/index.html)|
   |gevent|`pip install gevent`||
+  |tqdm|`pip install tqdm`|[官网](https://pypi.org/project/tqdm/)|
 - 升级：`pip install 'package' --upgrade`
 
 ### 1.2. JavaScript
