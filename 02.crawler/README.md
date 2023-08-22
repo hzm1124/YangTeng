@@ -21,13 +21,13 @@
   |:-:|:-|:-|
   |virtualenv|`pip install virtualenv`|[教程](https://www.liaoxuefeng.com/wiki/1016959663602400/1019273143120480)|
   |jupyter notebook|`pip install notebook`|[官网](https://jupyter.org)|
-  |jupyter_contrib_nbextensions|`pip install jupyter_contrib_nbextensions`|`jupyter contrib nbextension install --user` -> `Hinterland`、`Highlight selected word`、`AddBefore`、`AutoSaveTime`、`Go to Current Running Cells`<br><br>`pip install jupyterthemes` -> `!jt -h` -> `!jt -t chesterish -f roboto -fs 11 -ofs 10 -T -N -kl`|
+  |jupyter_contrib_nbextensions|`pip install jupyter_contrib_nbextensions`|`jupyter contrib nbextension install --user` -> `Hinterland`、`Highlight selected word`、`AddBefore`、`AutoSaveTime`、`Go to Current Running Cells`<br /><br />`pip install jupyterthemes` -> `!jt -h` -> `!jt -t chesterish -f roboto -fs 11 -ofs 10 -T -N -kl`|
   |pandas|`pip install pandas`|[官网](https://pandas.pydata.org/getting_started.html)|
   |openpyxl|`pip install openpyxl`|[Tutorial](https://openpyxl.readthedocs.io/en/stable/tutorial.html)|
   |pillow|`pip install pillow`|[官网](https://pillow.readthedocs.io/en/latest)|
   |requests|`pip install requests`|[教程](https://www.liaoxuefeng.com/wiki/1016959663602400/1183249464292448)|
   |BeautifulSoup|`pip install bs4`||
-  |selenium|`pip install selenium`|[官网](https://www.selenium.dev/zh-cn/documentation/webdriver/getting_started)<br>[chromedriver](https://chromedriver.chromium.org/home)<br>[下载](https://chromedriver.storage.googleapis.com/index.html)|
+  |selenium|`pip install selenium`|[官网](https://www.selenium.dev/zh-cn/documentation/webdriver/getting_started)<br />[chromedriver](https://chromedriver.chromium.org/home)<br />[下载](https://chromedriver.storage.googleapis.com/index.html)|
   |gevent|`pip install gevent`||
   |tqdm|`pip install tqdm`|[官网](https://pypi.org/project/tqdm/)|
 - 升级：`pip install 'package' --upgrade`
@@ -136,8 +136,8 @@
 ### 3.6. 常爬网站
 - |网址|爬前操作|目录字段|内容字段|爬取方法|
   |:-|:-|:-|:-|:-:|
-  |01. [RockAuto](https://www.rockauto.com/en/parts/STANDARD%20MOTOR%20PRODUCTS,Speed%20Sensor,10634)||***`Url`***、`Part_Number`|1. `Manufacturer`、`Vehicle`、`Alternate_OE_Part_Numbers`、`Note_1`、`Note_2`、`Pic`、***`Url`***、`Info`、`Src`<br />2. ***`Info`***、`Specifications`|selenium|
-  |02. [Dorman](https://www.dormanproducts.com/gsearch.aspx?type=keyword&origin=keyword&q=Climate%2520Control%2520Module&start=0&num=100)|`100 records per page`|`Part_Number`、`Part_Type`、`Application_Summary`、***`Url`***|1. ***`Url`***、`OE_Numbers`、***`vehicle_url`***、`Src`、`其他Specifications`<br />2. ***`vehicle_url`***、`Vehicle`|requests|
+  |01. [RockAuto](https://www.rockauto.com/en/parts/STANDARD%20MOTOR%20PRODUCTS,Speed%20Sensor,10634)||***`Url`***、`Part_Number`|1. `Manufacturer`、`Vehicle`、`Alternate_OE_Part_Numbers`、`Note_1`、`Note_2`、***`Url`***、***`Info`***、`Src`<br />2. ***`Info`***、`Kit_No`、`Kit_Quantity`、`Kit_Note`、`Kit_Manufacturer`、`Kit_Part_Number`、***`Kit_Info`***<br />3. ***`Kit_Info`***、`Kit_OE`、`Kit_Src`|selenium|
+  |02. [Dorman](https://www.dormanproducts.com/gsearch.aspx?type=keyword&origin=keyword&q=Climate%2520Control%2520Module&start=0&num=100)|`100 records per page`|***`Url`***、`Part_Number`、`Part_Type`、`Application_Summary`|1. `OE_Numbers`、***`Url`***、***`vehicle_url`***、`Src`、`其他Specifications`<br />2. ***`vehicle_url`***、`Vehicle`|requests|
   |03. [eBay](https://www.ebay.de/sch/i.html?_dkr=1&iconV2Request=true&_blrs=recall_filtering&_ssn=nb-parts-de&store_cat=0&store_name=nbpartsersatzteile&_oac=1&_nkw=bremsscheiben)|1. `Items per page` -> `240`<br />2. `Sort` -> `Price + Shipping: highest first`|***`Item_Number`***、`Url`|***`Item_Number`***、`Title`、`Price`、`Sold`、`Vehicle`、`Src`、`其他ItemSpecifics`|requests|
   |04. [Cardone](https://www.cardone.com/motors/wiper-and-washer/windshield-wiper-motor/?limit=96&sort=alphaasc)|1. `Show` -> `96`<br />2. `Sort By:` -> `A to Z`|`Title`、`Vehicle`、***`Url`***|1. ***`Url`***、***`Part_Number`***、`Src`、`其他General`<br />2. ***`Part_Number`***、`OE_Numbers`|requests + Tomcat|
   |05. [Standard](https://www.standardbrand.com/en/products/sensors/sensors/anti-lock-brake-abs-sensors)|1. 在官网找出[`iframe`](https://ecatalog.smpcorp.com/V2/STD/#/partsearch/searchText/ABS%20Speed%20Sensor?type=p&view=pp)：`title="E-Cat Frame"`，设置`View 96`、`Part  (A-Z)`<br />2. 在详情页找出[`详情api`](https://ecatalog.smpcorp.com/V2/STD/api/part/partselect?part=ALS417&func=PART&vid=)：`https://ecatalog.smpcorp.com/V2/STD/api/part/partselect?part=` + `Part_Number` + `&func=PART`<br />3. 在详情页找出[`图片api`](https://ecatalog.smpcorp.com/V2/STD/api/image/getallimages?partNum=ALS417&brand=STI&zoomFactor_sm=75&zoomFactor_md=360&zoomFactor_bg=960)：`https://ecatalog.smpcorp.com/V2/STD/api/image/getallimages?partNum=` + `Part_Number` + `&brand=` + `Brand` + `&zoomFactor_sm=75&zoomFactor_md=360&zoomFactor_bg=960`|***`Part_Number`***、`Url`|***`Part_Number`***、`POP`、`Per_Car`、`Part_Type`、`Vehicle`、`Src`、`其他partSpecs`|requests|
