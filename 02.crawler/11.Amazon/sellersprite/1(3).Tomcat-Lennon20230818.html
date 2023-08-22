@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>爬虫 - 11.Amazon</title>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <h1>Amazon</h1>
+        <p>1. 确认目录内容替换完毕</p>
+        <p>2. 设置 -> 下载内容 -> 位置：/Users/hzm/Desktop/YangTeng/code/venv/code/02.UTV爬虫/11.Amazon/seller</p>
+        <p>3. 设置 -> 隐私和安全 -> 清除浏览数据：缓存的图片和文件</p>
+        <p>4. <b>url</b>结尾添加<b>?index=0</b></p>
+    </div>
+
+    <script>
+        window.onload = function() {
+            let data = '[{"asin":"B0BRCVG8QF"},{"asin":"B089R1HBRP"},{"asin":"B08FKW6SHW"},{"asin":"B08FLX87DZ"},{"asin":"B08FM5JGT8"},{"asin":"B08FMF4MKV"},{"asin":"B08FMGYKB5"},{"asin":"B08HH63QF1"},{"asin":"B08KD36MQ6"},{"asin":"B08MQLYSL3"},{"asin":"B08MZLZS2P"},{"asin":"B08MZPMQZG"},{"asin":"B08N67ZR9C"},{"asin":"B08N6B95HK"},{"asin":"B08NGDMB2L"},{"asin":"B08NPCHSNW"},{"asin":"B08NPPR5TR"},{"asin":"B08NPSQSC8"},{"asin":"B08NPSWFJ9"},{"asin":"B08NPVDSRQ"},{"asin":"B08NT461CL"},{"asin":"B08NWRM7MM"},{"asin":"B08PB189ZK"},{"asin":"B08PB189ZK"},{"asin":"B08PB1WS3X"},{"asin":"B08RBJ3TKG"},{"asin":"B08RJ62H4P"},{"asin":"B08TBCFHR8"},{"asin":"B08TM9MT99"},{"asin":"B08Y6B3YXR"},{"asin":"B08Y6CWHTS"},{"asin":"B08Y6CWHTS"},{"asin":"B08Y6FQS28"},{"asin":"B08Y6FSPHR"},{"asin":"B08Y6GTQN8"},{"asin":"B08Z7S7W1G"},{"asin":"B08ZNB4931"},{"asin":"B08ZRZYT1D"},{"asin":"B091PM7N2Z"},{"asin":"B091PPN2N4"},{"asin":"B0924DY561"},{"asin":"B0924J9FT3"},{"asin":"B0928LP5JS"},{"asin":"B092HR7YXQ"},{"asin":"B092JBGC5N"},{"asin":"B092SJ1NYB"},{"asin":"B093PMBSQX"},{"asin":"B094N8RYWK"},{"asin":"B0952QHNGX"},{"asin":"B095CBFSHP"},{"asin":"B09656TZV5"},{"asin":"B096NRR5YJ"},{"asin":"B096TP7JY5"},{"asin":"B0978P5MVZ"},{"asin":"B0978WRW7S"},{"asin":"B097SDVF9P"},{"asin":"B0982STN69"},{"asin":"B098JL866M"},{"asin":"B098JQCMNK"},{"asin":"B09958BC9W"},{"asin":"B099PND719"},{"asin":"B099RD1JW6"},{"asin":"B09BMNLX6S"},{"asin":"B09CYNLN86"},{"asin":"B09FJXWD9Q"},{"asin":"B09GLWK4Z3"},{"asin":"B09H27WRTX"},{"asin":"B09J8LJD3V"},{"asin":"B09J8LLNMD"},{"asin":"B09J8RV4V6"},{"asin":"B09KZXLNP6"},{"asin":"B09LXXXMGK"},{"asin":"B09MYJJ1CP"},{"asin":"B09N35ZC8V"},{"asin":"B09N38GBR1"},{"asin":"B09ND6YBQC"},{"asin":"B09NS9VMS8"},{"asin":"B09NVLK49Z"},{"asin":"B09PH8RDS2"},{"asin":"B09R47GFWX"},{"asin":"B09SB12HVG"},{"asin":"B09SFKXM5S"},{"asin":"B09SFSCZT3"},{"asin":"B09SG36PR4"},{"asin":"B09SG7W2V8"},{"asin":"B09SWNNXL8"},{"asin":"B09T5LVYCJ"},{"asin":"B09TFGL48D"},{"asin":"B09TGS86GK"},{"asin":"B09TNPG55B"},{"asin":"B09TR69SDD"},{"asin":"B09TXR2MTR"},{"asin":"B09VZ6X37B"},{"asin":"B09WK6HSKJ"},{"asin":"B09WV6RYRP"},{"asin":"B09WV6RYRP"},{"asin":"B09X563LF2"},{"asin":"B09XDPS2N3"},{"asin":"B09XDPS2N3"},{"asin":"B09XDW4S6K"},{"asin":"B09XMD3HPK"},{"asin":"B09YRBZF19"},{"asin":"B09YRDNM9F"},{"asin":"B09Z67TCVG"},{"asin":"B09Z7V19R4"},{"asin":"B09Z7VY2V1"},{"asin":"B09ZBJCR7L"},{"asin":"B09ZKS648X"},{"asin":"B09ZL2VBXC"},{"asin":"B09ZQBGWKF"},{"asin":"B09ZXG1S7H"},{"asin":"B09ZXG1S7H"},{"asin":"B0B1J58C1Q"},{"asin":"B0B1Q6QFXG"},{"asin":"B0B1ZVKBGT"},{"asin":"B0B2116Y9Y"},{"asin":"B0B24T3RXB"},{"asin":"B0B2W1Z3Y3"},{"asin":"B0B3X6179W"},{"asin":"B0B3XNF314"},{"asin":"B0B5CWL7R9"},{"asin":"B0B5GDSDZR"},{"asin":"B0B5JWK1W9"},{"asin":"B0B5X8TC2Q"},{"asin":"B0B6DKW35K"},{"asin":"B0B6RGYWHM"},{"asin":"B0B6RH4Y4Q"},{"asin":"B0B6YW4LBY"},{"asin":"B0B6ZGX68W"},{"asin":"B0B73WHYWY"},{"asin":"B0B7411QFW"},{"asin":"B0B7RM5H2Z"},{"asin":"B0B7RMVTVJ"},{"asin":"B0B7RNMYW9"},{"asin":"B0B7RP1SH9"},{"asin":"B0B84RKB1B"},{"asin":"B0B87C7K9W"},{"asin":"B0B87CJTCR"},{"asin":"B0B87LW4H4"},{"asin":"B0B87M5SJD"},{"asin":"B0B8CM66QD"},{"asin":"B0B8CNH12V"},{"asin":"B0B8CPLB7Z"},{"asin":"B0B8Z9NP9C"},{"asin":"B0B9FKM62L"},{"asin":"B0B9WP87JY"},{"asin":"B0BB1TWV37"},{"asin":"B0BB1WB1N1"},{"asin":"B0BB1WLTJZ"},{"asin":"B0BB1YCYCH"},{"asin":"B0BB21W9QJ"},{"asin":"B0BBDLR2KG"},{"asin":"B0BBLRVQ5V"},{"asin":"B0BBM7ZTG9"},{"asin":"B0BBMB9RYX"},{"asin":"B0BBQNG8YY"},{"asin":"B0BF9HNS27"},{"asin":"B0BFKZJY1F"},{"asin":"B0BG6Z7J14"},{"asin":"B0BGBTYL4D"},{"asin":"B0BHN5Q9TS"},{"asin":"B0BHRV1HLR"},{"asin":"B0BHVYKT3B"},{"asin":"B0BJ8ST43M"},{"asin":"B0BJD6KHB9"},{"asin":"B0BN7JGP6L"},{"asin":"B0BP9XZ9TC"},{"asin":"B0BRX93W65"},{"asin":"B0BXRLMDTW"},{"asin":"B0BYCHD1D9"},{"asin":"B0C1BLHTYQ"},{"asin":"B0C1BM2BGK"},{"asin":"B0C1BTS4XP"},{"asin":"B0C22RYN3Z"},{"asin":"B0C2BYG26J"},{"asin":"B0C2P215KN"},{"asin":"B0C2P4PBTD"},{"asin":"B0C2P8JG85"},{"asin":"B0C3QZNL18"},{"asin":"B0C45KQZ2N"},{"asin":"B0C556XX5B"},{"asin":"B0C557T5LC"},{"asin":"B0C585YWW7"},{"asin":"B0C588JYVB"},{"asin":"B0C588QHRQ"},{"asin":"B0C5GXWDY9"},{"asin":"B0C5GYSFB3"},{"asin":"B0C5GZXCBP"},{"asin":"B0C5H23PM8"},{"asin":"B0C6G5HPWY"},{"asin":"B0C6GFYJP2"},{"asin":"B0C6GH35FY"},{"asin":"B0C73XC1TL"},{"asin":"B0C7MR33SB"},{"asin":"B0C7VQRXV5"},{"asin":"B0C7VXKG92"},{"asin":"B0C8196FZC"},{"asin":"B0C83TTTBD"},{"asin":"B0C8HL35YP"},{"asin":"B0C9HKXZ5D"},{"asin":"B0C9J2LPW9"},{"asin":"B0C9QJBWMB"},{"asin":"B0CB387KGV"}]'
+            let json_data = JSON.parse(data);
+            console.log('json_data：' + json_data.length);
+
+            let list_para = location.href.split('?')[1].split('&');
+            let para_index;
+            for(let i=0; i<list_para.length; i++) {
+                if(list_para[i].startsWith('index=')) {
+                    para_index = list_para[i].split('index=')[1];
+                }
+            }
+            console.log('index：' + para_index);
+
+            console.log(json_data[Number(para_index)]);
+            let url = 'https://www.sellersprite.com/v2/competitor-lookup/monthly?textareaValue=' + json_data[Number(para_index)]['asin'] + '&index=' + para_index;
+            console.log(url);
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
