@@ -39,23 +39,23 @@
 
 ## 1. 替代料表整理
 1. 确认能自动识别`替代料总表`
-    - ![alt pic_1_1](./pic/pic_1_1.png)
+    - ![alt img_1_1](./img/img_1_1.png)
 2. 输出：`整理好的替代料总表`
-    - ![alt pic_1_2](./pic/pic_1_2.png)
+    - ![alt img_1_2](./img/img_1_2.png)
 
 ## 2. 库存表生成
 1. 确认能自动识别`整理好的替代料总表`、`改价表`和`MRP表`
-    - ![alt pic_2_1](./pic/pic_2_1.png)
+    - ![alt img_2_1](./img/img_2_1.png)
 2. 输出：`整理好的库存表`
-    - ![alt pic_2_2](./pic/pic_2_2.png)
+    - ![alt img_2_2](./img/img_2_2.png)
 
 ## 3. 断货SKU筛选
 1. 确认能自动识别`计算表`
-    - ![alt pic_3_1](./pic/pic_3_1.png)
+    - ![alt img_3_1](./img/img_3_1.png)
 2. 输出：`筛选好的断货SKU`（`计算表`的`附_1统计源（含新品、清仓、新品成长）`中`在库`列和`在途`列都是`0`且`Level`列不是`普通`的行）
-    - ![alt pic_3_2](./pic/pic_3_2.png)
+    - ![alt img_3_2](./img/img_3_2.png)
 
 ## 4. 邮件数据核对
 1. 确认能自动识别`计算表`
-    - ![alt pic_4](./pic/pic_4.png)
+    - ![alt img_4](./img/img_4.png)
 2. 输出：邮件内容关键数据
