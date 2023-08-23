@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Dorman爬虫-sch
 // @namespace    https://github.com/lennon1124/YangTeng
-// @version      2023.06.20
+// @version      2023.08.23
 // @description  爬虫
 // @author       Lennon
 // @match        *://www.dormanproducts.com/gsearch.aspx?*
-// @icon         https://static.dormanproducts.com/images/website/banner2/favicon.ico
+// @icon         https://www.dormanproducts.com/favicon.ico
 // @grant        none
 // ==/UserScript==
 
