@@ -9,5 +9,5 @@ def get_Proxy_requests():
     return {'http': 'http://' + username + ':' + password + '@' + tunnel_host + ':' + tunnel_port,
             'https': 'http://' + username + ':' + password + '@' + tunnel_host + ':' + tunnel_port};
 
-def get_Proxy_Selenium():
+def get_Proxy_selenium():
     return '--proxy-server=http://' + tunnel_host + ':' + tunnel_port;
