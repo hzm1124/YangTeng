@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>爬虫 - 12_1.AutoteileDirekt</title>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <h1>AutoteileDirekt_1</h1>
+        <p>1. 确认目录内容替换完毕</p>
+        <p>2. 设置 -> 下载内容 -> 位置：/Users/hzm/Desktop/YangTeng/code/venv/code/02.UTV爬虫/12.AutoteileDirekt/oe</p>
+        <p>3. 设置 -> 隐私和安全 -> 清除浏览数据：缓存的图片和文件</p>
+        <p>4. <b>url</b>结尾添加<b>?index=0</b></p>
+    </div>
+
+    <script>
+        window.onload = function() {
+            let data = '[{"Url":"https://www.autoteiledirekt.de/nissens-7023595.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7850717.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7275626.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7275624.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7023973.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7518058.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7026513.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7025436.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7281864.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7643543.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7025335.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7024297.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7025071.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7019611.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7743586.html"},{"Url":"https://www.autoteiledirekt.de/nissens-10382564.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7026304.html"},{"Url":"https://www.autoteiledirekt.de/nissens-8157611.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7024166.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7025517.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7707778.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7025007.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7282266.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7026604.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7026010.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7023769.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7275637.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7026330.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7025485.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7933901.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7023266.html"},{"Url":"https://www.autoteiledirekt.de/nissens-8326955.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7023794.html"},{"Url":"https://www.autoteiledirekt.de/nissens-10383351.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7275635.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7023114.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7024112.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7024473.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7023405.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7025838.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7743561.html"},{"Url":"https://www.autoteiledirekt.de/nissens-8038943.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7026049.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7437572.html"},{"Url":"https://www.autoteiledirekt.de/nissens-7024196.html"}]'
+            let json_data = JSON.parse(data);
+            console.log('json_data：' + json_data.length);
+
+            let list_para = location.href.split('?')[1].split('&');
+            let para_index;
+            for(let i=0; i<list_para.length; i++) {
+                if(list_para[i].startsWith('index=')) {
+                    para_index = list_para[i].split('index=')[1];
+                }
+            }
+            console.log('index：' + para_index);
+            
+            window.location.href = json_data[Number(para_index)]['Url'];
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>爬虫 - 12_2.AutoteileDirekt</title>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <h1>AutoteileDirekt_2</h1>
+        <p>1. 确认目录内容替换完毕</p>
+        <p>2. 设置 -> 下载内容 -> 位置：/Users/hzm/Desktop/YangTeng/code/venv/code/02.UTV爬虫/12.AutoteileDirekt/oe</p>
+        <p>3. 设置 -> 隐私和安全 -> 清除浏览数据：缓存的图片和文件</p>
+        <p>4. <b>url</b>结尾添加<b>?index=0</b></p>
+    </div>
+
+    <script>
+        window.onload = function() {
+            let data = '[{"Src":"https://cdn.autoteiledirekt.de/thumb?id=7275624&m=1&n=0&lng=de&rev=94077844"},{"Src":"https://cdn.autoteiledirekt.de/thumb?id=7850717&m=1&n=0&lng=de&rev=94077844"},{"Src":"https://cdn.autoteiledirekt.de/thumb?id=7275626&m=1&n=0&lng=de&rev=94077844"},{"Src":"https://cdn.autoteiledirekt.de/thumb?id=7023595&m=1&n=0&lng=de&rev=94077844"}]'
+            let json_data = JSON.parse(data);
+            console.log('json_data：' + json_data.length);
+
+            let list_para = location.href.split('?')[1].split('&');
+            let para_index;
+            for(let i=0; i<list_para.length; i++) {
+                if(list_para[i].startsWith('index=')) {
+                    para_index = list_para[i].split('index=')[1];
+                }
+            }
+            console.log('index：' + para_index);
+
+            window.location.href = json_data[Number(para_index)]['Src'];
+        }
+    </script>
+</body>
+</html>
