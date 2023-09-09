@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AutoteileDirekt爬虫-sch
 // @namespace    https://github.com/lennon1124/YangTeng
-// @version      2023.09.08
+// @version      2023.09.09
 // @description  爬虫
 // @author       Lennon
 // @match        *://www.autoteiledirekt.de/*
@@ -17,22 +17,28 @@
         window.scrollTo(0, document.body.scrollHeight);
         console.log('爬虫启动...');
 
-        let list_part_number = document.querySelectorAll('div[class="product-card__artkl"]');
+        let list_part_number = document.querySelectorAll('div.product-card__artkl');
         let array_part_number = new Array();
         for(let i=0; i<list_part_number.length; i++) {
             array_part_number.push(list_part_number[i].innerText);
         }
 
-        let list_title = document.querySelectorAll('div[class="product-card__title"]');
+        let list_title = document.querySelectorAll('div.product-card__title');
         let array_title = new Array();
         for(let i=0; i<list_title.length; i++) {
             array_title.push(list_title[i].innerText.replace('\n', ' '));
         }
 
-        let list_price = document.querySelectorAll('div[class="product-card__new-price"]');
+        let list_price = document.querySelectorAll('div.product-card__new-price');
         let array_price = new Array();
         for(let i=0; i<list_price.length; i++) {
             array_price.push(list_price[i].innerText);
+        }
+
+        let list_url = document.querySelectorAll('a.product-card__title-link');
+        let array_url = new Array();
+        for(let i=0; i<list_url.length; i++) {
+            array_url.push(list_url[i].getAttribute('href'));
         }
 
         // array
@@ -43,7 +49,6 @@
             array_content[i]['Title'] = array_title[i];
             array_content[i]['Price'] = array_price[i];
             array_content[i]['Url'] = array_url[i];
-            array_content[i]['Src'] = array_src[i];
         }
         console.log('数量：' + array_content.length);
 
