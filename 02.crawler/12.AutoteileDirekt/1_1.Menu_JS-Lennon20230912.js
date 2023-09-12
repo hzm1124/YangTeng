@@ -1,15 +1,11 @@
 // ==UserScript==
-// @name         eBay爬虫-Menu
+// @name         AutoteileDirekt爬虫-Menu
 // @namespace    https://github.com/lennon1124/YangTeng
-// @version      2023.09.11
+// @version      2023.09.12
 // @description  爬虫
 // @author       Lennon
-// @match        *://www.ebay.com/sch/*
-// @match        *://www.ebay.de/sch/*
-// @match        *://www.ebay.co.uk/sch/*
-// @match        *://www.ebay.com.au/sch/*
-// @match        *://www.ebay.ca/sch/*
-// @icon         https://www.ebay.com/favicon.ico
+// @match        *://www.autoteiledirekt.de/*
+// @icon         https://www.autoteiledirekt.de/favicon.ico
 // @grant        none
 // ==/UserScript==
 
@@ -24,11 +20,11 @@
 
         // array
         let array_menu = new Array();
-        let list_part = document.querySelectorAll('ul.srp-results.srp-list.clearfix div.s-item__image-section');
+        let list_part = document.querySelectorAll('a.product-card__title-link');
         for(let i=0; i<list_part.length; i++) {
             array_menu[i] = {};
             array_menu[i]['No.'] = i + 1;
-            array_menu[i]['Url'] = list_part[i].querySelector('div a').getAttribute('href');
+            array_menu[i]['Url'] = list_part[i].getAttribute('href');
         }
         console.log('Tampermonkey 2：目录获取成功');
 
@@ -48,6 +44,6 @@
         console.log('= = = = = = = = = = = = = = =\n\n\n');
 
         // next
-        document.querySelector('a.pagination__next.icon-link').click();
+        window.location.href = document.querySelector('span[data-pagination-next]').getAttribute('data-ajax-link');
     }
 })();
