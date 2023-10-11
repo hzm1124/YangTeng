@@ -151,6 +151,7 @@
   |13. [1AAuto](https://www.1aauto.com/search?q=brake+calipers)|`A-Z`|`Title`、***`Url`***、`Brand`|1. ***`Url`***、***`vehicle_url`***、`Src`<br />2. ***`vehicle_url`***、`OE`、`Vehicle`|requests|
   |14. [Rotomaster](https://rotomaster.com/search.php?search_query=Turbocharger&section=product&_bc_fsnf=1&Part+Type=Turbocharger)|1. `VIEW AS` -> `3`<br />2. `SHOW` -> `30 items per page`<br />3. `SORT BY` -> `A to Z`|***`Url`***|`Title`、`Price`、***`Url`***、`Src`|Selenium|
   |15. [TurbochargerPros](https://www.turbochargerpros.com/search_result.asp?w=garrett#/filter:brand:Garrett)||***`Url`***|`Title`、`Price`、`Vehicle`、***`Url`***、`Src`|Selenium|
+  |16. [ATPAutoteile](https://www.atp-autoteile.de/de/search/n-243/o-1/b-1-592/bremsbelaege-bestprice-atec)|||||
 
 ## 4. 附录
 1. [selenium常用配置](https://blog.csdn.net/m0_56676945/article/details/129215165)
