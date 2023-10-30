@@ -1,5 +1,2 @@
-- ![alt pic_1](./img/pic_1.png)
-- ![alt pic_2](./img/pic_2.png)
-- ![alt pic_3](./img/pic_3.png)
-- ![alt pic_4](./img/pic_4.png)
-- ![alt pic_5](./img/pic_5.png)
+# README
+- 正经人谁写readme啊~
