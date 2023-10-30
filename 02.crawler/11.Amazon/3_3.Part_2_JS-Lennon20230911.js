@@ -99,6 +99,19 @@
             array_part[0]['SKU'] = list_div[2].querySelectorAll('span')[5-offset].innerText.replace('变体数:', '').replace(/^.*?\(/, '').replace(/\)$/, '');
         }
         array_part[0]['卖家数'] = list_div[2].querySelectorAll('span')[6-offset].innerText.replace('卖家: ', '');
+        if(list_div[2].querySelectorAll('span').length > 8 - offset) {
+            array_part[0]['BuyBox卖家'] = list_div[2].querySelectorAll('span')[8-offset].innerText.replace('BuyBox卖家：', '');
+            if(list_div[2].querySelectorAll('span')[8-offset].querySelector('a') == null) {
+                array_part[0]['BuyBox卖家链接'] = '';
+            }
+            else {
+                array_part[0]['BuyBox卖家链接'] = list_div[2].querySelectorAll('span')[8-offset].querySelector('a').getAttribute('href');
+            }
+        }
+        else {
+            array_part[0]['BuyBox卖家'] = '';
+            array_part[0]['BuyBox卖家链接'] = '';
+        }
         console.log('Tampermonkey 2：内容获取成功');
 
         // json
