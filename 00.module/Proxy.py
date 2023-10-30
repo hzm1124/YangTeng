@@ -7,7 +7,7 @@ tunnel_port = '15818'
 
 def get_Proxy_Requests():
     return {'http': 'http://' + username + ':' + password + '@' + tunnel_host + ':' + tunnel_port,
-            'https': 'http://' + username + ':' + password + '@' + tunnel_host + ':' + tunnel_port};
+            'https': 'http://' + username + ':' + password + '@' + tunnel_host + ':' + tunnel_port}
 
 def get_Proxy_Selenium():
-    return '--proxy-server=http://' + tunnel_host + ':' + tunnel_port;
+    return 'http://' + tunnel_host + ':' + tunnel_port

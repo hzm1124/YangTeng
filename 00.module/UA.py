@@ -35,4 +35,4 @@ list_user_agent = ['Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/
                    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.20 Safari/537.36']
 
 def get_User_Agent():
-    return random.choice(list_user_agent);
+    return random.choice(list_user_agent)
