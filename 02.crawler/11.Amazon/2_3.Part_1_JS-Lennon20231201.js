@@ -20,6 +20,7 @@
         // array
         let array_data = new Array();
         array_data[0] = {};
+        array_data[0]['序号'] = '';
         array_data[0]['ASIN'] = window.location.href.split('/dp/')[1].split('/')[0].trim();
         array_data[0]['Title'] = document.querySelector('h1#title').innerText.trim();
         array_data[0]['Price'] = document.querySelector('span.a-offscreen').innerText.trim();
@@ -38,7 +39,7 @@
         let list_th = document.querySelectorAll('table#productDetails_techSpec_section_1 th');
         let list_td = document.querySelectorAll('table#productDetails_techSpec_section_1 td');
         for(let i=0; i<list_th.length; i++) {
-            array_data[0][list_th[i].innerText.toLowerCase()] = list_td[i].innerText.trim();
+            array_data[0][list_th[i].innerText.trim().toLowerCase()] = list_td[i].innerText.trim();
         }
 
         list_th = document.querySelectorAll('table#productDetails_detailBullets_sections1 th');
@@ -47,7 +48,7 @@
             if(list_th[i].innerText == 'ASIN') {
                 continue;
             }
-            array_data[0][list_th[i].innerText.toUpperCase()] = list_td[i].innerText.trim();
+            array_data[0][list_th[i].innerText.trim().toUpperCase()] = list_td[i].innerText.trim();
         }
         console.log('Crawler Log 2: Array');
 

@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name         Web爬虫-Menu
+// @name         Dorman爬虫-Menu
 // @namespace    https://github.com/lennon1124/YangTeng
-// @version      2023.11.21
+// @version      2023.12.05
 // @description  Crawler
 // @author       Lennon
-// @match        *://Web/*
-// @icon         https://Web/favicon.ico
+// @match        *://www.dormanproducts.com/gsearch.aspx?*
+// @icon         https://www.dormanproducts.com/favicon.ico
 // @grant        none
 // ==/UserScript==
 
@@ -19,10 +19,11 @@
 
         // array
         let array_data = new Array();
-        let list_ = document.querySelectorAll('');
-        for(let i=0; i<list_.length; i++) {
+        let list_part = document.querySelectorAll('div.searchItems');
+        for(let i=0; i<list_part.length; i++) {
             array_data[i] = {};
             array_data[i]['No.'] = i + 1;
+            array_data[i]['Url'] = 'https://www.dormanproducts.com/' + list_part[0].querySelector('div.searchItems-img>a').getAttribute('href').trim();
         }
         console.log('Crawler Log 2: Array');
 
@@ -42,6 +43,6 @@
         console.log('= = = = = = = = = = = = = = =\n\n\n');
 
         // next
-        document.querySelector('').click();
+        document.querySelector('a#pagingBottom_nextButton').click();
     }
 })();
