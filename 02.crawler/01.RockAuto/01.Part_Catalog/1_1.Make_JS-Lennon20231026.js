@@ -19,11 +19,11 @@
 
         // array
         let array_data = new Array();
-        let list_part = document.querySelectorAll('td.niconspace.ncollapsedicon>a');
-        for(let i=0; i<list_part.length; i++) {
+        let list_make = document.querySelectorAll('td.niconspace.ncollapsedicon>a');
+        for(let i=0; i<list_make.length; i++) {
             array_data[i] = {};
             array_data[i]['No.'] = i + 1;
-            array_data[i]['Url'] = 'https://www.rockauto.com' + list_part[i].getAttribute('href');
+            array_data[i]['Url'] = 'https://www.rockauto.com' + list_make[i].getAttribute('href').trim();
         }
         console.log('Crawler Log 2: Array');
 
@@ -36,7 +36,7 @@
         let blob_url = URL.createObjectURL(blob_data);
         let blob_a = document.createElement('a');
         blob_a.href = blob_url;
-        blob_a.download = window.location.href + '.txt';
+        blob_a.download = 'make.txt';
         blob_a.click();
         URL.revokeObjectURL(blob_url);
         console.log('Crawler Log 4: End');

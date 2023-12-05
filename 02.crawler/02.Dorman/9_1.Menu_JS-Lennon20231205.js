@@ -23,7 +23,6 @@
         for(let i=0; i<list_.length; i++) {
             array_data[i] = {};
             array_data[i]['No.'] = i + 1;
-            fuck.trim();
         }
         console.log('Crawler Log 2: Array');
 

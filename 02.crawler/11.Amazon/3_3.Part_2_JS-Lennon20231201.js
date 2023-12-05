@@ -43,73 +43,73 @@
                 part_index = i;
             }
         }
-        array_data[0]['标识'] = list_part[part_index].querySelectorAll('td')[1].innerText.replace(/\n/g, ';');
-        array_data[0]['PASIN'] = list_part[part_index].querySelectorAll('td')[2].innerText.split('\n')[2].split('PASIN:')[1];
-        array_data[0]['品牌'] = list_part[part_index].querySelectorAll('td')[2].innerText.split('\n')[3];
-        array_data[0]['品牌链接'] = list_part[part_index].querySelector('td a.style-color').getAttribute('href');
-        array_data[0]['大类BSR'] = list_part[part_index].querySelectorAll('td')[3].innerText.split('\n')[0];
-        array_data[0]['BSR增长数'] = list_part[part_index].querySelectorAll('td')[3].innerText.split('\n')[1].split(' ')[0];
-        array_data[0]['BSR增长率'] = list_part[part_index].querySelectorAll('td')[3].innerText.split('\n')[1].split(' ')[1];
-        array_data[0]['父体月销量'] = list_part[part_index].querySelectorAll('td')[5].innerText.split('\n')[0];
-        array_data[0]['父体月销量增长率'] = list_part[part_index].querySelectorAll('td')[5].innerText.split('\n')[1];
-        array_data[0]['月销售额'] = list_part[part_index].querySelectorAll('td')[6].innerText.split('\n')[0];
-        array_data[0]['月销售额增长率'] = list_part[part_index].querySelectorAll('td')[6].innerText.split('\n')[1];
-        array_data[0]['价格'] = list_part[part_index].querySelectorAll('td')[7].innerText.split('\n')[0];
-        array_data[0]['Q&A数'] = list_part[part_index].querySelectorAll('td')[7].innerText.split('\n')[1];
-        array_data[0]['毛利率'] = list_part[part_index].querySelectorAll('td')[8].innerText.split('\n')[0];
-        array_data[0]['FBA运费'] = list_part[part_index].querySelectorAll('td')[8].innerText.split('\n')[1];
-        array_data[0]['评分数'] = list_part[part_index].querySelectorAll('td')[9].innerText.split('\n')[0];
-        array_data[0]['月度留评率'] = list_part[part_index].querySelectorAll('td')[9].innerText.split('\n')[1];
-        array_data[0]['评分'] = list_part[part_index].querySelectorAll('td')[10].innerText.split('\n')[0];
-        array_data[0]['月内新增评分数'] = list_part[part_index].querySelectorAll('td')[10].innerText.split('\n')[1];
-        array_data[0]['上架时间_1'] = list_part[part_index].querySelectorAll('td')[11].innerText.split('\n')[0];
-        array_data[0]['上架时间_2'] = list_part[part_index].querySelectorAll('td')[11].innerText.split('\n')[1];
-        array_data[0]['配送方式'] = list_part[part_index].querySelectorAll('td')[12].innerText;
+        array_data[0]['标识'] = list_part[part_index].querySelectorAll('td')[1].innerText.replace(/\n/g, ';').trim();
+        array_data[0]['PASIN'] = list_part[part_index].querySelectorAll('td')[2].innerText.split('\n')[2].split('PASIN:')[1].trim();
+        array_data[0]['品牌'] = list_part[part_index].querySelectorAll('td')[2].innerText.split('\n')[3].trim();
+        array_data[0]['品牌链接'] = list_part[part_index].querySelector('td a.style-color').getAttribute('href').trim();
+        array_data[0]['大类BSR'] = list_part[part_index].querySelectorAll('td')[3].innerText.split('\n')[0].trim();
+        array_data[0]['BSR增长数'] = list_part[part_index].querySelectorAll('td')[3].innerText.split('\n')[1].split(' ')[0].trim();
+        array_data[0]['BSR增长率'] = list_part[part_index].querySelectorAll('td')[3].innerText.split('\n')[1].split(' ')[1].trim();
+        array_data[0]['父体月销量'] = list_part[part_index].querySelectorAll('td')[5].innerText.split('\n')[0].trim();
+        array_data[0]['父体月销量增长率'] = list_part[part_index].querySelectorAll('td')[5].innerText.split('\n')[1].trim();
+        array_data[0]['月销售额'] = list_part[part_index].querySelectorAll('td')[6].innerText.split('\n')[0].trim();
+        array_data[0]['月销售额增长率'] = list_part[part_index].querySelectorAll('td')[6].innerText.split('\n')[1].trim();
+        array_data[0]['价格'] = list_part[part_index].querySelectorAll('td')[7].innerText.split('\n')[0].trim();
+        array_data[0]['Q&A数'] = list_part[part_index].querySelectorAll('td')[7].innerText.split('\n')[1].trim();
+        array_data[0]['毛利率'] = list_part[part_index].querySelectorAll('td')[8].innerText.split('\n')[0].trim();
+        array_data[0]['FBA运费'] = list_part[part_index].querySelectorAll('td')[8].innerText.split('\n')[1].trim();
+        array_data[0]['评分数'] = list_part[part_index].querySelectorAll('td')[9].innerText.split('\n')[0].trim();
+        array_data[0]['月度留评率'] = list_part[part_index].querySelectorAll('td')[9].innerText.split('\n')[1].trim();
+        array_data[0]['评分'] = list_part[part_index].querySelectorAll('td')[10].innerText.split('\n')[0].trim();
+        array_data[0]['月内新增评分数'] = list_part[part_index].querySelectorAll('td')[10].innerText.split('\n')[1].trim();
+        array_data[0]['上架时间_1'] = list_part[part_index].querySelectorAll('td')[11].innerText.split('\n')[0].trim();
+        array_data[0]['上架时间_2'] = list_part[part_index].querySelectorAll('td')[11].innerText.split('\n')[1].trim();
+        array_data[0]['配送方式'] = list_part[part_index].querySelectorAll('td')[12].innerText.trim();
 
-        array_data[0]['类目路径'] = list_part[part_index+1].querySelector('span.text-primary').innerText.replace(/›/g, '->');
+        array_data[0]['类目路径'] = list_part[part_index+1].querySelector('span.text-primary').innerText.replace(/›/g, '->').trim();
 
         let list_div = list_part[part_index+2].querySelectorAll('div.text-secondary.mt-1');
-        array_data[0]['中文类目名'] = list_div[0].innerText.replace(/^中文类目名: /, '').replace(/›/g, '->');
-        array_data[0]['小类BSR'] = list_div[1].querySelector('span.badge.badge-primary.no-decoration.lighter ').innerText;
-        array_data[0]['小类目'] = list_div[1].querySelector('a.item-border-dotted1').innerText;
-        array_data[0]['小类目链接'] = list_div[1].querySelector('a.item-border-dotted1').getAttribute('href');
+        array_data[0]['中文类目名'] = list_div[0].innerText.replace(/^中文类目名: /, '').replace(/›/g, '->').trim();
+        array_data[0]['小类BSR'] = list_div[1].querySelector('span.badge.badge-primary.no-decoration.lighter ').innerText.trim();
+        array_data[0]['小类目'] = list_div[1].querySelector('a.item-border-dotted1').innerText.trim();
+        array_data[0]['小类目链接'] = list_div[1].querySelector('a.item-border-dotted1').getAttribute('href').trim();
         let offset = 0;
-        array_data[0]['重量_1'] = list_div[2].querySelectorAll('span')[0-offset].innerText.replace(/^重量: /, '');
+        array_data[0]['重量_1'] = list_div[2].querySelectorAll('span')[0-offset].innerText.replace(/^重量: /, '').trim();
         if(array_data[0]['重量_1'] == '--') {
             offset += 1;
             array_data[0]['重量_2'] = '--';
         }
         else {
-            array_data[0]['重量_2'] = list_div[2].querySelectorAll('span')[1-offset].getAttribute('data-tips');
+            array_data[0]['重量_2'] = list_div[2].querySelectorAll('span')[1-offset].getAttribute('data-tips').trim();
         }
-        array_data[0]['体积_1'] = list_div[2].querySelectorAll('span')[2-offset].innerText.replace(/^体积: /, '');
+        array_data[0]['体积_1'] = list_div[2].querySelectorAll('span')[2-offset].innerText.replace(/^体积: /, '').trim();
         if(array_data[0]['体积_1'] == '--') {
             offset += 1;
             array_data[0]['体积_2'] = '--';
         }
         else {
-            array_data[0]['体积_2'] = list_div[2].querySelectorAll('span')[3-offset].getAttribute('data-tips');
+            array_data[0]['体积_2'] = list_div[2].querySelectorAll('span')[3-offset].getAttribute('data-tips').trim();
         }
-        array_data[0]['LQS'] = list_div[2].querySelectorAll('span')[4-offset].innerText.replace(/^LQS: /, '');
-        array_data[0]['变体数'] = list_div[2].querySelectorAll('span')[5-offset].innerText.replace('变体数: ', '').replace(/\(.*?\)$/, '');
+        array_data[0]['LQS'] = list_div[2].querySelectorAll('span')[4-offset].innerText.replace(/^LQS: /, '').trim();
+        array_data[0]['变体数'] = list_div[2].querySelectorAll('span')[5-offset].innerText.replace('变体数: ', '').replace(/\(.*?\)$/, '').trim();
         if(array_data[0]['变体数'] == '无') {
             array_data[0]['SKU'] = '';
         }
         else {
-            array_data[0]['SKU'] = list_div[2].querySelectorAll('span')[5-offset].innerText.replace('变体数:', '').replace(/^.*?\(/, '').replace(/\)$/, '');
+            array_data[0]['SKU'] = list_div[2].querySelectorAll('span')[5-offset].innerText.replace('变体数:', '').replace(/^.*?\(/, '').replace(/\)$/, '').trim();
         }
-        array_data[0]['卖家数'] = list_div[2].querySelectorAll('span')[6-offset].innerText.replace('卖家: ', '');
+        array_data[0]['卖家数'] = list_div[2].querySelectorAll('span')[6-offset].innerText.replace('卖家: ', '').trim();
         if(list_div[2].querySelectorAll('span').length > 8 - offset) {
-            array_data[0]['BuyBox卖家'] = list_div[2].querySelectorAll('span')[8-offset].innerText.replace('BuyBox卖家：', '');
+            array_data[0]['BuyBox卖家'] = list_div[2].querySelectorAll('span')[8-offset].innerText.replace('BuyBox卖家：', '').trim();
             if(list_div[2].querySelectorAll('span')[8-offset].querySelector('a') == null) {
                 array_data[0]['BuyBox卖家链接'] = '';
             }
             else {
-                array_data[0]['BuyBox卖家链接'] = list_div[2].querySelectorAll('span')[8-offset].querySelector('a').getAttribute('href');
+                array_data[0]['BuyBox卖家链接'] = list_div[2].querySelectorAll('span')[8-offset].querySelector('a').getAttribute('href').trim();
             }
         }
         else {
-            array_data[0]['BuyBox卖家'] = '';
+            array_data[0]['BuyBox卖家'] = '';s
             array_data[0]['BuyBox卖家链接'] = '';
         }
         console.log('Crawler Log 2: Array');

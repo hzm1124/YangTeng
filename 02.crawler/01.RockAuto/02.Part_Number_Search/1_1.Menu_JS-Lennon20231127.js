@@ -22,9 +22,9 @@
         let list_part = document.querySelectorAll('a.navlabellink.nvoffset.nnormal');
         for(let i=0; i<list_part.length; i++) {
             array_data[i] = {};
-            array_data[i]['Url'] = 'https://www.rockauto.com' + list_part[i].getAttribute('href');
+            array_data[i]['Url'] = 'https://www.rockauto.com' + list_part[i].getAttribute('href').trim();
             array_data[i]['No.'] = i + 1;
-            array_data[i]['Part_Number'] = list_part[i].innerText;
+            array_data[i]['Part_Number'] = list_part[i].innerText.trim();
         }
         console.log('Crawler Log 2: Array');
 

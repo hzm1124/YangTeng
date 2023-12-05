@@ -23,7 +23,7 @@
         for(let i=0; i<list_part.length; i++) {
             array_data[i] = {};
             array_data[i]['No.'] = i + 1;
-            array_data[i]['Url'] = 'https://www.amazon.com' + list_part[i].querySelector('div>a').getAttribute('href');
+            array_data[i]['Url'] = 'https://www.amazon.com' + list_part[i].querySelector('div>a').getAttribute('href').trim();
         }
         console.log('Crawler Log 2: Array');
 
