@@ -152,8 +152,8 @@
   |14. [Rotomaster](https://rotomaster.com/search.php?search_query=Turbocharger&section=product&_bc_fsnf=1&Part+Type=Turbocharger)|1. `VIEW AS` -> `3`<br />2. `SHOW` -> `30 items per page`<br />3. `SORT BY` -> `A to Z`|***`Url`***|`Title`、`Price`、***`Url`***、`Src`|Selenium|
   |15. [TurbochargerPros](https://www.turbochargerpros.com/search_result.asp?w=garrett#/filter:brand:Garrett)||***`Url`***|`Title`、`Price`、`Vehicle`、***`Url`***、`Src`|Selenium|
   |16. [ATPAutoteile](https://www.atp-autoteile.de/de/search/n-243/o-1/b-1-592/bremsbelaege-bestprice-atec)|||||
-  |17. [Mevotech](https://www.mevotech.com/part/CMK100003)|||||
-  |18. [Cub](https://www.cubelec.com.tw/switch-parts-en.php?ID=2)|账号：CUBTPMS<br />密码：CUBTPMS|`No.`、`Part_Number`、`Name`、`OE`、`Vehicle`、`Pic`、`Date`、`Url`、`Src`、|||
+  |17. [Mevotech](https://www.mevotech.com/part/CMK100003)|从`RockAuto`爬下来`Part_Number`，再去`Mevotech`官网获取`车型`和`位置`信息|***`Part_Number`***|***`Part_Number`***、`Vehicle`|requests|
+  |18. [Cub](https://www.cubelec.com.tw/switch-parts-en.php?ID=2)|账号：CUBTPMS<br />密码：CUBTPMS|`No.`、`Part_Number`、`Name`、`OE`、`Vehicle`、`Pic`、`Date`、`Url`、`Src|||
 
 ## 4. 附录
 1. [selenium常用配置](https://blog.csdn.net/m0_56676945/article/details/129215165)
