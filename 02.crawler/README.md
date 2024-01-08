@@ -159,7 +159,7 @@
   |21. [SpectrePerformance](https://www.spectreperformance.com/cross-reference/stp)||1. `No.`、***`Url_1`***<br />2. ***`Url_1`***、***`Url`***、`$_No.`|`$_序号`、`Part_Number`、`Title`、`Information`、`Vehicle`、`分列OE`、`$_Pic`、***`Url`***、`Src`、`其他Specifications`|Tomcat|
   |22. [CentricParts](https://www.centricparts.com/partFinder/page/index/?p=1&product_list_limit=25&product_list_order=part_number)|1. `Sort By` -> `Part Number`<br />2. `Show` -> `25 per page`|`Menu`、***`Url`***、***`Sku`***、`Src`|`$_序号`、***`Sku`***、`Status`、`Title`、`Summary`、`Vehicle`、`$_Pic`、***`Url`***、`$_Src`、`其他Attribute`、`其他Details`|requests|
   |23. [KaKaPart](http://www.kakapart.com/)|从`CentricParts`爬下来`Sku`，再去`KaKaPart`官网获取`分列OE`||`Sku`、`分列OE`|requests|
-  |24. [Agility](https://apdi.autocaredata.com/)|从`RockAuto`爬下来`Part_Number`，再去`Agility`官网获取`Vehicle`和`Src`||`Part_Number`、`Vehicle`|requests|
+  |24. [Agility](https://apdi.autocaredata.com/)|从`RockAuto`爬下来`Part_Number`，再去`Agility`官网获取`Vehicle`和`Src`||1. `Part_Number`、`Vehicle`<br />2. `Pic`|requests|
 
 ## 4. 附录
 1. [selenium常用配置](https://blog.csdn.net/m0_56676945/article/details/129215165)
