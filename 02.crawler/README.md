@@ -150,7 +150,7 @@
   |12. [AutoteileDirekt](https://www.autoteiledirekt.de/suche.html?keyword=Radlagersatz%20SKF&brand%5B0%5D=50&pg=122)||***`Url`***、`No.`|1. `$_序号`、`Title`、`Subtitle`、`Price`、`Kit`、`Vehicle`、`OE`、`$_Pic`、***`Url`***、`Src`、`其他Desc`、`其他TecDoc`<br />2. `Pic`|Tomcat|
   |13. [1AAuto](https://www.1aauto.com/search?q=brake+calipers)|`A-Z`|`Title`、***`Url`***、`Brand`|1. ***`Url`***、***`vehicle_url`***、`Src`<br />2. ***`vehicle_url`***、`OE`、`Vehicle`|requests|
   |14. [Rotomaster](https://rotomaster.com/search.php?search_query=Turbocharger&section=product&_bc_fsnf=1&Part+Type=Turbocharger)|1. `VIEW AS` -> `3`<br />2. `SHOW` -> `30 items per page`<br />3. `SORT BY` -> `A to Z`|***`Url`***|`Title`、`Price`、***`Url`***、`Src`|Selenium|
-  |15. [TurbochargerPros](https://www.turbochargerpros.com/search_result.asp?w=garrett#/filter:brand:Garrett)||***`Url`***|`Title`、`Price`、`Vehicle`、***`Url`***、`Src`|Selenium|
+  |15. [TurbochargerPros](https://www.turbochargerpros.com/search_result.asp?w=garrett#/filter:brand:Garrett)||***`Url`***、`No.`|`$_序号`、`Title`、`Vehicle`、`$_Pic`、***`Url`***、`Src`、`其他Specifications`|requests|
   |16. [ATPAutoteile](https://www.atp-autoteile.de/de/search/n-243/o-1/b-1-592/bremsbelaege-bestprice-atec)|`Sortieren nach` -> `Preis absteigend`|`Menu`、***`Url`***、`Kit`|`$_序号`、`Title`、`OE`、`$_Kit`、`$_Pic`、***`Url`***、`Src`、`其他No.`|requests|
   |17. [Mevotech](https://www.mevotech.com/part/CMK100003)|从`RockAuto`爬下来`Part_Number`，再去`Mevotech`官网获取`Vehicle`||`Part_Number`、`Vehicle`|requests|
   |18. [Cub](https://www.cubelec.com.tw/switch-parts-en.php?ID=2)|账号：CUBTPMS<br />密码：CUBTPMS|`No.`、`Part_Number`、`Name`、`OE`、`Vehicle`、`Pic`、`Date`、`Url`、`Src`|||
