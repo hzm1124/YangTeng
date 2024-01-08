@@ -36,3 +36,6 @@ list_user_agent = ['Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/
 
 def get_User_Agent_Requests():
     return {'User-Agent': random.choice(list_user_agent)}
+
+def get_User_Agent_Selenium():
+    return 'user-agent=' + random.choice(list_user_agent)
