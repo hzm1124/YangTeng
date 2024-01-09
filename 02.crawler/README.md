@@ -1,4 +1,4 @@
-# 爬虫任务 - 2023.12.01（临时指北）
+# 爬虫任务 - 2024.01.09（临时指北）
 ## 1. 基础工具
 ### 1.1. Python
 #### 1.1.1. 简介
@@ -149,7 +149,7 @@
   |11. [Amazon](https://www.amazon.com/stores/page/0195C224-966C-45B3-8971-DF02D7217AEC/search?ingress=2&visitId=65dccac2-1687-4d2f-962e-024be8560dcb&ref_=ast_bln&terms=blower)|`Sort by:` -> `Price: High to Low`|***`Url`***、`No.`|1. `$_序号`、***`ASIN`***、`Title`、`Price`、`About`、`$_Pic`、`Url`、`Src`、`其他productDetails`<br />2. ***`ASIN`***、`标识`、`PASIN`、`品牌`、`品牌链接`、`大类BSR`、`BSR增长数`、`BSR增长率`、`父体月销量`、`父体月销量增长率`、`月销售额`、`月销售额增长率`、`价格`、`Q&A数`、`毛利率`、`FBA运费`、`评分数`、`月度留评率`、`评分`、`月内新增评分数`、`上架时间_1`、`上架时间_2`、`配送方式`、`类目路径`、`中文类目名`、`小类BSR`、`小类目`、`小类目链接`、`重量_1`、`重量_2`、`体积_1`、`体积_2`、`LQS`、`变体数`、`SKU`、`卖家数`、`BuyBox卖家`、`BuyBox卖家链接`|Tomcat|
   |12. [AutoteileDirekt](https://www.autoteiledirekt.de/suche.html?keyword=Radlagersatz%20SKF&brand%5B0%5D=50&pg=122)||***`Url`***、`No.`|1. `$_序号`、`Title`、`Subtitle`、`Price`、`Kit`、`Vehicle`、`OE`、`$_Pic`、***`Url`***、`Src`、`其他Desc`、`其他TecDoc`<br />2. `Pic`|Tomcat|
   |13. [1AAuto](https://www.1aauto.com/search?q=brake+calipers)|`A-Z`|`Title`、***`Url`***、`Brand`|1. ***`Url`***、***`vehicle_url`***、`Src`<br />2. ***`vehicle_url`***、`OE`、`Vehicle`|requests|
-  |14. [Rotomaster](https://rotomaster.com/search.php?search_query=Turbocharger&section=product&_bc_fsnf=1&Part+Type=Turbocharger)|1. `VIEW AS` -> `3`<br />2. `SHOW` -> `30 items per page`<br />3. `SORT BY` -> `A to Z`|***`Url`***|`Title`、`Price`、***`Url`***、`Src`|Selenium|
+  |14. [Rotomaster](https://rotomaster.com/search.php?search_query=Turbocharger&section=product&_bc_fsnf=1&Part+Type=Turbocharger)|1. `VIEW AS` -> `3`<br />2. `SHOW` -> `30 items per page`<br />3. `SORT BY` -> `A to Z`|`Menu`、***`Url`***|`$_序号`、`Title`、`$_Pic`、***`Url`***、`Src`、`其他Attribute`、`其他Specifications`|requests|
   |15. [TurbochargerPros](https://www.turbochargerpros.com/search_result.asp?w=garrett#/filter:brand:Garrett)||***`Url`***、`No.`|`$_序号`、`Title`、`Vehicle`、`$_Pic`、***`Url`***、`Src`、`其他Specifications`|requests|
   |16. [ATPAutoteile](https://www.atp-autoteile.de/de/search/n-243/o-1/b-1-592/bremsbelaege-bestprice-atec)|`Sortieren nach` -> `Preis absteigend`|`Menu`、***`Url`***、`Kit`|`$_序号`、`Title`、`OE`、`$_Kit`、`$_Pic`、***`Url`***、`Src`、`其他No.`|requests|
   |17. [Mevotech](https://www.mevotech.com/part/CMK100003)|从`RockAuto`爬下来`Part_Number`，再去`Mevotech`官网获取`Vehicle`||`Part_Number`、`Vehicle`|requests|
