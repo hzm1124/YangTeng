@@ -59,7 +59,7 @@
 
 ## 3. 爬虫入门
 ### 3.1. 目录获取
-1. JavaScript：`文本` -> `JSON (JavaScript Object Notation)` -> `Blob (Binary Large Object)`
+1. JavaScript：`Array` -> `JSON (JavaScript Object Notation)` -> `Blob (Binary Large Object)`
 2. Python：`文本` -> `JSON` -> `DataFrame`
 
 ### 3.2. 内容爬取
