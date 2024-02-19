@@ -3,8 +3,8 @@
 ### 1.1. Python
 #### 1.1.1. 简介
 - [Python](https://python.org)
-- [Python教程_1](https://www.liaoxuefeng.com/wiki/1016959663602400/1016959856222624)
-- [Python教程_2](https://www.runoob.com/python3/python3-tutorial.html)
+- [Python教程_1](https://www.runoob.com/python3/python3-tutorial.html)
+- [Python教程_2](https://www.liaoxuefeng.com/wiki/1016959663602400/1016959856222624)
 - [路径长度error](https://blog.csdn.net/weixin_43658159/article/details/127454046)
 
 #### 1.1.2. Pip换源
@@ -47,13 +47,15 @@
 - [HTML教程](https://www.runoob.com/html/html-tutorial.html)
 
 #### 1.3.2. Tomcat
-- 待补充，暂时先自行百度
+- [参考](https://www.runoob.com/jsp/eclipse-jsp.html)
 
 ## 2. 知识补充
 - [Regular Expression（正则表达式）](https://github.com/ziishaned/learn-regex)
 - [XPath（XML Path Language）](https://www.runoob.com/xpath/xpath-tutorial.html)
-- 协程[1](https://blog.csdn.net/qq_45476428/article/details/108782593)、[2](https://blog.csdn.net/freeking101/article/details/53097420)
-- [Postman](https://www.postman.com/downloads)（[教程](https://www.bilibili.com/video/BV1hP4y177gS)）
+- [协程教程_1](https://blog.csdn.net/qq_45476428/article/details/108782593)
+- [协程教程_2](https://blog.csdn.net/freeking101/article/details/53097420)
+- [Postman官网](https://www.postman.com/downloads)
+- [Postman教程](https://www.bilibili.com/video/BV1hP4y177gS)
 
 ## 3. 爬虫入门
 ### 3.1. 目录获取
@@ -61,8 +63,8 @@
 2. Python：`文本` -> `JSON` -> `DataFrame`
 
 ### 3.2. 内容爬取
-- [b站](https://www.bilibili.com/video/BV1bL4y1V7q1)
-- [书](https://www.ituring.com.cn/book/2847)
+- [b站教程](https://www.bilibili.com/video/BV1bL4y1V7q1)
+- [参考书籍](https://www.ituring.com.cn/book/2847)
 
 ### 3.3. 爬虫提速
 - [多进程 vs 多线程 vs 协程](https://blog.csdn.net/weixin_51656605/article/details/113694044)
@@ -116,14 +118,14 @@
   |32.|`Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36`|
   |33.|`Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.20 Safari/537.36`|
 
-#### 3.5.3. Referer
+#### 3.5.3. ~~Referer~~
 - |爬取方法|代码示例|
   |:-:|:-|
   |requests|`headers = {'Referer': 'Referer'}`<br /><br />`requests.get(url, headers=headers)`|
 
 #### 3.5.4. ~~Cookie~~
 
-#### 3.5.5. 代理池
+#### 3.5.5. 网络代理
 - [快代理](https://www.kuaidaili.com/) -> 隧道代理
 - |爬取方法|代码示例|
   |:-:|:-|
@@ -142,7 +144,7 @@
   |04. [Cardone](https://www.cardone.com/motors/wiper-and-washer/windshield-wiper-motor/?limit=96&sort=alphaasc)|1. `Show` -> `96`<br />2. `Sort By:` -> `A to Z`|`Menu`、***`Part_Number`***、`Url`、`Application_Summary`|`$_序号`、`Part_Type`、***`Part_Number`***、`Title`、`Application_Summary`、`Vehicle`、`OE`、`$_Pic`、`$_Url`、`Src`、`其他General`、`其他Technical`|Tomcat|
   |05. [Standard](https://www.standardbrand.com/en/ecatalog?part=Accelerator%20Pedal%20Sensor%20(APS)&type=p)|1. 在官网找出[`iframe`](https://ecatalog.smpcorp.com/V2/STD/#/partsearch/searchText/Accelerator%20Pedal%20Sensor%20(APS)?type=p)：`id="eCatFrame"`，设置`View 96`、`Part  (A-Z)`<br />2. 在`iframe`找出[`目录api`](https://ecatalog.smpcorp.com/V2/STD/api/part/partsearch?filterType=n&searchType=p&imageSize=80&limit=1&sort=3&catFilter=-All-&yearFilter=-All-&makeFilter=-All-&modelFilter=-All-&engineFilter=-All-&attrCodeFilter=-All-&attrValueFilter=-All-&plkEngineMakeFilter=-All-&plkEngineModelFilter=-All-&plkEngineDispFilter=-All-&filter=Accelerator%20Pedal%20Sensor%20(APS)&start=0)：`https://ecatalog.smpcorp.com/V2/STD/api/part/partsearch?filterType=n&searchType=p&imageSize=80&limit=1&sort=3&catFilter=-All-&yearFilter=-All-&makeFilter=-All-&modelFilter=-All-&engineFilter=-All-&attrCodeFilter=-All-&attrValueFilter=-All-&plkEngineMakeFilter=-All-&plkEngineModelFilter=-All-&plkEngineDispFilter=-All-&filter=` + `Filter` + `&start=` + `Start`<br />3. 在详情页找出[`详情api`](https://ecatalog.smpcorp.com/V2/STD/api/part/partselect?func=PART&vid=&part=APK100)：`https://ecatalog.smpcorp.com/V2/STD/api/part/partselect?func=PART&vid=&part=` + `Part_Number`<br />4. 在详情页找出[`图片api`](https://ecatalog.smpcorp.com/V2/STD/api/image/getallimages?zoomFactor_sm=75&zoomFactor_md=360&zoomFactor_bg=960&partNum=APK100&brand=STD)：`https://ecatalog.smpcorp.com/V2/STD/api/image/getallimages?zoomFactor_sm=75&zoomFactor_md=360&zoomFactor_bg=960&partNum=` + `Part_Number` + `&brand=` + `Brand`|***`Part_Number`***、`No.`|1. `$_序号`、***`Part_Number`***、`Part_Type`、`Part_Type_Long`、`Brand`、`Pop`、`Per_Car`、`Vehicle`、`$_Pic`、`Url`、`$_Src`、`其他partSpecs`<br />2. ***`Part_Number`***、`Src`|requests|
   |06. [CARiD](https://www.carid.com/search/NGK+Laser+Iridium+Spark+Plugs/code-ccb8ce4eee843e4eb433d7a9a8931e0d/queryId-420738fe115bb7ad7af949d2688d7e1a/?redirect=1/sort-price-desc)|`Sort by` -> `Price High to Low`|`Menu`、***`Url`***、`Sku`、`Title`、`Src`|`$_序号`、`$_Sku`、`$_Title`、`Vehicle`、`$_Pic`、***`Url`***、`$_Src`、`其他Descriptions`、`其他Specifications`|requests|
-  |07. [Summit](https://www.summitracing.com/search?PageSize=100&SortBy=SKU&SortOrder=Ascending&keyword=LS%20Oil%20Pan)|1. `Records Per Page` -> `100 Records Per Page`<br />2. `Sort By` -> `Part Number (a-z)`|`Menu`、***`Url`***|`$_序号`、`Part_Number`、`Title`、`Description`、`$_Pic`、***`Url`***、`Src`、`其他Overview`|Selenium|
+  |07. [Summit](https://www.summitracing.com/search?PageSize=100&SortBy=SKU&SortOrder=Ascending&keyword=LS%20Oil%20Pan)|1. `Records Per Page` -> `100 Records Per Page`<br />2. `Sort By` -> `Part Number (a-z)`|`Menu`、***`Url`***|`$_序号`、`Part_Number`、`Title`、`Description`、`$_Pic`、***`Url`***、`Src`、`其他Overview`|selenium|
   |08. [SpectraPremium](https://ecat.spectrapremium.com/en/parts?line=oil_pans&year=&make=&model=&submodel=&universal=0&hide-exclusives-canadian-market=0&sort=part-number&limit=50)|1. `Sort by part #`<br />2. `Number of results` -> `50`|`Menu`、***`Url`***、`Type`|1. `$_序号`、`Part_Number`、`$_Type`、`$_Vehicle`、***`Url`***、`Src`、`其他Part_Specifications`<br />2. ***`Url`***、`Vehicle`|requests|
   |09. [Denniskirk](https://www.denniskirk.com/atv/cv-axle/brandasc.srt/100.ipp)|1. `Results per Page` -> `100`<br />2. `Sort by` -> `Brand: A-Z`|`Title`、`Brand`、`Price`、***`Url`***|***`Url`***、`OE`、`Vehicle`、`Src`、`其他Specifications`|Tomcat|
   |10. [FourSeasons](https://www.4s.com/en/ecatalog?part=blower&type=p&search=s)|1. 在官网找出[`iframe`](https://ecatalog.smpcorp.com/v2/fs/#/partsearch/searchText/blower?type=p&search=s)：`title="eCatFrame"`，设置`View 96`、`Part  (A-Z)`<br />2. 在详情页找出[`详情api`](https://ecatalog.smpcorp.com/v2/fs/api/part/partselect?part=35001&func=PART&vid=)：`https://ecatalog.smpcorp.com/v2/fs/api/part/partselect?part=` + `Part_Number` + `&func=PART`<br />4. 在详情页找出[`图片api`](https://ecatalog.smpcorp.com/v2/fs/api/image/getallimages?partNum=35001&brand=FS&zoomFactor_sm=75&zoomFactor_md=360&zoomFactor_bg=960)：`https://ecatalog.smpcorp.com/v2/fs/api/image/getallimages?partNum=` + `Part_Number` + `&brand=` + `Brand` + `&zoomFactor_sm=75&zoomFactor_md=360&zoomFactor_bg=960`|***`Part_Number`***、`Url`|***`Part_Number`***、`POP`、`Per_Car`、`Part_Type`、`Vehicle`、`Src`、`其他partSpecs`|requests|
@@ -160,12 +162,13 @@
   |22. [CentricParts](https://www.centricparts.com/partFinder/page/index/?p=1&product_list_limit=25&product_list_order=part_number)|1. `Sort By` -> `Part Number`<br />2. `Show` -> `25 per page`|`Menu`、***`Url`***、***`Sku`***、`Src`|`$_序号`、***`Sku`***、`Status`、`Title`、`Summary`、`Vehicle`、`$_Pic`、***`Url`***、`$_Src`、`其他Attribute`、`其他Details`|requests|
   |23. [KaKaPart](http://www.kakapart.com/)|从`CentricParts`爬下来`Sku`，再去`KaKaPart`官网获取`分列OE`||`Sku`、`分列OE`|requests|
   |24. [Agility](https://apdi.autocaredata.com/)|从`RockAuto`爬下来`Part_Number`，再去`Agility`官网获取`Vehicle`和`Src`||1. `Part_Number`、`Vehicle`<br />2. `Pic`|requests|
+  |25. [Gates](https://www.gates.com/gb/en/power-transmission/power-transmission-kits/micro-v-kits.html)|1. 选择特定`Item`，点击`VIEW ALL PARTS`<br />2. ` Product #`升序<br />3. 点击翻页按钮找出目录api：`https://www.gates.com/bin/listing/products/variant?draw=`+ Draw + `&columns%5B0%5D%5Bdata%5D=&columns%5B0%5D%5Bname%5D=partnumberauto_en_gb_string&columns%5B0%5D%5Bsearchable%5D=true&columns%5B0%5D%5Borderable%5D=true&columns%5B0%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B0%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B1%5D%5Bdata%5D=&columns%5B1%5D%5Bname%5D=productnumber_en_gb_string&columns%5B1%5D%5Bsearchable%5D=true&columns%5B1%5D%5Borderable%5D=true&columns%5B1%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B1%5D%5Bsearch%5D%5Bregex%5D=false&columns%5B2%5D%5Bdata%5D=name_text_en_gb&columns%5B2%5D%5Bname%5D=name_text_en_gb&columns%5B2%5D%5Bsearchable%5D=true&columns%5B2%5D%5Borderable%5D=true&columns%5B2%5D%5Bsearch%5D%5Bvalue%5D=&columns%5B2%5D%5Bsearch%5D%5Bregex%5D=false&order%5B0%5D%5Bcolumn%5D=1&order%5B0%5D%5Bdir%5D=asc&start=10&length=10&search%5Bvalue%5D=&search%5Bregex%5D=false&id=` + Id + `&lang=en_gb&country=gb&fieldList=code_string%2Cpartnumberauto_en_gb_string%2Cpartnumberind_string%2Cproductnumber_en_gb_string%2Cname_text_en_gb&filters=&_=` + _|`Page`、***`Url`***、`No.`|`$_序号`、***`Url`***、`Kit_No.`、`其他Specifications`、`其他Kit信息`|requests|
 
 ## 4. 附录
-1. [selenium常用配置](https://blog.csdn.net/m0_56676945/article/details/129215165)
-2. [selenium配置大全](https://peter.sh/experiments/chromium-command-line-switches)
+1. [Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
+2. [JSON解析](https://www.json.cn)
 3. [selenium等待机制](https://blog.csdn.net/biggbang/article/details/121511531)
-4. [eBay网站开发者API](https://developer.ebay.com/devzone/shopping/docs/CallRef/GetSingleItem.html)
-5. [正则表达式测试网站](https://www.whatsmyip.org/regular-expression-tester)
-6. [JSON解析](https://www.json.cn)
-7. [Git教程](https://www.liaoxuefeng.com/wiki/896043488029600)
+4. [正则表达式测试网站](https://www.whatsmyip.org/regular-expression-tester)
+5. [selenium常用配置](https://blog.csdn.net/m0_56676945/article/details/129215165)
+6. [selenium配置大全](https://peter.sh/experiments/chromium-command-line-switches)
+7. [~~eBay网站开发者API~~](https://developer.ebay.com/devzone/shopping/docs/CallRef/GetSingleItem.html)
