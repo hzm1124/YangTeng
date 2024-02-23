@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Auveco爬虫-Menu
 // @namespace    https://github.com/lennon1124/YangTeng
-// @version      2023.12.11
+// @version      2024.02.23
 // @description  Crawler
 // @author       Lennon
 // @match        *://www.auveco.com/*
@@ -22,8 +22,8 @@
         let list_part = document.querySelectorAll('li.product-title>a');
         for(let i=0; i<list_part.length; i++) {
             array_data[i] = {};
-            array_data[i]['No.'] = i + 1;
             array_data[i]['Url'] = 'https://www.auveco.com' + list_part[i].getAttribute('href').trim();
+            array_data[i]['No.'] = i + 1;
         }
         console.log('Crawler Log 2: Array');
 
