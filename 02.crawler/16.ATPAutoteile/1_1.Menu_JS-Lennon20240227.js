@@ -13,7 +13,10 @@ for(let i=0; i<list_url.length; i++) {
             blob_a.download = String(i+1) + '.txt';
             blob_a.click();
             URL.revokeObjectURL(blob_url);
-            console.log(i);
+            console.log(i+1);
+        }
+        else {
+            xhr.send();
         }
     };
     xhr.send();
