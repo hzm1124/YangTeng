@@ -14,10 +14,7 @@ for(let i=0; i<list_url.length; i++) {
             blob_a.download = list_no[i] + '.txt';
             blob_a.click();
             URL.revokeObjectURL(blob_url);
-            console.log(i+1);
-        }
-        else {
-            xhr.send();
+            console.log(list_no[i]);
         }
     };
     xhr.send();
