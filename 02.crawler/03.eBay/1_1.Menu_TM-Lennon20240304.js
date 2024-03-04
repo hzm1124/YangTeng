@@ -1,11 +1,13 @@
 // ==UserScript==
-// @name         Dorman爬虫-Menu
+// @name         eBay爬虫-Search
 // @namespace    https://github.com/lennon1124/YangTeng
 // @version      2024.03.04
 // @description  Crawler
 // @author       Lennon
-// @match        *://www.dormanproducts.com/gsearch.aspx?*
-// @icon         https://www.dormanproducts.com/favicon.ico
+// @match        *://www.ebay.com/*
+// @match        *://www.ebay.de/*
+// @match        *://www.ebay.com.au/*
+// @icon         https://www.ebay.com/favicon.ico
 // @grant        none
 // ==/UserScript==
 
@@ -13,15 +15,16 @@
     'use strict';
 
     window.onload = function() {
-        let param_amount = 393;
-
         // parameter
         let list_param = window.location.href.split('?')[1].split('&');
-        let param_start;
+        let param__pgn;
         for(let i=0; i<list_param.length; i++) {
-            if(list_param[i].startsWith('start=')) {
-                param_start = parseInt(list_param[i].split('start=')[1]);
+            if(list_param[i].startsWith('_pgn=')) {
+                param__pgn = parseInt(list_param[i].split('_pgn=')[1]);
             }
+        }
+        if(param__pgn == undefined) {
+            param__pgn = 1;
         }
 
         window.scrollTo(0, document.body.scrollHeight);
@@ -30,12 +33,17 @@
 
         // array
         let array_data = new Array();
-        let list_part = document.querySelectorAll('div.searchItems-img>a');
+        let list_part = document.querySelectorAll('span.s-item__item-id.s-item__itemID');
         for(let i=0; i<list_part.length; i++) {
             array_data[i] = {};
-            array_data[i]['Page'] = param_start / 100 + 1;
+            array_data[i]['Page'] = param__pgn;
             array_data[i]['No.'] = i + 1;
-            array_data[i]['Url'] = 'https://www.dormanproducts.com/' + list_part[i].getAttribute('href').trim();
+            if(window.location.href.indexOf('://www.ebay.com/') != -1) {
+                array_data[i]['Item_Number'] = list_part[i].innerText.replace('Item:', '').trim();
+            }
+            else if(window.location.href.indexOf('://www.ebay.de/') != -1) {
+                array_data[i]['Item_Number'] = list_part[i].innerText.replace('Artikel:', '').trim();
+            }
         }
         console.log('Crawler Log 2: Array');
 
@@ -48,15 +56,13 @@
         let blob_url = URL.createObjectURL(blob_data);
         let blob_a = document.createElement('a');
         blob_a.href = blob_url;
-        blob_a.download = String(param_start / 100 + 1) + '.txt';
+        blob_a.download = String(param__pgn) + '.txt';
         blob_a.click();
         URL.revokeObjectURL(blob_url);
         console.log('Crawler Log 4: End');
         console.log('= = = = = = = = = = = = = = =\n\n\n');
 
         // next
-        if(param_amount > param_start+100) {
-            window.location.href = window.location.href.replace('&start='+String(param_start), '&start='+String(param_start+100));
-        }
+        document.querySelector('a.pagination__next.icon-link').click();
     }
 })();
