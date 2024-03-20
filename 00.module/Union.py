@@ -11,8 +11,13 @@ def get_Union_File(path):
     if '0.null.txt' in list_file:
         list_file.remove('0.null.txt')
 
+    list_file.sort()
+
     for file in tqdm(list_file, desc='进度', ncols=77):
-        df = pd.concat([df, pd.read_excel(path + '/' + file)], ignore_index=False)
+        df_temp = pd.read_excel(path + '/' + file,
+                                header=0,
+                                dtype=str).fillna('')
+        df = pd.concat([df, df_temp], ignore_index=False)
 
     df = df.drop_duplicates(ignore_index=True)
 
