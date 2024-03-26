@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         eBay爬虫-Search
 // @namespace    https://github.com/lennon1124/YangTeng
-// @version      2024.03.20
+// @version      2024.03.25
 // @description  Crawler
 // @author       Lennon
 // @match        *://www.ebay.com/*
@@ -18,14 +18,11 @@
     window.onload = function() {
         // parameter
         let list_param = window.location.href.split('?')[1].split('&');
-        let param__pgn;
+        let param__pgn = 1;
         for(let i=0; i<list_param.length; i++) {
             if(list_param[i].startsWith('_pgn=')) {
                 param__pgn = parseInt(list_param[i].split('_pgn=')[1]);
             }
-        }
-        if(param__pgn == undefined) {
-            param__pgn = 1;
         }
 
         window.scrollTo(0, document.body.scrollHeight);
