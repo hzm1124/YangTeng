@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         SpectrePerformance爬虫-Menu
+// @name         SpectrePerformance爬虫爬虫-Menu_1
 // @namespace    https://github.com/lennon1124/YangTeng
-// @version      2023.12.27
+// @version      2024.03.31
 // @description  Crawler
 // @author       Lennon
 // @match        *://www.spectreperformance.com/*
@@ -19,11 +19,12 @@
 
         // array
         let array_data = new Array();
-        let list_part = document.querySelectorAll('li[class="column-list__item"]');
+        let list_part = document.querySelectorAll('li[class="column-list__item"]>a');
         for(let i=0; i<list_part.length; i++) {
             array_data[i] = {};
             array_data[i]['No.'] = i + 1;
-            array_data[i]['Url_1'] = list_part[i].querySelector('a').getAttribute('href').trim();
+            array_data[i]['Name'] = list_part[i].innerText.trim();
+            array_data[i]['Url_1'] = list_part[i].getAttribute('href').trim();
         }
         console.log('Crawler Log 2: Array');
 
@@ -36,7 +37,7 @@
         let blob_url = URL.createObjectURL(blob_data);
         let blob_a = document.createElement('a');
         blob_a.href = blob_url;
-        blob_a.download = 'menu.txt';
+        blob_a.download = 'menu_1.txt';
         blob_a.click();
         URL.revokeObjectURL(blob_url);
         console.log('Crawler Log 4: End');
