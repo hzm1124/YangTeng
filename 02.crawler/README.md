@@ -9,10 +9,10 @@
 #### 1.1.2. Pip换源
 - 临时换源：`-i`参数  
     > 清华：`pip install `<ins>`'package'`</ins>` -i https://pypi.tuna.tsinghua.edu.cn/simple`  
-    > 阿里云：`pip install `<u>`'package'`</u>` -i http://mirrors.aliyun.com/pypi/simple`  
-    > 中科大：`pip install `<u>`'package'`</u>` -i http://pypi.mirrors.ustc.edu.cn/simple`  
-    > 华为：`pip install `<u>`'package'`</u>` -i https://repo.huaweicloud.com/repository/pypi/simple`  
-    > 腾讯：`pip install `<u>`'package'`</u>` -i http://mirrors.cloud.tencent.com/pypi/simple`
+    > 阿里云：`pip install `<ins>`'package'`</ins>` -i http://mirrors.aliyun.com/pypi/simple`  
+    > 中科大：`pip install `<ins>`'package'`</ins>` -i http://pypi.mirrors.ustc.edu.cn/simple`  
+    > 华为：`pip install `<ins>`'package'`</ins>` -i https://repo.huaweicloud.com/repository/pypi/simple`  
+    > 腾讯：`pip install `<ins>`'package'`</ins>` -i http://mirrors.cloud.tencent.com/pypi/simple`
 - 永久换源：自行百度
 
 #### 1.1.3. Library包
@@ -29,8 +29,8 @@
   |selenium|`pip install selenium`|[官网](https://www.selenium.dev/zh-cn/documentation/webdriver/getting_started)<br />[chromedriver](https://chromedriver.chromium.org/home)|
   |gevent|`pip install gevent`||
   |tqdm|`pip install tqdm`|[官网](https://pypi.org/project/tqdm/)|
-- 查看可安装版本：`pip index versions `<u>`'package'`</u>
-- 升级：`pip install `<u>`'package'`</u>` --upgrade`
+- 查看可安装版本：`pip index versions `<ins>`'package'`</ins>
+- 升级：`pip install `<ins>`'package'`</ins>` --upgrade`
 
 ### 1.2. JavaScript
 #### 1.2.1. 简介
@@ -69,8 +69,8 @@
 #### 3.4.2. [`User-Agent`](https://sspai.com/post/75349)
 - |爬取方法|代码示例|
   |:-:|:-|
-  |requests|`headers = {'User-Agent': `<u>`'UA'`</u>`}`<br /><br />`requests.get(url, headers=headers)`|
-  |selenium|`from selenium.webdriver import ChromeOptions`<br /><br />`option = ChromeOptions()`<br />`option.add_argument('user-agent=`<u>`UA`</u>`')`<br /><br />`from selenium.webdriver import Chrome`<br />`from selenium.webdriver.chrome.service import Service`<br /><br />`browser = Chrome(service=Service(`<u>`'chromedriver'`</u>`), options=option)`|
+  |requests|`headers = {'User-Agent': `<ins>`'UA'`</ins>`}`<br /><br />`requests.get(url, headers=headers)`|
+  |selenium|`from selenium.webdriver import ChromeOptions`<br /><br />`option = ChromeOptions()`<br />`option.add_argument('user-agent=`<ins>`UA`</ins>`')`<br /><br />`from selenium.webdriver import Chrome`<br />`from selenium.webdriver.chrome.service import Service`<br /><br />`browser = Chrome(service=Service(`<ins>`'chromedriver'`</ins>`), options=option)`|
 
 #### 3.4.3. Referer（暂时不用）
 - |爬取方法|代码示例|
