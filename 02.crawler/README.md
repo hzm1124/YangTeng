@@ -8,7 +8,7 @@
 
 #### 1.1.2. Pip换源
 - 临时换源：`-i`参数  
-    > 清华：`pip install `<u>`'package'`</u>` -i https://pypi.tuna.tsinghua.edu.cn/simple`  
+    > 清华：`pip install `<a href="#package">`'package'`</a>` -i https://pypi.tuna.tsinghua.edu.cn/simple`  
     > 阿里云：`pip install `<u>`'package'`</u>` -i http://mirrors.aliyun.com/pypi/simple`  
     > 中科大：`pip install `<u>`'package'`</u>` -i http://pypi.mirrors.ustc.edu.cn/simple`  
     > 华为：`pip install `<u>`'package'`</u>` -i https://repo.huaweicloud.com/repository/pypi/simple`  
