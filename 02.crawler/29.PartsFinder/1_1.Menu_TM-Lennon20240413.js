@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         PartsFinder爬虫-Search
+// @name         PartsFinder爬虫-Menu
 // @namespace    https://github.com/lennon1124/YangTeng
 // @version      2024.04.13
 // @description  Crawler

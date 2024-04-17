@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         TecDoc爬虫-Menu
+// @name         WalkerProducts爬虫-Menu
 // @namespace    https://github.com/lennon1124/YangTeng
 // @version      2024.03.04
 // @description  Crawler
