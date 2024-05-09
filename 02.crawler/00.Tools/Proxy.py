@@ -1,9 +1,9 @@
 import random
 import zipfile
 
-username = 't19182064816778'
-password = 'm0my10ty'
-tunnel_host = 'f290.kdltps.com'
+username = 't11496349597780'
+password = '2tavn8uw'
+tunnel_host = 'v814.kdltps.com'
 tunnel_port = '15818'
 
 def get_Proxy_Requests():
