@@ -20,6 +20,7 @@
   |:-:|:-|:-|
   |virtualenv|`pip install virtualenv`|[教程](https://www.liaoxuefeng.com/wiki/1016959663602400/1019273143120480)|
   |jupyter notebook|`pip install notebook`|[官网](https://jupyter.org)|
+  |jupyterlab-language-pack-zh-CN|`pip install jupyterlab-language-pack-zh-CN`|[官网](https://pypi.org/project/jupyterlab-language-pack-zh-CN/)|
   |pandas|`pip install pandas`|[官网](https://pandas.pydata.org/getting_started.html)|
   |openpyxl|`pip install openpyxl`|[Tutorial](https://openpyxl.readthedocs.io/en/stable/tutorial.html)|
   |pillow|`pip install pillow`|[官网](https://pillow.readthedocs.io/en/latest)|
@@ -50,7 +51,7 @@
 
 ## 3. 爬虫入门
 ### 3.1. 参考资料
-- [廖雪峰教程](https://www.liaoxuefeng.com/wiki/1016959663602400/1183249464292448)|
+- [廖雪峰教程](https://www.liaoxuefeng.com/wiki/1016959663602400/1183249464292448)
 - [b站教程](https://www.bilibili.com/video/BV1bL4y1V7q1)
 - [参考书籍](https://www.ituring.com.cn/book/2847)
 
