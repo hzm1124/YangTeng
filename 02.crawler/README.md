@@ -147,6 +147,7 @@
   |:-:|:-:|:-:|
   |2024Hope2002|Hope|2721751152@qq.com|
   |Aleya-L|Aleya|lhxin1228@163.com|
+  |Archer9528|Archer|893393406@qq.com|
   |bibabo119|Camilla|2676128666@qq.com|
   |Carver-HJQ |Carver|hejiaqi0318@163.com|
   |Crissy1010|Crissy|2523031949@qq.com|
