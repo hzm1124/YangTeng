@@ -145,15 +145,17 @@
 ## 附录B Collaborators
 - |GitHub|Name|E-mail|
   |:-:|:-:|:-:|
-  |2024Hope2002|Hope|2721751152@qq.com|
+  |2024Hope2002|Hoppe|2721751152@qq.com|
   |Aleya-L|Aleya|lhxin1228@163.com|
   |Archer9528|Archer|893393406@qq.com|
   |bibabo119|Camilla|2676128666@qq.com|
   |Carver-HJQ |Carver|hejiaqi0318@163.com|
   |Crissy1010|Crissy|2523031949@qq.com|
+  |Isiah-yi|Isiah|pd56@cht-group.net|
   |Oolong-bit|Ward|1106622586@qq.com|
   |Paulcccc|Paul|573638095@qq.com|
-  |shinian9911|Bear|2863415146@qq.com|
   |Westbroobo|Westbroobo|lswbk888@gmail.com|
-  |yt-Miang|Miang|1547541812@qq.com|
+  |YL-Wang1|Grant|281689104@qq.com|
+  |yuanlinabc|Leif|zyl964051609@gmail.com|
   |Yvonyy|Yvonyy|1460161270@qq.com|
+  
