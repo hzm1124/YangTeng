@@ -152,6 +152,7 @@
   |Carver-HJQ |Carver|hejiaqi0318@163.com|
   |Crissy1010|Crissy|2523031949@qq.com|
   |Isiah-yi|Isiah|pd56@cht-group.net|
+  |Larkin420420|Larkin|heijiaow@163.com|
   |Oolong-bit|Ward|1106622586@qq.com|
   |Paulcccc|Paul|573638095@qq.com|
   |Westbroobo|Westbroobo|lswbk888@gmail.com|
