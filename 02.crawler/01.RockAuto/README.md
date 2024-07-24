@@ -1,6 +1,6 @@
 # 1. About
 
-- [x] Update: 2024.07.22
+- [x] Update: 2024.07.24
 
 - - -
 
@@ -13,7 +13,7 @@
 - |No|Name|File In|Fields In|File Out|Fields Out|
   |:-:|:-|:-|:-|:-|:-|
   |1|Make_R|N/A|N/A|1.make.xlsx|A. `Make No`<sub>[int、Sort: True]</sub><br />B. `Make`|
-  |2|Year_R|1.make.xlsx|<span style="color: violet;">Make</span>|2.year.xlsx|A. $\color{teal}{Make\ No}$<sub>[int、Sort: True]</sub><br />B. $\color{violet}{Make}$<br />C. `Year`<sub>[int、Sort: False]</sub>|
+  |2|Year_R|1.make.xlsx|$\color{violet}{Make}$|2.year.xlsx|A. $\color{teal}{Make\ No}$<sub>[int、Sort: True]</sub><br />B. $\color{violet}{Make}$<br />C. `Year`<sub>[int、Sort: False]</sub>|
   |3|Model_R|2.year.xlsx|$\color{violet}{Make}$<br />$\color{violet}{Year}$|3.model.xlsx|A. $\color{teal}{Make\ No}$<sub>[int、Sort: True]</sub><br />B. $\color{violet}{Make}$<br />C. $\color{violet}{Year}$<sub>[int、Sort: False]</sub><br />D. `Model No`<sub>[int、Sort: True]</sub><br />E. `Model`|
   |4|Engine_R|3.model.xlsx|$\color{violet}{Make}$<br />$\color{violet}{Year}$<br />$\color{violet}{Model}$|4.engine.xlsx|A. $\color{teal}{Make\ No}$<sub>[int、Sort: True]</sub><br />B. $\color{violet}{Make}$<br />C. $\color{violet}{Year}$<sub>[int、Sort: False]</sub><br />D. $\color{teal}{Model\ No}$<sub>[int、Sort: True]</sub><br />E. $\color{violet}{Model}$<br />F. `Engine No`<sub>[int、Sort: True]</sub><br />G. `Engine`<br />H. `Car Code`|
   |5|Engine_2|4.engine.xlsx|$\color{violet}{Make\ No}$<br />$\color{violet}{Make}$<br />$\color{violet}{Year}$<br />$\color{violet}{Model\ No}$</sub><br />$\color{violet}{Model}$<br />$\color{violet}{Engine\ No}$<br />$\color{violet}{Engine}$<br />$\color{violet}{Car\ Code}$|5.engine_2|A. $\color{violet}{Make\ No}$<sub>[int、Sort: True]</sub><br />B. $\color{violet}{Make}$<br />C. $\color{violet}{Model\ No}$<sub>[int、Sort: True]</sub><br />D. $\color{violet}{Model}$<br />E. $\color{violet}{Engine\ No}$<sub>[int、Sort: True]</sub><br />F. $\color{violet}{Engine}$<br />G. $\color{violet}{Car\ Code}$<br />H. $\color{violet}{Year}$<sub>[int、Sort: False]</sub>|
@@ -56,18 +56,3 @@
   |:-:|:-|:-|:-|:-|:-|
   |1|Vehicle|part_2|$\color{violet}{Manufacturer}$<br />$\color{violet}{Part\ Number}$<br />$\color{violet}{Type\ Code}$<br />$\color{violet}{Key}$|vehicle|A. $\color{teal}{JOIN\underline{\ \ }MPNTCK}$<sub>[Sort: True]</sub><br />B. `Json_Vehicle`|
   |2|Info|part_2|$\color{violet}{Info}$|info|A. $\color{teal}{JOIN\underline{\ \ }MPNTCK}$<sub>[Sort: True]</sub><br />B. `Json_Specification`<br />D. `Json_Kit`|
-
-- <table>
-<thead>
-<tr>
-<th><span style="color: red;">1</span></th>
-<th>2</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>01</td>
-<td>02</td>
-</tr>
-</tbody>
-</table>
