@@ -56,3 +56,18 @@
   |:-:|:-|:-|:-|:-|:-|
   |1|Vehicle|part_2|$\color{violet}{Manufacturer}$<br />$\color{violet}{Part\ Number}$<br />$\color{violet}{Type\ Code}$<br />$\color{violet}{Key}$|vehicle|A. $\color{teal}{JOIN\underline{\ \ }MPNTCK}$<sub>[Sort: True]</sub><br />B. `Json_Vehicle`|
   |2|Info|part_2|$\color{violet}{Info}$|info|A. $\color{teal}{JOIN\underline{\ \ }MPNTCK}$<sub>[Sort: True]</sub><br />B. `Json_Specification`<br />D. `Json_Kit`|
+
+- <table>
+<thead>
+<tr>
+<th><span style="color: red;">1</span></th>
+<th>2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>02</td>
+</tr>
+</tbody>
+</table>
