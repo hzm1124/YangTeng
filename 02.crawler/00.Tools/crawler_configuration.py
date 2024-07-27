@@ -40,14 +40,16 @@ password = '2tavn8uw'
 tunnel_host = 'v813.kdltps.com'
 tunnel_port = 15818
 
-def get_header(method='requests', os='mac', ua=True, **kwargs):
+def get_header(method='requests', ua=True, gzip=True, **kwargs):
     if method == 'requests':
-        if os == 'mac':
-            if ua:
-                kwargs['User-Agent'] = random.choice(list_ua)
-            else:
-                pass
-        elif os == 'win':
+        if ua:
+            kwargs['User-Agent'] = random.choice(list_ua)
+        else:
+            pass
+
+        if gzip:
+            kwargs['Accept-Encoding'] = 'gzip'
+        else:
             pass
 
         return kwargs
