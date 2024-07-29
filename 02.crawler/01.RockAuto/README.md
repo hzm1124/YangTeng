@@ -1,6 +1,7 @@
 # 1. About
 
-- [x] Update: 2024.07.24
+- [x] Head: Westbroobo
+- [x] e.g.: [MELLING > Engine > Timing Chain & Component Kit](https://www.rockauto.com/en/parts/melling,timing+chain+&+component+kit,5756)
 
 - - -
 
@@ -54,5 +55,6 @@
 ## 2.2. Combined
 - |No|Name|File In|Fields In|File Out|Fields Out|
   |:-:|:-|:-|:-|:-|:-|
-  |1|Vehicle|part_2|<span style="color: violet;">Manufacturer</span><br /><span style="color: violet;">Part Number</span><br /><span style="color: violet;">Type Code</span><br /><span style="color: violet;">Key</span>|vehicle|A. <span style="color: teal;">JOIN_MPNTCK</span><sub>[Sort: True]</sub><br />B. `Json_Vehicle`|
-  |2|Info|part_2|<span style="color: violet;">Info</span>|info|A. <span style="color: teal;">JOIN_MPNTCK</span><sub>[Sort: True]</sub><br />B. `Json_Specification`<br />D. `Json_Kit`|
+  |1|Integrate|part|<span style="color: violet;">JOIN_MPNTCK</span><br /><span style="color: violet;">Manufacturer</span><br /><span style="color: violet;">Part Number</span><br /><span style="color: violet;">Type Code</span><br /><span style="color: violet;">Key</span><br /><span style="color: violet;">Parameter</span><br /><span style="color: violet;">OEM</span><br /><span style="color: violet;">Info</span><br /><span style="color: violet;">Json_Src</span>|integrate|A. <span style="color: violet;">JOIN_MPNTCK</span><sub>[Sort: True]</sub><br />B. <span style="color: violet;">Manufacturer</span><br />C. <span style="color: violet;">Part Number</span><br />D. <span style="color: violet;">Type Code</span><br />E. <span style="color: violet;">Key</span><br />F. <span style="color: violet;">Parameter</span><br />G. <span style="color: violet;">OEM</span><br />H. <span style="color: violet;">Info</span><br />I. <span style="color: violet;">Json_Src</span>|
+  |2|Vehicle_R|integrate|<span style="color: violet;">Manufacturer</span><br /><span style="color: violet;">Part Number</span><br /><span style="color: violet;">Type Code</span><br /><span style="color: violet;">Key</span>|vehicle|A. <span style="color: teal;">JOIN_MPNTCK</span><sub>[Sort: True]</sub><br />B. `Json_Vehicle`|
+  |3|Info_R|integrate|<span style="color: violet;">Info</span>|info|A. <span style="color: teal;">JOIN_MPNTCK</span><sub>[Sort: True]</sub><br />B. `Json_Specification`<br />D. `Json_Kit`|
