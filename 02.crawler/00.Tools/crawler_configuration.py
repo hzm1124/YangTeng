@@ -35,9 +35,9 @@ list_ua = ['Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36',
            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.20 Safari/537.36']
 
-username = 't11496349597780'
-password = '2tavn8uw'
-tunnel_host = 'v813.kdltps.com'
+username = 't12247677289191'
+password = 'bewl74m7'
+tunnel_host = 'k444.kdltps.com'
 tunnel_port = 15818
 
 def get_header(method='requests', ua=True, gzip=True, **kwargs):
@@ -56,42 +56,45 @@ def get_header(method='requests', ua=True, gzip=True, **kwargs):
     elif method == 'selenium':
         return 'user-agent=' + random.choice(list_ua)
 
-def get_proxy(method='requests'):
+def get_proxy(method='requests', coroutine=True):
     if method == 'requests':
         return {'http': f'http://{username}:{password}@{tunnel_host}:{tunnel_port}',
                 'https': f'http://{username}:{password}@{tunnel_host}:{tunnel_port}'}
     elif method == 'selenium':
-        manifest_json = '''{"version": "1.0.0",
-                            "manifest_version": 2,
-                            "name": "Chrome Proxy",
-                            "permissions": ["proxy",
-                                            "tabs",
-                                            "unlimitedStorage",
-                                            "storage",
-                                            "<all_urls>",
-                                            "webRequest",
-                                            "webRequestBlocking"],
-                            "background": {"scripts": ["background.js"]},
-                            "minimum_chrome_version": "22.0.0"}'''
+        if coroutine:
+            return './vimm_chrome_proxyauth_plugin.zip'
+        else:
+            manifest_json = '''{"version": "1.0.0",
+                                "manifest_version": 2,
+                                "name": "Chrome Proxy",
+                                "permissions": ["proxy",
+                                                "tabs",
+                                                "unlimitedStorage",
+                                                "storage",
+                                                "<all_urls>",
+                                                "webRequest",
+                                                "webRequestBlocking"],
+                                "background": {"scripts": ["background.js"]},
+                                "minimum_chrome_version": "22.0.0"}'''
 
-        background_js = f'''var config = {{mode: "fixed_servers",
-                                           rules: {{singleProxy: {{scheme: "http",
-                                                                   host: "{tunnel_host}",
-                                                                   port: {tunnel_port}}},
-                                           bypassList: ["foobar.com"]}}}};
+            background_js = f'''var config = {{mode: "fixed_servers",
+                                               rules: {{singleProxy: {{scheme: "http",
+                                                                       host: "{tunnel_host}",
+                                                                       port: {tunnel_port}}},
+                                               bypassList: ["foobar.com"]}}}};
 
-                            chrome.proxy.settings.set({{value: config, scope: "regular"}}, function() {{}});
+                                chrome.proxy.settings.set({{value: config, scope: "regular"}}, function() {{}});
 
-                            function callbackFn(details) {{
-                                return {{authCredentials: {{username: "{username}",
-                                                            password: "{password}"}}}};}}
+                                function callbackFn(details) {{
+                                    return {{authCredentials: {{username: "{username}",
+                                                                password: "{password}"}}}};}}
 
-                            chrome.webRequest.onAuthRequired.addListener(callbackFn,
-                                                                         {{urls: ["<all_urls>"]}},
-                                                                         ['blocking']);'''
+                                chrome.webRequest.onAuthRequired.addListener(callbackFn,
+                                                                             {{urls: ["<all_urls>"]}},
+                                                                             ['blocking']);'''
 
-        with zipfile.ZipFile('./vimm_chrome_proxyauth_plugin.zip', 'w') as zp:
-            zp.writestr('manifest.json', manifest_json)
-            zp.writestr('background.js', background_js)
+            with zipfile.ZipFile('./vimm_chrome_proxyauth_plugin.zip', 'w') as zp:
+                zp.writestr('manifest.json', manifest_json)
+                zp.writestr('background.js', background_js)
 
-        return './vimm_chrome_proxyauth_plugin.zip'
+            return './vimm_chrome_proxyauth_plugin.zip'
