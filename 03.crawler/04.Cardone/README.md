@@ -1,6 +1,5 @@
 # 1. About
 
-- [x] Head: Camilla
 - [x] eg 1: [Windshield Wiper Motor](https://www.cardone.com/motors/wiper-and-washer/windshield-wiper-motor/?sort=alphaasc&limit=96&page=1)
 - [x] eg 2: [Driveshaft / Prop Shaft](https://www.cardone.com/drivetrain/driveline-axles/driveshaft-prop-shaft/?limit=96&sort=alphaasc)
 

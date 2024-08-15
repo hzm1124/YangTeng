@@ -1,6 +1,5 @@
 # 1. About
 
-- [x] Head: Paul
 - [x] eg 1: [Oil Pan](https://ecat.spectrapremium.com/en/parts?line=oil_pans&universal=0&hide-exclusives-canadian-market=0&sort=part-number&limit=50)
 - [x] eg 2: [Electronic Throttle Body](https://ecat.spectrapremium.com/en/parts?line=electronic_throttle_bodies&year=&make=&model=&submodel=&universal=0&hide-exclusives-canadian-market=0&sort=part-number&limit=100)
 

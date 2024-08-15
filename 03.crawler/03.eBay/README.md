@@ -1,6 +1,5 @@
 # 1. About
 
-- [x] Head: Westbroobo
 - [x] eg 1: [ac compressor (scitoo-autoparts)](https://www.ebay.com/sch/i.html?_dkr=1&iconV2Request=true&_blrs=recall_filtering&_ssn=scitoo-autoparts&store_cat=0&store_name=cnbatteries&_oac=1&_nkw=ac%20compressor)
 - [x] eg 2: [türschloss (atp-autoteile)](https://www.ebay.de/sch/i.html?_dkr=1&iconV2Request=true&_blrs=recall_filtering&_ssn=atp-autoteile&store_name=atpautoteile&_oac=1&_nkw=t%C3%BCrschloss&rt=nc&LH_BIN=1)
 

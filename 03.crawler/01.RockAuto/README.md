@@ -1,6 +1,5 @@
 # 1. About
 
-- [x] Head: Westbroobo
 - [x] eg 1: [Engine > Timing Chain & Component Kit > MELLING](https://www.rockauto.com/en/parts/melling,timing+chain+&+component+kit,5756)
 - [x] eg 2: [Interior > Hood Release Handle > DORMAN](https://www.rockauto.com/en/parts/dorman,hood+release+cable,1360)
 

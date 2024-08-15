@@ -1,6 +1,5 @@
 # 1. About
 
-- [x] Head: Camilla
 - [x] eg 1: [Clutch Starter Safety Switch](https://www.standardbrand.com/en/ecatalog?part=Clutch%20Starter%20Safety%20Switch&type=p)
 - [x] eg 2: [Power Seat Switch](https://www.standardbrand.com/en/ecatalog?part=Power%20Seat%20Switch&type=p&search=s)
 
