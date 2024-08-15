@@ -1,0 +1,1 @@
+- [x] [通过网盘分享的文件：05.Standard (提取码: stan)](https://pan.baidu.com/s/1KgILa1EgqVCY9di2MJrJ-w?pwd=stan)
