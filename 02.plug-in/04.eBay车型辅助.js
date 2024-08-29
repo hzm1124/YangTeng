@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         eBay车型辅助
 // @namespace    https://github.com/lennon1124/YangTeng
-// @version      2024.07.15
+// @version      2024.08.29
 // @description  eBay销量辅助
 // @author       Lennon
 // @match        *://www.ebay.com/itm/*
@@ -185,7 +185,16 @@
 
     let jq = jQuery.noConflict();
     jq(document).ready(function() {
-        let list_compatibility = JSON.parse(document.querySelector('body').innerHTML.split('$MC=(window.$MC||[]).concat(')[1].split(']}]})</script>')[0].trim() + ']}]}')['o']['w'][0][2]['model']['modules']['COMPATIBILITY_TABLE']['paginatedTable']['pagination']['pages'];
+        let json_ = JSON.parse(document.querySelector('body').innerHTML.split('$MC=(window.$MC||[]).concat(')[1].split(']}]})</script>')[0].trim() + ']}]}');
+        let index_model = -1;
+        for(let i=0; i<json_['o']['w'].length; i++) {
+            if('model' in json_['o']['w'][i][2]) {
+                index_model = i;
+                break;
+            }
+        }
+
+        let list_compatibility = json_['o']['w'][index_model][2]['model']['modules']['COMPATIBILITY_TABLE']['paginatedTable']['pagination']['pages'];
 
         page = parseInt(list_compatibility[list_compatibility.length-1]['text'].trim());
         payload_data = JSON.stringify({'scopedContext': {'catalogDetails': {'categoryId': list_compatibility[list_compatibility.length-1]['action']['params']['categoryId'],
