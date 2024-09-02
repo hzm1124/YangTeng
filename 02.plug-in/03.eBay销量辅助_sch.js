@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         eBay销量辅助_sch
 // @namespace    https://github.com/lennon1124/YangTeng
-// @version      2024.07.15
+// @version      2024.09.02
 // @description  eBay销量辅助
 // @author       Lennon
 // @match        *://www.ebay.com/sch/*
@@ -17,8 +17,9 @@
     'use strict';
 
     // Your code here...
-    let jq = jQuery.noConflict();
-    jq(document).ready(function() {
+    //let jq = jQuery.noConflict();
+    //jq(document).ready(function() {
+    $(document).ready(function() {
         let list_item = document.querySelectorAll('span.s-item__item-id.s-item__itemID');
         for(let i=0; i<list_item.length; i++)
         {
@@ -39,5 +40,6 @@
                 list_item[i].innerHTML = list_item[i].innerText + '&emsp;<a href="https://www.ebay.ca/bin/purchaseHistory?item=' + item_number + '" target="_blank"><button style="background-color: #e9faff;">&emsp;查看销量&emsp;</button></a>';
             }
         }
+        //window.$ = jq;
     });
 })();

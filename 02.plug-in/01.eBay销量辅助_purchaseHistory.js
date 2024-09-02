@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         eBay销量辅助_purchaseHistory
 // @namespace    https://github.com/lennon1124/YangTeng
-// @version      2024.07.15
+// @version      2024.09.02
 // @description  eBay销量辅助
 // @author       Lennon
 // @match        *://www.ebay.com/bin/purchaseHistory?item=*
@@ -34,8 +34,9 @@
 
     // = = = = = = = = = = = = = = =
 
-    let jq = jQuery.noConflict();
-    jq(document).ready(function() {
+    //let jq = jQuery.noConflict();
+    //jq(document).ready(function() {
+    $(document).ready(function() {
         let quantity, date_of_purchase, date_of_offer;
         if(window.location.href.includes('://www.ebay.de/bin/purchaseHistory?item=')) {
             quantity = 'Stückzahl';
@@ -102,5 +103,6 @@
         }
         content += '</tbody></table><br/><br/></div>';
         document.querySelector('div.app-item-card.ph').insertAdjacentHTML("beforebegin", content);
+        //window.$ = jq;
     });
 })();

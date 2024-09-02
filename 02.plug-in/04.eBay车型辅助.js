@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         eBay车型辅助
 // @namespace    https://github.com/lennon1124/YangTeng
-// @version      2024.08.29
+// @version      2024.09.02
 // @description  eBay销量辅助
 // @author       Lennon
 // @match        *://www.ebay.com/itm/*
@@ -183,8 +183,9 @@
 
     // = = = = = = = = = = = = = = =
 
-    let jq = jQuery.noConflict();
-    jq(document).ready(function() {
+    //let jq = jQuery.noConflict();
+    //jq(document).ready(function() {
+    $(document).ready(function() {
         let json_ = JSON.parse(document.querySelector('body').innerHTML.split('$MC=(window.$MC||[]).concat(')[1].split(']}]})</script>')[0].trim() + ']}]}');
         let index_model = -1;
         for(let i=0; i<json_['o']['w'].length; i++) {
@@ -221,5 +222,6 @@
                 get_vehicle('https://www.ebay.ca/g/api/finders?module_groups=PART_FINDER&referrer=VIEWITEM&offset=' + String(i*20) + '&module=COMPATIBILITY_TABLE');
             }
         }
+        //window.$ = jq;
     });
 })();

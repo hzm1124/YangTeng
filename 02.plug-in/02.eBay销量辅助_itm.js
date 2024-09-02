@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         eBay销量辅助_itm
 // @namespace    https://github.com/lennon1124/YangTeng
-// @version      2024.07.15
+// @version      2024.09.02
 // @description  eBay销量辅助
 // @author       Lennon
 // @match        *://www.ebay.com/itm/*
@@ -133,8 +133,9 @@
 
     // = = = = = = = = = = = = = = =
 
-    let jq = jQuery.noConflict();
-    jq(document).ready(function() {
+    //let jq = jQuery.noConflict();
+    //jq(document).ready(function() {
+    $(document).ready(function() {
         let item_number = window.location.href.split('/itm/')[1].split('/')[0].split('?')[0].trim();
 
         // = = = = = = = = = = = = = = =
@@ -156,5 +157,6 @@
         }
 
         get_purchase_history(purchase_history_url);
+        //window.$ = jq;
     });
 })();
