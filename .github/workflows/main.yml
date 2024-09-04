@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Generate DingTalk Signature and Send notification
       run: |
-        timestap=$(python3 << EOF
+        timestap=$(python << EOF
 import time
 
 timestamp = str(round(time.time() * 1000))
@@ -19,7 +19,7 @@ EOF
         )
         echo "Timestamp: $timestamp"
 
-        sign=$(python3 << EOF
+        sign=$(python << EOF
 import hmac
 import hashlib
 import base64
