@@ -17,12 +17,16 @@ jobs:
           COMMIT_SHA=$(git rev-parse HEAD)
           COMMIT_FILES=$(git diff-tree --no-commit-id --name-only -r $COMMIT_SHA | tr '\n' ',' | sed 's/,$//')
 
+          echo ${COMMIT_AUTHOR}
+          echo ${COMMIT_SHA}
+          echo ${COMMIT_FILES}
+
           curl -X POST https://oapi.dingtalk.com/robot/send?access_token=bada4bbd50de162fe754b3f7519768a4ae30558c2a1464a7cbf6c28b3857799f \
           -H "Content-Type: application/json" \
           -d '{
             "msgtype": "markdown",
             "markdown": {
               "title": "GitHub Push Notification",
-              "text": "## GitHub 仓库更新\n\n**Author**: '"${COMMIT_AUTHOR}"'\n**Commit SHA:** '"${COMMIT_SHA}"'\n**Files Changed:**\n'"${COMMIT_FILES}"'
+              "text": "## GitHub 仓库更新\n\n**Author**: '"${COMMIT_AUTHOR}"'\n**Commit SHA:** '"${COMMIT_SHA}"'
             }
           }'
