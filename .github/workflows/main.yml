@@ -11,7 +11,6 @@ jobs:
     - name: Generate DingTalk Signature and Send notification
       run: |
         timestamp=$(($(date +%s%N)/1000000))
-        timestamp="1725441011274"
         echo "Timestamp: $timestamp"
 
         secret="SEC29db82f7d6562f71f4e6ea51757cbdb0b75d982d17df2583fa4bdfed58fcac6b"
