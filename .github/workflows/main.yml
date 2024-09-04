@@ -8,14 +8,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
     - name: Generate DingTalk Signature and Send notification
       run: |
         COMMIT_AUTHOR=$(git log -1 --format='%an')
         COMMIT_SHA=$(git rev-parse HEAD)
         COMMIT_FILES=$(git diff-tree --no-commit-id --name-only -r $COMMIT_SHA)
-        echo "COMMIT_AUTHOR=$COMMIT_AUTHOR" >> $GITHUB_ENV
-        echo "COMMIT_FILES=$COMMIT_FILES" >> $GITHUB_ENV
-        echo "COMMIT_SHA=$COMMIT_SHA" >> $GITHUB_ENV
 
         curl -X POST https://oapi.dingtalk.com/robot/send?access_token=bada4bbd50de162fe754b3f7519768a4ae30558c2a1464a7cbf6c28b3857799f \
         -H "Content-Type: application/json" \
