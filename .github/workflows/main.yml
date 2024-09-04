@@ -30,6 +30,6 @@ jobs:
             "msgtype": "markdown",
             "markdown": {
               "title": "GitHub Push Notification",
-              "text": "## GitHub 仓库更新\n\n**Author:** '"${COMMIT_AUTHOR}"'\n\n**Files Changed:** '"${COMMIT_FILES}"'\n\n**Commit SHA:** '"${COMMIT_SHA}"'\n"
+              "text": "## GitHub 仓库更新\n\n**Author:**\n\n'"${COMMIT_AUTHOR}"'\n\n\n\n**Files Changed:** '"${COMMIT_FILES}"'\n\n**Commit SHA:** '"${COMMIT_SHA}"'\n"
             }
           }'
