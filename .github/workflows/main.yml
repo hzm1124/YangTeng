@@ -10,20 +10,34 @@ jobs:
     steps:
     - name: Generate DingTalk Signature and Send notification
       run: |
-        timestamp=$(($(date +%s%N)/1000000))
+        timestap=$(python3 << EOF
+import time
+
+timestamp = str(round(time.time() * 1000))
+print(timestamp)
+EOF
+        )
         echo "Timestamp: $timestamp"
 
-        secret="SEC29db82f7d6562f71f4e6ea51757cbdb0b75d982d17df2583fa4bdfed58fcac6b"
-        secret_enc=$(python3 -c "print('$secret'.encode('utf-8'))")
+        sign=$(python3 << EOF
+import hmac
+import hashlib
+import base64
+import urllib.parse
 
-        string_to_sign="$timestamp\n$secret"
-        string_to_sign_enc=$(python3 -c "print('$string_to_sign'.encode('utf-8'))")
+timestamp = "$timestamp"
 
-        hmac_code=$(python3 -c "import hmac, hashlib; print(hmac.new($secret_enc, $string_to_sign_enc, digestmod=hashlib.sha256).digest())")
-
-        sign=$(python3 -c "import base64, urllib.parse; print(urllib.parse.quote_plus(base64.b64encode('$hmac_code')))")
+secret = 'SEC29db82f7d6562f71f4e6ea51757cbdb0b75d982d17df2583fa4bdfed58fcac6b'
+secret_enc = secret.encode('utf-8')
+string_to_sign = '{}\n{}'.format(timestamp, secret)
+string_to_sign_enc = string_to_sign.encode('utf-8')
+hmac_code = hmac.new(secret_enc, string_to_sign_enc, digestmod=hashlib.sha256).digest()
+sign = urllib.parse.quote_plus(base64.b64encode(hmac_code))
+print(sign)
+EOF
+        )
         echo "Sign: $sign"
-        
+
         curl -X POST "https://oapi.dingtalk.com/robot/send?access_token=bada4bbd50de162fe754b3f7519768a4ae30558c2a1464a7cbf6c28b3857799f&timestamp=${timestamp}&sign=${sign}" \
         -H "Content-Type: application/json" \
         -d '{
