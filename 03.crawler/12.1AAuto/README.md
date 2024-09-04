@@ -1,6 +1,5 @@
 # 1. About
 
-- [x] Head: Lennon
 - [x] eg 1: [brake calipers](https://www.1aauto.com/search?q=brake+calipers)
 - [x] eg 2: [Weatherstripping](https://www.1aauto.com/weatherstripping/c/12)
 

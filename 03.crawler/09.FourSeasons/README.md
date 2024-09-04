@@ -1,6 +1,5 @@
 # 1. About
 
-- [x] Head: Ward
 - [x] eg 1: [Evaporator Core](https://www.4s.com/en/ecatalog?part=Evaporator%20Core&type=p&search=s)
 - [x] eg 2: [Heater Core](https://www.4s.com/en/ecatalog?part=Heater%20Core&type=p&search=s)
 
