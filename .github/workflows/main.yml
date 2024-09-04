@@ -21,9 +21,9 @@ jobs:
 
         hmac_code=$(echo -n "$string_to_sign_enc" | openssl dgst -sha256 -hmac "$secret_enc" -binary)
 
-        base64_encoded=$(echo "$hmac_code" | openssl base64 -A)
+        base64_encoded=$(echo -n "$hmac_code" | base64 | tr -d '\n')
 
-        sign=$(echo -n "$base64_encoded" | jq -sRr @uri)
+        sign=$(echo -n "$base64_encoded" | sed 's/+/%2B/g; s/\//%2F/g; s/=/%3D/g')
         echo "Sign: $sign"
 
         curl -X POST "https://oapi.dingtalk.com/robot/send?access_token=bada4bbd50de162fe754b3f7519768a4ae30558c2a1464a7cbf6c28b3857799f&timestamp=${timestamp}&sign=${sign}" \
