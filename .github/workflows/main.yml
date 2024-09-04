@@ -1,47 +1,38 @@
 name: Notify DingTalk on GitHub Push
 
 on:
-  push:
+  push:  # 监听所有分支的 push 事件
 
 jobs:
   notify:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.x'
-
-    - name: Generate DingTalk Signature
-      id: generate-sign
+    - name: Generate DingTalk Signature and Send notification
       run: |
-        python3 -c "
+        timestamp=$(($(date +%s%N)/1000000))
+        echo "Timestamp: $timestamp"
+
+        sign=$(python << EOF
 import hmac
 import hashlib
 import base64
 import urllib.parse
-import time
 
-# 获取当前时间戳
-timestamp = str(round(time.time() * 1000))
+timestamp = "$timestamp"
+
 secret = 'SEC29db82f7d6562f71f4e6ea51757cbdb0b75d982d17df2583fa4bdfed58fcac6b'
-
-# 生成签名字符串
+secret_enc = secret.encode('utf-8')
 string_to_sign = '{}\n{}'.format(timestamp, secret)
+string_to_sign_enc = string_to_sign.encode('utf-8')
+hmac_code = hmac.new(secret_enc, string_to_sign_enc, digestmod=hashlib.sha256).digest()
+sign = urllib.parse.quote_plus(base64.b64encode(hmac_code))
+print(sign)
+EOF
+        )
+        echo "Sign: $sign"
 
-# 计算 HMAC-SHA256 签名并进行 Base64 编码
-hmac_code = hmac.new(secret.encode('utf-8'), string_to_sign.encode('utf-8'), digestmod=hashlib.sha256).digest()
-sign = urllib.parse.quote_plus(base64.b64encode(hmac_code).decode('utf-8'))
-
-# 输出时间戳和签名
-print(f'::set-output name=timestamp::{timestamp}')
-print(f'::set-output name=sign::{sign}')
-"
-
-    - name: Send Notification to DingTalk
-      run: |
-        curl -X POST "https://oapi.dingtalk.com/robot/send?access_token=YOUR_ACCESS_TOKEN&timestamp=${{ steps.generate-sign.outputs.timestamp }}&sign=${{ steps.generate-sign.outputs.sign }}" \
+        curl -X POST "https://oapi.dingtalk.com/robot/send?access_token=bada4bbd50de162fe754b3f7519768a4ae30558c2a1464a7cbf6c28b3857799f&timestamp=${timestamp}&sign=${sign}" \
         -H "Content-Type: application/json" \
         -d '{
           "msgtype": "markdown",
