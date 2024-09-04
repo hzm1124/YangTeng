@@ -1,0 +1,30 @@
+name: Notify DingTalk on GitHub Push
+
+on:
+  push:  # 监听所有分支的 push 事件
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Generate DingTalk Signature
+      id: sign
+      run: |
+        timestamp=$(($(date +%s%N)/1000000))
+        secret="SEC29db82f7d6562f71f4e6ea51757cbdb0b75d982d17df2583fa4bdfed58fcac6b"
+        sign=$(echo -n "${timestamp}\n${secret}" | openssl dgst -sha256 -hmac "${secret}" -binary | base64)
+        echo "::set-output name=timestamp::${timestamp}"
+        echo "::set-output name=sign::${sign}"
+        
+    - name: Send notification to DingTalk
+      run: |
+        curl -X POST "https://oapi.dingtalk.com/robot/send?access_token=bada4bbd50de162fe754b3f7519768a4ae30558c2a1464a7cbf6c28b3857799f&timestamp=${{ steps.sign.outputs.timestamp }}&sign=${{ steps.sign.outputs.sign }}" \
+        -H "Content-Type: application/json" \
+        -d '{
+          "msgtype": "markdown",
+          "markdown": {
+            "title": "GitHub Push Notification",
+            "text": "## GitHub 仓库更新\n\n**仓库**: ${GITHUB_REPOSITORY}\n**分支**: ${GITHUB_REF}\n**提交**: ${GITHUB_SHA}\n**触发者**: ${GITHUB_ACTOR}\n"
+          }
+        }'
