@@ -11,25 +11,20 @@ jobs:
     - name: Generate DingTalk Signature and Send notification
       run: |
         timestamp=$(($(date +%s%N)/1000000))
+        timestamp="1725441011274"
         echo "Timestamp: $timestamp"
 
-        sign=$(python << EOF
-import hmac
-import hashlib
-import base64
-import urllib.parse
+        secret="SEC29db82f7d6562f71f4e6ea51757cbdb0b75d982d17df2583fa4bdfed58fcac6b"
+        secret_enc=$(echo -n "$secret" | iconv -t utf-8)
 
-timestamp = "$timestamp"
+        string_to_sign="$timestamp\n$secret"
+        string_to_sign_enc=$(echo -n "$string_to_sign" | iconv -t utf-8)
 
-secret = 'SEC29db82f7d6562f71f4e6ea51757cbdb0b75d982d17df2583fa4bdfed58fcac6b'
-secret_enc = secret.encode('utf-8')
-string_to_sign = '{}\n{}'.format(timestamp, secret)
-string_to_sign_enc = string_to_sign.encode('utf-8')
-hmac_code = hmac.new(secret_enc, string_to_sign_enc, digestmod=hashlib.sha256).digest()
-sign = urllib.parse.quote_plus(base64.b64encode(hmac_code))
-print(sign)
-EOF
-        )
+        hmac_code=$(echo -n "$string_to_sign_enc" | openssl dgst -sha256 -hmac "$secret_enc" -binary)
+
+        base64_encoded=$(echo "$hmac_code" | openssl base64 -A)
+
+        sign=$(echo -n "$base64_encoded" | jq -sRr @uri)
         echo "Sign: $sign"
 
         curl -X POST "https://oapi.dingtalk.com/robot/send?access_token=bada4bbd50de162fe754b3f7519768a4ae30558c2a1464a7cbf6c28b3857799f&timestamp=${timestamp}&sign=${sign}" \
