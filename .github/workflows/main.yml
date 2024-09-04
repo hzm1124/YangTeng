@@ -13,8 +13,8 @@ jobs:
 
       - name: Generate DingTalk Signature and Send notification
         run: |
-          COMMIT_AUTHOR=$(git log -1 --format='%an')
           COMMIT_SHA=$(git rev-parse HEAD)
+          COMMIT_AUTHOR=$(git log -1 --format='%an')
           COMMIT_FILES=$(git diff-tree --no-commit-id --name-only -r $COMMIT_SHA)
 
           curl -X POST https://oapi.dingtalk.com/robot/send?access_token=bada4bbd50de162fe754b3f7519768a4ae30558c2a1464a7cbf6c28b3857799f \
@@ -23,6 +23,6 @@ jobs:
             "msgtype": "markdown",
             "markdown": {
               "title": "GitHub Push Notification",
-              "text": "## GitHub 仓库更新\n\n**Author**: '"${COMMIT_AUTHOR}"'\n**Commit SHA:** '"${COMMIT_SHA}"'\n**Files Changed:**\n'"${COMMIT_FILES}"'
+              "text": "## Push Notification\n\n**Author:** '"${COMMIT_AUTHOR}"'\n**Commit SHA:** '"${COMMIT_SHA}"'\n**Files Changed:**\n'"${COMMIT_FILES}"'
             }
           }'
