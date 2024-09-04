@@ -11,7 +11,7 @@ jobs:
     - name: Generate DingTalk Signature
       id: sign
       run: |
-        timestamp=$(date +%s)
+        timestamp=$(($(date +%s%N)/1000000))
         secret="SEC29db82f7d6562f71f4e6ea51757cbdb0b75d982d17df2583fa4bdfed58fcac6b"
         sign=$(echo -n "${timestamp}\n${secret}" | openssl dgst -sha256 -hmac "${secret}" -binary | base64)
         echo "::set-output name=timestamp::${timestamp}"
