@@ -13,7 +13,7 @@ jobs:
         with:
           fetch-depth: 0  # 确保克隆完整的提交历史
 
-      - name: Generate DingTalk Signature and Send notification
+      - name: Send Notification to DingTalk
         run: |
           COMMITTER_DATE=$(git log -1 --pretty=%cI)
           echo "COMMITTER_DATE: $COMMITTER_DATE"
