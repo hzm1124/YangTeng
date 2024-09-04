@@ -10,23 +10,7 @@ jobs:
     steps:
     - name: Generate DingTalk Signature and Send notification
       run: |
-        timestamp=$(($(date +%s%N)/1000000))
-        echo "Timestamp: $timestamp"
-
-        secret="SEC29db82f7d6562f71f4e6ea51757cbdb0b75d982d17df2583fa4bdfed58fcac6b"
-        secret_enc=$(echo -n "$secret" | iconv -t utf-8)
-
-        string_to_sign="$timestamp\n$secret"
-        string_to_sign_enc=$(echo -n "$string_to_sign" | iconv -t utf-8)
-
-        hmac_code=$(echo -n "$string_to_sign_enc" | openssl dgst -sha256 -hmac "$secret_enc" -binary)
-
-        base64_encoded=$(echo -n "$hmac_code" | base64 | tr -d '\n')
-
-        sign=$(echo -n "$base64_encoded" | sed 's/+/%2B/g; s/\//%2F/g; s/=/%3D/g')
-        echo "Sign: $sign"
-
-        curl -X POST "https://oapi.dingtalk.com/robot/send?access_token=bada4bbd50de162fe754b3f7519768a4ae30558c2a1464a7cbf6c28b3857799f&timestamp=${timestamp}&sign=${sign}" \
+        curl -X POST https://oapi.dingtalk.com/robot/send?access_token=bada4bbd50de162fe754b3f7519768a4ae30558c2a1464a7cbf6c28b3857799f \
         -H "Content-Type: application/json" \
         -d '{
           "msgtype": "markdown",
