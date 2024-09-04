@@ -15,6 +15,9 @@ jobs:
 
       - name: Generate DingTalk Signature and Send notification
         run: |
+          COMMITTER_DATE=$(git log -1 --pretty=%cI)
+          echo "COMMITTER_DATE: $COMMITTER_DATE"
+
           COMMIT_AUTHOR=$(git log -1 --format='%an')
           echo "COMMIT_AUTHOR: $COMMIT_AUTHOR"
 
@@ -24,17 +27,19 @@ jobs:
           COMMIT_FILES=$(git diff-tree --no-commit-id --name-only -r $COMMIT_SHA)
           echo "COMMIT_FILES: $COMMIT_FILES"
 
-          COMMIT_DATE=$(git log -1 --pretty=format:"%cd" --date=format:"%Y-%m-%d %H:%M:%S")
-          echo "COMMIT_DATE: $COMMIT_DATE"
+          MESSAGE=$(cat <<EOF
+**Time:** ${COMMITTER_DATE}
 
-          COMMITTER_NAME=$(git log -1 --pretty=%cn)
-          echo "COMMITTER_NAME: $COMMITTER_NAME"
+**Author:** ${COMMIT_AUTHOR}
 
-          AUTHOR_NAME=$(git log -1 --pretty=%an)
-          echo "AUTHOR_NAME: $AUTHOR_NAME"
+**Commit SHA:** ${COMMIT_SHA}
 
-          COMMITTER_DATE=$(git log -1 --pretty=%cI)
-          echo "COMMITTER_DATE: $COMMITTER_DATE"
+**Files Changed:**
+\`\`\`
+${COMMIT_FILES}
+\`\`\`
+EOF
+)
 
           curl -X POST https://oapi.dingtalk.com/robot/send?access_token=bada4bbd50de162fe754b3f7519768a4ae30558c2a1464a7cbf6c28b3857799f \
           -H "Content-Type: application/json" \
@@ -42,6 +47,6 @@ jobs:
             "msgtype": "markdown",
             "markdown": {
               "title": "GitHub Push Notification",
-              "text": "## GitHub 仓库更新\n\n**Author:** '"${COMMIT_AUTHOR}"'\n\n**Commit SHA:** '"${COMMIT_SHA}"'\n\n**Files Changed:** '"${COMMIT_FILES}"'"
+              "text": "'"${MESSAGE}"'"
             }
           }'
