@@ -28,6 +28,6 @@ jobs:
             "msgtype": "markdown",
             "markdown": {
               "title": "GitHub Push Notification",
-              "text": "## GitHub 仓库更新\n\n**Author:** '"${COMMIT_AUTHOR}"'\n"
+              "text": "## GitHub 仓库更新\n\n**Author:** '"${COMMIT_AUTHOR}"'\n**Commit SHA:** '"${COMMIT_SHA}"'\n"
             }
           }'
