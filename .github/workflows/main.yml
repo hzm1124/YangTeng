@@ -13,6 +13,11 @@ jobs:
         with:
           fetch-depth: 0  # 确保克隆完整的提交历史
 
+      - name: Set environment to UTF-8
+        run: |
+          export LANG=en_US.UTF-8
+          export LC_ALL=en_US.UTF-8
+
       - name: Send Notification to DingTalk
         run: |
           COMMITTER_DATE=$(git log -1 --pretty=%cI)
@@ -24,11 +29,11 @@ jobs:
           COMMIT_SHA=$(git rev-parse HEAD)
           echo "COMMIT_SHA: $COMMIT_SHA"
 
-          COMMIT_FILES=$(git diff-tree --no-commit-id --name-only -r $COMMIT_SHA)
+          COMMIT_FILES=$(git diff-tree --no-commit-id --name-only -r $COMMIT_SHA | sed 's/"/\\"/g')
           echo "COMMIT_FILES: $COMMIT_FILES"
 
           MESSAGE="## [GitHub 仓库更新](https://github.com/hzm1124/YangTeng)\n\n- - -\n\n***Time:*** ${COMMITTER_DATE}\n\n***Author:*** ${COMMIT_AUTHOR}\n\n***Commit SHA:*** ${COMMIT_SHA}\n\n***Files Changed:***\n\`\`\`\n${COMMIT_FILES}\n\`\`\`"
 
-          curl -X POST https://oapi.dingtalk.com/robot/send?access_token=79d97a0de5f5c45b2a35e41cf192643dc6e8c9068bc1f9d48d67a5d1011c9b9b \
+          curl -X POST https://oapi.dingtalk.com/robot/send?access_token=482ae1c66e7cc56b145bc99219f225ccc95b31f031437603d4750108c1e561a3 \
           -H "Content-Type: application/json" \
-          -d '{"msgtype": "markdown", "markdown": {"title": "GitHub Push Notification", "text": "'"${MESSAGE}"'"}}'
+          -d '{"msgtype": "markdown", "markdown": {"title": "GitHub Push Notification自定义", "text": "'"${MESSAGE}"'"}}'
