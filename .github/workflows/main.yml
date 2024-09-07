@@ -29,12 +29,17 @@ jobs:
           COMMIT_SHA=$(git rev-parse HEAD)
           echo "COMMIT_SHA: $COMMIT_SHA"
 
-          COMMIT_FILES=$(git diff-tree --no-commit-id --name-only -r $COMMIT_SHA)
-          COMMIT_FILES=$(printf "$COMMIT_FILES")
-          COMMIT_FILES=$(echo "$COMMIT_FILES" | sed 's/"//g')
-          echo "COMMIT_FILES: $COMMIT_FILES"
+          FILES_MODIFIED=$(git diff-tree --no-commit-id --diff-filter=M --name-only -r $COMMIT_SHA)
+          FILES_MODIFIED=$(printf "$FILES_MODIFIED")
+          FILES_MODIFIED=$(echo "$FILES_MODIFIED" | sed 's/"//g')
+          echo "FILES_MODIFIED: $FILES_MODIFIED"
 
-          MESSAGE="## [GitHub 仓库更新](https://github.com/hzm1124/YangTeng)\n\n- - -\n\n***Time:*** ${COMMITTER_DATE}\n\n***Author:*** ${COMMIT_AUTHOR}\n\n***Commit SHA:*** ${COMMIT_SHA}\n\n***Files Changed:***\n\`\`\`\n${COMMIT_FILES}\n\`\`\`"
+          FILES_ADDED=$(git diff-tree --no-commit-id --diff-filter=A --name-only -r $COMMIT_SHA)
+          FILES_ADDED=$(printf "$FILES_ADDED")
+          FILES_ADDED=$(echo "$FILES_ADDED" | sed 's/"//g')
+          echo "FILES_ADDED: $FILES_ADDED"
+
+          MESSAGE="## [GitHub 仓库更新](https://github.com/hzm1124/YangTeng)\n\n- - -\n\n- ***Time***: ${COMMITTER_DATE}\n\n- ***Author***: ${COMMIT_AUTHOR}\n\n- ***Commit SHA***: ${COMMIT_SHA}\n\n- - -\n\n- ***Files Modified***:\n\`\`\`\n${FILES_MODIFIED}\n\`\`\`\n\n- - - \n\n- ***Files Added***:\n\`\`\`\n${FILES_ADDED}\n\`\`\`"
 
           curl -X POST https://oapi.dingtalk.com/robot/send?access_token=79d97a0de5f5c45b2a35e41cf192643dc6e8c9068bc1f9d48d67a5d1011c9b9b \
           -H "Content-Type: application/json" \
