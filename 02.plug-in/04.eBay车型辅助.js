@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         eBay车型辅助
 // @namespace    https://github.com/lennon1124/YangTeng
-// @version      2024.09.20
+// @version      2024.09.21
 // @description  eBay销量辅助
 // @author       Lennon
 // @match        *://www.ebay.com/itm/*
@@ -155,11 +155,12 @@
                         content += '<tr><td style="border: 1px solid;">&emsp;' + list_vehicle[j] + '&emsp;</td></tr>';
                     }
                     content += '</tbody></table><br/><br/></div>';
-                    if(window.location.href.includes('://www.ebay.de/itm/') && document.querySelectorAll("div.tabs__content").length != 1) {
-                        document.querySelectorAll("div.tabs__content")[1].insertAdjacentHTML("afterbegin", content);
-                    }
-                    else {
-                        document.querySelector("div.tabs__content").insertAdjacentHTML("afterbegin", content);
+
+                    let list_div = document.querySelectorAll('div.tabs__content');
+                    for(let i=0; i<list_div.length; i++) {
+                        if(list_div[i].querySelectorAll('div.tabs__panel>div.tabs__cell>div>div[data-testid="d-vi-evo-region"]').length == 1) {
+                            list_div[i].insertAdjacentHTML("afterbegin", content);
+                        }
                     }
 
                     if(with_engine) {
