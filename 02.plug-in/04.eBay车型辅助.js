@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         eBay车型辅助
 // @namespace    https://github.com/lennon1124/YangTeng
-// @version      2024.09.02
+// @version      2024.09.20
 // @description  eBay销量辅助
 // @author       Lennon
 // @match        *://www.ebay.com/itm/*
@@ -155,7 +155,7 @@
                         content += '<tr><td style="border: 1px solid;">&emsp;' + list_vehicle[j] + '&emsp;</td></tr>';
                     }
                     content += '</tbody></table><br/><br/></div>';
-                    if(window.location.href.includes('://www.ebay.de/itm/')) {
+                    if(window.location.href.includes('://www.ebay.de/itm/') && document.querySelectorAll("div.tabs__content").length != 1) {
                         document.querySelectorAll("div.tabs__content")[1].insertAdjacentHTML("afterbegin", content);
                     }
                     else {
