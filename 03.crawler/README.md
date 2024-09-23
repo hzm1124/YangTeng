@@ -126,7 +126,7 @@
   |9|[FourSeasons](https://www.4s.com/en/ecatalog?part=Evaporator%20Core&type=p&search=s)|Grant|
   |12|[1AAuto](https://www.1aauto.com/catalog/brands)|数据部|
   |18|[Auveco](https://www.auveco.com/products/assortments/cabinetandcompartmentbinassortments)|Grant|
-  |24|[Gates](https://www.gates.com/us/en/search.html?searchType=product&text=Positive+Crankcase+Ventilation+%28PCV%29+Hose)|Camilla|
+  |24|[Gates](https://www.gates.com/us/en/search.html?searchType=product&text=Positive+Crankcase+Ventilation+%28PCV%29+Hose)|数据部|
   |26|[Moog](https://www.moogparts.com/find-my-part.html)|数据部|
 
 ### 二、理论基础
@@ -254,6 +254,7 @@
   |Melanie-77|Melanie|1103533236@qq.com|
   |Oolong-bit|Ward|1106622586@qq.com|
   |Paulcccc|Paul|573638095@qq.com|
+  |shinian9911|Bear|2863415146@qq.com|
   |Westbroobo|Westbroobo|lswbk888@gmail.com|
   |Ybai7819|Yiheng|mktg483@cht-group.net|
   |YL-Wang1|Grant|281689104@qq.com|
