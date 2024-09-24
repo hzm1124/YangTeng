@@ -9,9 +9,8 @@
 
 - |No|Name|File In|Fields In|File Out|Fields Out|
   |:-:|:-|:-|:-|:-|:-|
-  |1|Item_Number_R|input.xlsx|`Url`|1.item_number|A. `No`<sub>[int、Sort: True]</sub><br />B. `Item Number`<br />C. `Url`|
-  |2|Item_R|1.item_number|<span style="color: violet;">Url</span>|2.item|A. <span style="color: teal;">No</span><sub>[int、Sort: True]</sub><br />B. <span style="color: teal;">Item Number</span><br />C. `Title`<br />D. `Subtitle`<br />E. `Price`<br />F. `Sold`<br />G. `Available`<br />H. `Picture`<sub>[null]</sub><br />I. <span style="color: violet;">Url</span><br />J. `Description Url`<br />K. `Json_Src`<br />L. `Json_Specific`<br />M. `Json_Compatibility`|
-  |3|Vehicle_R|2.item|<span style="color: violet;">Json_Compatibility</span>|3.vehicle|A. <span style="color: teal;">No</span><sub>[int、Sort: True]</sub><br />B. <span style="color: teal;">Item Number</span><br />C. <span style="color: violet;">Json_Compatibility</span><br />D. `Page`<sub>[int、Sort: True]</sub><br />E. `Row`<sub>[int、Sort: True]</sub><br />... `eBay兼容表`|
-  |~~4~~[^Note_1]|~~Description_R~~|~~2.item~~|~~<span style="color: violet;">Description Url</span>~~|~~4.description~~|~~A. <span style="color: teal;">No</span><sub>[int、Sort: True]</sub>~~<br />~~B. <span style="color: teal;">Item Number</span>~~<br />~~C. <span style="color: violet;">Description Url</span>~~<br />~~... `eBay卖家描述`~~|
-
-  [^Note_1]: 正常情况下不爬取该部分数据，特殊情况需先做可行性评估
+  |1|Item_Number_R|input.xlsx|`Url`|1.item_number|A. `No`<sub>[int]</sub><br />B. `Item Number`<sub>[Sort: Occurrence]</sub>|
+  |2|Url_R|1.item_number|<span style="color: violet;">Item Number</span>|2.url|A. <span style="color: teal;">No</span><sub>[int、Sort: True]</sub><br />B. <span style="color: violet;">Item Number</span><br />C. `Url`|
+  |3|Part_R|2.url|<span style="color: violet;">Url</span>|3.part|A. <span style="color: teal;">No</span><sub>[int、Sort: True]</sub><br />B. <span style="color: teal;">Item Number</span><br />C. `Market`<br />D. `Title`<br />E. `Price`<br />F. `Picture`<sub>[null]</sub><br />G. <span style="color: violet;">Url</span><br />H. `Json_Src`<br />I. `Description Url`<br />J. `Subtitle`<br />K. `Json_Quantity`<br />L. `Json_Compatibility`<br />M. `Json_Specific`|
+  |4|Vehicle_R|3.part|<span style="color: violet;">Json_Compatibility</span>|4.vehicle|A. <span style="color: teal;">No</span><sub>[int、Sort: True]</sub><br />B. <span style="color: teal;">Item Number</span><br />C. <span style="color: violet;">Json_Compatibility</span><br />D. `Page`<sub>[int、Sort: True]</sub><br />E. `Row`<sub>[int、Sort: True]</sub><br />... `eBay兼容表`|
+  |5|Collate|||||
