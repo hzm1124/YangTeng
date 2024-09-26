@@ -9,6 +9,7 @@
 
 - |No|Name|File In|Fields In|File Out|Fields Out|
   |:-:|:-|:-|:-|:-|:-|
-  |1|Url_R|input.xlsx|`Url`|1.url|A. `No`<sub>[int、Sort: True]</sub><br />B. `Url`|
-  |2|Part_R|1.url|<span style="color: violet;">Url</span>|2.part|A. <span style="color: teal;">No</span><sub>[int、Sort: True]</sub><br />B. `Market`<br />C. `Type`<br />D. `Part Number`<br />E. `Picture`<sub>[null]</sub><br />F. <span style="color: violet;">Url</span><br />G. `Json_Src`<br />H. `Json_Specification`<br />I. `Vehicle Page`|
-  |3|Vehicle_R|2.part|<span style="color: violet;">Url</span><br /><span style="color: violet;">Vehicle Page</span>|3.vehicle|A. <span style="color: teal;">No</span><sub>[int、Sort: True]</sub><br />B. <span style="color: teal;">Part Number</span><br />C. <span style="color: violet;">Url</span><br />D. `Page`<sub>[int、Sort: True]</sub><br />... `SpectraPremium兼容表`|
+  |1|Url_R|input.xlsx|`Url`|1.url|A. `No`<sub>[int]</sub><br />B. `Url`<sub>[Sort: Occurrence]</sub>|
+  |2|Part_R|1.url|<span style="color: violet;">Url</span>|2.part|A. <span style="color: teal;">No</span><sub>[int、Sort: True]</sub><br />B. `Market`<br />C. `Type`<br />D. `Part Number`<br />E. `Vehicle`<sub>[null]</sub><br />F. `Picture`<sub>[null]</sub><br />G. <span style="color: violet;">Url</span><br />H. `Json_Src`<br />I. `Json_Specification`<br />J. `Vehicle Page`|
+  |3|Vehicle_R|2.part|<span style="color: violet;">Url</span><br /><span style="color: violet;">Vehicle Page</span>|3.vehicle|A. <span style="color: teal;">No</span><sub>[int、Sort: True]</sub><br />B. <span style="color: teal;">Part Number</span><br />C. `Page`<sub>[int、Sort: True]</sub><br />D. `Vehicle No`<sub>[int、Sort: True]</sub><br />E. `Make Model Engine`<br />F. `Row`<sub>[int、Sort: True]</sub><br />... `SpectraPremium兼容表`|
+  |4|Collate|||||
