@@ -115,19 +115,20 @@
 ## 《爬虫临时指北》 - 2024.09.05
 
 ### 一、常爬网站
-- |序号|网址及示例|网站负责人|
-  |:-:|:-|:-:|
-  |1|[RockAuto](https://www.rockauto.com/en/parts/melling,timing+chain+&+component+kit,5756)|Camilla|
-  |2|[Dorman](https://www.dormanproducts.com/gsearch.aspx?type=keyword&origin=keyword&q=wheel%2520cylinder)|Camilla|
-  |3|[eBay](https://www.ebay.com/sch/i.html?_dkr=1&iconV2Request=true&_blrs=recall_filtering&_ssn=scitoo-autoparts&store_cat=0&store_name=cnbatteries&_oac=1&_nkw=ac%20compressor)|Isiah|
-  |4|[Cardone](https://www.cardone.com/motors/wiper-and-washer/windshield-wiper-motor/?sort=alphaasc)|Ward|
-  |5|[Standard](https://www.standardbrand.com/en/ecatalog?part=Clutch%20Starter%20Safety%20Switch&type=p)|Grant|
-  |7|[SpectraPremium](https://ecat.spectrapremium.com/en/parts?line=oil_pans&universal=0&hide-exclusives-canadian-market=0)|Ward|
-  |9|[FourSeasons](https://www.4s.com/en/ecatalog?part=Evaporator%20Core&type=p&search=s)|Grant|
-  |12|[1AAuto](https://www.1aauto.com/catalog/brands)|数据部|
-  |18|[Auveco](https://www.auveco.com/products/assortments/cabinetandcompartmentbinassortments)|Grant|
-  |24|[Gates](https://www.gates.com/us/en/search.html?searchType=product&text=Positive+Crankcase+Ventilation+%28PCV%29+Hose)|数据部|
-  |26|[Moog](https://www.moogparts.com/find-my-part.html)|数据部|
+- |序号|网址及示例|
+  |:-:|:-|
+  |1|[RockAuto](https://www.rockauto.com/en/parts/melling,timing+chain+&+component+kit,5756)|
+  |2|[Dorman](https://www.dormanproducts.com/gsearch.aspx?type=keyword&origin=keyword&q=wheel%2520cylinder)|
+  |3|[eBay](https://www.ebay.com/sch/i.html?_dkr=1&iconV2Request=true&_blrs=recall_filtering&_ssn=scitoo-autoparts&store_cat=0&store_name=cnbatteries&_oac=1&_nkw=ac%20compressor)|
+  |4|[Cardone](https://www.cardone.com/motors/wiper-and-washer/windshield-wiper-motor/?sort=alphaasc)|
+  |5|[Standard](https://www.standardbrand.com/en/ecatalog?part=Clutch%20Starter%20Safety%20Switch&type=p)|
+  |7|[SpectraPremium](https://ecat.spectrapremium.com/en/parts?line=oil_pans&universal=0&hide-exclusives-canadian-market=0)|
+  |9|[FourSeasons](https://www.4s.com/en/ecatalog?part=Evaporator%20Core&type=p&search=s)|
+  |10|[Amazon](https://www.amazon.com/gp/bestsellers/automotive/15730511/ref=pd_zg_hrsr_automotive)|
+  |12|[1AAuto](https://www.1aauto.com/catalog/brands)|
+  |18|[Auveco](https://www.auveco.com/products/assortments/cabinetandcompartmentbinassortments)|
+  |24|[Gates](https://www.gates.com/us/en/search.html?searchType=product&text=Positive+Crankcase+Ventilation+%28PCV%29+Hose)|
+  |26|[Moog](https://www.moogparts.com/find-my-part.html)|
 
 ### 二、理论基础
 
@@ -247,6 +248,7 @@
   |Carver-HJQ|Carver|hejiaqi0318@163.com|
   |coarl-cc|Luka|864383059@qq.com|
   |Crissy1010|Crissy|2523031949@qq.com|
+  |DamnPapacito|Nolan|414180483@qq.com|
   |hlxjustin|Liz|hlx_justin@163.com|
   |Isiah-yi|Isiah|pd56@cht-group.net|
   |Larkin420420|Larkin|heijiaow@163.com|
@@ -272,7 +274,6 @@
   |:-|:-|:-|:-|
   |06. [Summit](https://www.summitracing.com/search?PageSize=100&SortBy=SKU&SortOrder=Ascending&keyword=LS%20Oil%20Pan)<br /><br />&emsp;-|1. `Records Per Page` -> `100 Records Per Page`<br />2. `Sort By` -> `Part Number (a-z)`|$\color{red}{1. Menu}$<sup>【Tampermonkey】</sup><br />$\color{blue}{输出：}$`Page`、`No.`、`Url`|$\color{red}{2. Part}$<sup>【requests】</sup><br />$\color{blue}{输入：}$<ins>`No.`</ins><sub>[Menu]</sub>、<ins>`Url`</ins><sub>[Menu]</sub><br />$\color{blue}{输出：}$<ins>`序号`</ins>、`Part_Number`、`Title`、`Description`、`Pic`<sub>(n)</sub>、<ins>`Url`</ins>、`Src`、`其他Overview`|
   |08. [Denniskirk](https://www.denniskirk.com/atv/cv-axle/brandasc.srt/100.ipp)<br /><br />&emsp;Westbroobo|1. `Results per Page` -> `100`<br />2. `Sort by` -> `Brand: A-Z`|$\color{red}{1. Menu}$<sup>【Tampermonkey】</sup><br />$\color{blue}{输出：}$`Page`、`No.`、`Url`|$\color{red}{2. Part}$<sup>【Tampermonkey】</sup><br />$\color{blue}{输入：}$<ins>`No.`</ins><sub>[Menu]</sub>、<ins>`Url`</ins><sub>[Menu]</sub><br />$\color{blue}{输出：}$<ins>`序号`</ins>、`Brand`、`Title`、`Vehicle`、`OE`、`Pic`<sup>(n)</sup>、<ins>`Url`</ins>、`Src`、`其他Specifications`|
-  |10. [Amazon](https://www.amazon.com/Best-Sellers-Automotive-Automotive-Replacement-Air-Conditioning-Clutches/zgbs/automotive/15723281/ref=zg_bs_pg_1_automotive?_encoding=UTF8&pg=1)<br /><br />&emsp;Aleya||$\color{red}{1. Menu}$<sup>【Tampermonkey】</sup><br />$\color{blue}{输出：}$`No.`、`Url`<sup>(y)</sup>|$\color{red}{2. Part}$<sup>【Console】</sup><br />$\color{blue}{输入：}$<ins>`No.`</ins><sub>[Menu]</sub>、`Url`<sub>[Menu]</sub><br />$\color{blue}{输出：}$<ins>`序号`</ins>、`ASIN`、`Title`、`Price`、`About`、`Pic`<sup>(n)</sup>、`Url`<sup>(n)</sup>、`Src`、`其他Attribute`、`其他Technical_Details`、`其他Additional_Information`<br /><br />$\color{red}{3. SellerSprite\underline{ }Competitor}$<sup>【Tampermonkey】</sup><br />$\color{blue}{输入：}$<ins>`ASIN`</ins><sub>[Part]</sub><br />$\color{blue}{输出：}$<ins>`ASIN`</ins>、`标识`、`父ASIN`、`品牌`、`品牌链接`、`大类BSR排名`、`近7天BSR增长数`、`近7天BSR增长率`、`父体近30天总销量`、`父体近30天销量增长率`、`父体近30天总销售额`、`子体近一个月的销量`、`子体近一个月的预估销售额`、`变体数`、`最新售价 (BuyBox)`、`最新Q&A数`、`Listing的最新评分数`、`Listing近30天的新增评分数`、`Listing的最新评分值`、`月度留评率`、`FBA运费`、`毛利率`、`上架时间_1`、`上架时间_2`、`配送`、`类目路径_1`、`类目路径_2`、`小类目`、`重量`、`体积`、`LQS`、`卖家数`、`BuyBox卖家`、`BuyBox`<br /><br />$\color{red}{4. SellerSprite\underline{ }Sales}$<sup>【selenium】</sup><br />$\color{blue}{输入：}$<ins>`ASIN`</ins><sub>[Part]</sub><br />$\color{blue}{输出：}$<ins>`ASIN`</ins>、`销量预测信息`|
   |11. [AutoteileDirekt](https://www.autoteiledirekt.de/suche.html?keyword=Radlagersatz%20SKF&brand%5B0%5D=50)<br /><br />&emsp;Aleya||$\color{red}{1. Menu}$<sup>【Tampermonkey】</sup><br />$\color{blue}{输出：}$`Page`、`No.`、`Url`<sup>(y)</sup>|$\color{red}{2. Part}$<sup>【Console】</sup><br />$\color{blue}{输入：}$<ins>`No.`</ins><sub>[Menu]</sub>、`Url`<sub>[Menu]</sub><br />$\color{blue}{输出：}$<ins>`序号`</ins>、`Title`、`Subtitle`、`Artkl`、`Product_Id`、`Price`、`Vehicle_1`<sup>(n)</sup>、`Vehicle_2`<sup>(n)</sup>、`OE`、`Kit`、`Pic`<sup>(n)</sup>、`Url`<sup>(n)</sup>、`Src`、`Maker_Id`、`其他Desc`、`其他TecDoc`<br /><br />$\color{red}{3. Model}$<sup>【Console】</sup><br />$\color{blue}{输入：}$<ins>`Product_Id`</ins><sub>[Part]</sub>、<ins>`Maker_Id`</ins><sub>[Part]</sub><br />$\color{blue}{输出\_1：}$`No.`、<ins>`Product_Id`</ins>、<ins>`Maker_Id`</ins>、`Model_Id`、`Vehicle_1`<br />$\color{blue}{输出：}$<ins>`Product_Id`</ins>、`Vehicle_1`<sup>(y)</sup><br /><br />$\color{red}{4. Engine}$<sup>【Console】</sup><br />$\color{blue}{输入：}$<ins>`Product_Id`</ins><sub>[Model_1]</sub>、`Maker_Id`<sub>[Model_1]</sub>、`Model_Id`<sub>[Model_1]</sub>、`Vehicle_1`<sub>[Model_1]</sub><br />$\color{blue}{输出：}$<ins>`Product_Id`</ins>、`Vehicle_2`<sup>(y)</sup><br /><br />$\color{red}{5. Pic}$<sup>【Tampermonkey】</sup><br />$\color{blue}{输入：}$`Src`<sub>[Part]</sub><br />$\color{blue}{输出：}$`Pic`<sup>(y)</sup>|
   |13. [Rotomaster](https://rotomaster.com/search.php?search_query=Turbocharger&section=product&_bc_fsnf=1&Part%20Type=Turbocharger&limit=30&sort=alphaasc)<br /><br />&emsp;Westbroobo|1. `VIEW AS` -> `3`<br />2. `SHOW` -> `30 items per page`<br />3. `SORT BY` -> `A to Z`|$\color{red}{1. Menu}$<sup>【Tampermonkey】</sup><br />$\color{blue}{输出：}$`Page`、`No.`、`Url`|$\color{red}{2. Part}$<sup>【requests】</sup><br />$\color{blue}{输入：}$<ins>`No.`</ins><sub>[Menu]</sub>、<ins>`Url`</ins><sub>[Menu]</sub><br />$\color{blue}{输出：}$<ins>`序号`</ins>、`Title`、`Pic`<sup>(n)</sup>、<ins>`Url`</ins>、`Src`、`其他Attribute`、`其他Specifications`|
   |14. [TurbochargerPros](https://www.turbochargerpros.com/search_result.asp?w=garrett#/filter:brand:Garrett)<br /><br />&emsp;-||$\color{red}{1. Menu}$<sup>【Tampermonkey】</sup><br />$\color{blue}{输出：}$`Page`、`No.`、`Url`|$\color{red}{2. Part}$<sup>【requests】</sup><br />$\color{blue}{输入：}$<ins>`No.`</ins><sub>[Menu]</sub>、<ins>`Url`</ins><sub>[Menu]</sub><br />$\color{blue}{输出：}$<ins>`序号`</ins>、`Title`、`Vehicle`、`Pic`<sup>(n)</sup>、<ins>`Url`</ins>、`Src`、`其他Specifications`|
