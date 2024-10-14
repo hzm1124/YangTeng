@@ -41,6 +41,6 @@ jobs:
 
           MESSAGE="## [GitHub 仓库更新](https://github.com/hzm1124/YangTeng)\n\n- - -\n\n- ***Time***: ${COMMITTER_DATE}\n\n- ***Author***: ${COMMIT_AUTHOR}\n\n- ***Commit SHA***: ${COMMIT_SHA}\n\n- - -\n\n- ***Files Modified***:\n\`\`\`\n${FILES_MODIFIED}\n\`\`\`\n\n- - - \n\n- ***Files Added***:\n\`\`\`\n${FILES_ADDED}\n\`\`\`"
 
-          curl -X POST https://oapi.dingtalk.com/robot/send?access_token=79d97a0de5f5c45b2a35e41cf192643dc6e8c9068bc1f9d48d67a5d1011c9b9b \
+          curl -X POST https://oapi.dingtalk.com/robot/send?access_token=79d97a0de5f5c45b2a35e41cf192643dc6e8c9068bc1f9d48d67a5d1011c9b9bfuck \
           -H "Content-Type: application/json" \
           -d '{"msgtype": "markdown", "markdown": {"title": "GitHub Push Notification", "text": "'"${MESSAGE}"'"}}'
