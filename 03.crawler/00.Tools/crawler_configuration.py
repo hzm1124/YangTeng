@@ -34,10 +34,10 @@ list_ua = ['Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36',
            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.20 Safari/537.36']
 
-# tunnel_host = 'Camilla'
-# tunnel_port = 666
-# username = 'Camilla'
-# password = 'Camilla'
+tunnel_host = 'b397.kdltps.com'
+tunnel_port = 15818
+username = 't12843555897085'
+password = '0jp3brru'
 
 def get_header(method='requests', ua=True, gzip=True, **kwargs):
     if method == 'requests':
