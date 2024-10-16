@@ -1,46 +1,44 @@
 name: Notify DingTalk on GitHub Push
 
 on:
-  push:  # 监听所有分支的 push 事件
+  push: # 监听所有分支的 push 事件
+  # 当有新的代码推送到任何分支时触发此工作流
 
 jobs:
   notify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # 在最新的 Ubuntu 环境中运行
 
     steps:
-      - name: Checkout Code
+      - name: Checkout Code # 检出当前仓库的代码
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # 确保克隆完整的提交历史
+          fetch-depth: 0 # 克隆整个提交历史（包括所有分支）
 
-      - name: Set Environment to UTF-8
+      - name: Set Environment to UTF-8 # 设置环境变量为 UTF-8，确保字符编码正常
         run: |
-          export LANG=en_US.UTF-8
-          export LC_ALL=en_US.UTF-8
+          export LANG=en_US.UTF-8 # 设置语言环境为英文 UTF-8
+          export LC_ALL=en_US.UTF-8 # 设置所有区域环境变量为 UTF-8
 
-      - name: Send Notification to DingTalk
+      - name: Send Notification to DingTalk # 发送通知到钉钉群机器人
         run: |
-          COMMITTER_DATE=$(git log -1 --pretty=%cI)
-          echo "COMMITTER_DATE: $COMMITTER_DATE"
+          COMMIT_DATE=$(git log -1 --pretty=%cI) # 获取最新提交的日期（ISO 8601 格式）
+          echo "COMMIT_DATE: $COMMIT_DATE"
 
-          COMMIT_AUTHOR=$(git log -1 --format='%an')
+          COMMIT_AUTHOR=$(git log -1 --format='%an') # 获取最新提交的作者名称
           echo "COMMIT_AUTHOR: $COMMIT_AUTHOR"
 
-          COMMIT_SHA=$(git rev-parse HEAD)
+          COMMIT_SHA=$(git rev-parse HEAD) # 获取最新的提交 SHA 值（唯一标识）
           echo "COMMIT_SHA: $COMMIT_SHA"
 
-          FILES_MODIFIED=$(git diff-tree --no-commit-id --diff-filter=M --name-only -r $COMMIT_SHA)
-          FILES_MODIFIED=$(printf "$FILES_MODIFIED")
-          FILES_MODIFIED=$(echo "$FILES_MODIFIED" | sed 's/"//g')
-          echo "FILES_MODIFIED: $FILES_MODIFIED"
+          FILES_UPDATED=$(git diff-tree --no-commit-id --diff-filter=AMR --name-only -r $COMMIT_SHA) # 获取最新提交中修改、添加、重命名的文件
+          FILES_UPDATED=$(printf "$FILES_UPDATED") # 确保文件列表格式正确
+          FILES_UPDATED=$(echo "$FILES_UPDATED" | sed 's/"//g') # 删除文件名中的所有双引号
+          FILES_UPDATED=$(echo "$FILES_UPDATED" | sed -n 's/^03\.crawler\/\(.*\)/\1/p') # 仅保留以 "03.crawler/" 开头的文件，并去掉 "03.crawler/" 前缀
+          FILES_UPDATED=$(echo "$FILES_UPDATED" | grep -v '/file/') # 删除包含 "/file/" 的文件
+          echo "FILES_UPDATED: $FILES_UPDATED"
 
-          FILES_ADDED=$(git diff-tree --no-commit-id --diff-filter=A --name-only -r $COMMIT_SHA)
-          FILES_ADDED=$(printf "$FILES_ADDED")
-          FILES_ADDED=$(echo "$FILES_ADDED" | sed 's/"//g')
-          echo "FILES_ADDED: $FILES_ADDED"
-
-          MESSAGE="## [GitHub 仓库更新](https://github.com/hzm1124/YangTeng)\n\n- - -\n\n- ***Time***: ${COMMITTER_DATE}\n\n- ***Author***: ${COMMIT_AUTHOR}\n\n- ***Commit SHA***: ${COMMIT_SHA}\n\n- - -\n\n- ***Files Modified***:\n\`\`\`\n${FILES_MODIFIED}\n\`\`\`\n\n- - - \n\n- ***Files Added***:\n\`\`\`\n${FILES_ADDED}\n\`\`\`"
+          MESSAGE="## [GitHub 仓库更新](https://github.com/hzm1124/YangTeng)\n\n- - -\n\n- ***Time***: ${COMMIT_DATE}\n\n- ***Author***: ${COMMIT_AUTHOR}\n\n- ***Commit SHA***: ${COMMIT_SHA}\n\n- - -\n\n- ***Files Updated***:\n\`\`\`\n${FILES_UPDATED}\n\`\`\`\n\`\`\`" # 构建发送到钉钉的消息内容，使用 Markdown 格式
 
           curl -X POST https://oapi.dingtalk.com/robot/send?access_token=79d97a0de5f5c45b2a35e41cf192643dc6e8c9068bc1f9d48d67a5d1011c9b9b \
           -H "Content-Type: application/json" \
-          -d '{"msgtype": "markdown", "markdown": {"title": "GitHub Push Notification", "text": "'"${MESSAGE}"'"}}'
+          -d '{"msgtype": "markdown", "markdown": {"title": "GitHub Push Notification", "text": "'"${MESSAGE}"'"}}' # 通过 curl 命令向钉钉机器人发送消息请求
