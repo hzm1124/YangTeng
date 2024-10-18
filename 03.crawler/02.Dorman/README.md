@@ -9,8 +9,8 @@
 
 - |No|Name|File In|Fields In|File Out|Fields Out|
   |:-:|:-|:-|:-|:-|:-|
-  |1|Page_R|input.xlsx|`Url`<sup>*</sup>|1.page.xlsx|A. `No`<sup>**</sup><sub>[int、Sort: True]</sub><br />B. `Url`<sup>*</sup><br />C. `SKU Count`<sub>[int]</sub><br />D. `Page`<sub>[int]</sub>|
+  |1|Page_R|input.xlsx|`Url`<sup>[1]</sup>|1.page.xlsx|A. `No`<sup>\*</sup><sub>[int、Sort: True]</sub><br />B. `Url`<sup>[1]</sup><br />C. `SKU Count`<sub>[int]</sub><br />D. `Page`<sub>[int]</sub>|
   |2|Url_R|1.page.xlsx|`Url`<br />`Page`|2.url|A. `No`<sub>[int]</sub><br />B. `Url`<sub>[Sort: Occurrence]</sub>|
-  |3|Part_R|2.url|`Url`<sup>*</sup>|3.part|A. `No`<sup>**</sup><sub>[int]</sub><br />B. `Type`<sub>[Sort: True]</sub><br />C. `Part Number`<sub>[Sort: True]</sub><br />D. `Brand`<br />E. `Description`<br />F. `Application Summary`<br />G. `OEM`<br />H. `Picture`<sub>[null]</sub><br />I. `Url`<sup>*</sup><br />J. `Json_Src`<br />K. `Vehicle Url`<br />L. `Json_Specification`|
-  |4|Vehicle_R|3.part|`Vehicle Url`<sup>*</sup>|4.vehicle|A. `Vehicle Url`<sup>*</sup><sub>[Sort: True]</sub><br />B. `Page`<sub>[int、Sort: True]</sub><br />C. `Row`<sub>[int、Sort: True]</sub><br />... `Dorman兼容表`|
+  |3|Part_R|2.url|`Url`<sup>[1]</sup>|3.part|A. `No`<sup>\*</sup><sub>[int]</sub><br />B. `Type`<sub>[Sort: True]</sub><br />C. `Part Number`<sub>[Sort: True]</sub><br />D. `Brand`<br />E. `Description`<br />F. `Application Summary`<br />G. `OEM`<br />H. `Picture`<sub>[null]</sub><br />I. `Url`<sup>[1]</sup><br />J. `Json_Src`<br />K. `Vehicle Url`<br />L. `Json_Specification`|
+  |4|Vehicle_R|3.part|`Vehicle Url`<sup>[1]</sup>|4.vehicle|A. `Vehicle Url`<sup>[1]</sup><sub>[Sort: True]</sub><br />B. `Page`<sub>[int、Sort: True]</sub><br />C. `Row`<sub>[int、Sort: True]</sub><br />... `Dorman兼容表`|
   |5|Collate|||||
