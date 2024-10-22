@@ -11,7 +11,7 @@
 
 ### 1. 这一坨文件是什么鬼？
 
-- 以[Dorman](https://www.dormanproducts.com/gsearch.aspx?type=keyword&origin=keyword&q=wheel%2520cylinder&start=0&num=100)网站为例，文件结构如下：
+- 以[Dorman](./02.Dorman)网站为例，文件结构如下：
 - ```markdown
   - `02.Dorman/`
     - `README.md`
