@@ -10,7 +10,7 @@
 - |No|Name|File In|Fields In|File Out|Fields Out|
   |:-:|:-|:-|:-|:-|:-|
   |1|Item_Number_R|input.xlsx|`Url`|1.item_number|A. `No`<sub>[int]</sub><br />B. `Item Number`<sub>[Sort: Occurrence]</sub>|
-  |2|Url_R|1.item_number|<span style="color: violet;">Item Number</span>|2.url|A. <span style="color: teal;">No</span><sub>[int、Sort: True]</sub><br />B. <span style="color: violet;">Item Number</span><br />C. `Url`|
-  |3|Part_R|2.url|<span style="color: violet;">Url</span>|3.part|A. <span style="color: teal;">No</span><sub>[int、Sort: True]</sub><br />B. <span style="color: teal;">Item Number</span><br />C. `Market`<br />D. `Title`<br />E. `Price`<br />F. `Picture`<sub>[null]</sub><br />G. <span style="color: violet;">Url</span><br />H. `Json_Src`<br />I. `Description Url`<br />J. `Subtitle`<br />K. `Json_Quantity`<br />L. `Json_Compatibility`<br />M. `Json_Specific`|
-  |4|Vehicle_R|3.part|<span style="color: violet;">Json_Compatibility</span>|4.vehicle|A. <span style="color: teal;">No</span><sub>[int、Sort: True]</sub><br />B. <span style="color: teal;">Item Number</span><br />C. <span style="color: violet;">Json_Compatibility</span><br />D. `Page`<sub>[int、Sort: True]</sub><br />E. `Row`<sub>[int、Sort: True]</sub><br />... `eBay兼容表`|
+  |2|Url_R|1.item_number|`Item Number`<sup>[1]</sup>|2.url|A. `No`<sup>\*</sup><sub>[int、Sort: True]</sub><br />B. `Item Number`<sup>[1]</sup><br />C. `Url`|
+  |3|Part_R|2.url|`Url`<sup>[1]</sup>|3.part|A. `No`<sup>\*</sup><sub>[int、Sort: True]</sub><br />B. `Item Number`<sup>\*</sup><br />C. `Title`<br />D. `Price`<br />E. `Picture`<sub>[null]</sub><br />F. `Url`<sup>[1]</sup><br />G. `Market`</span><br />H. `Subtitle`<br />I. `Store Name`<br />J. `Store Url`<br />K. `Json_Src`<br />L. `Description Url`<br />M. `Json_Quantity`<br />N. `Json_Price`<br />O. `Json_Specific`<br />P. `Json_Compatibility`|
+  |4|Vehicle_R|3.part|`Json_Compatibility`<sup>[1]</sup>|4.vehicle|A. `Json_Compatibility`<sup>[1]</sup><sub>[int、Sort: True]</sub><br />B. `Page`<sub>[int、Sort: True]</sub><br />C. `Row`<sub>[int、Sort: True]</sub><br />... `eBay兼容表`|
   |5|Collate|||||
