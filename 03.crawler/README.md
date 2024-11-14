@@ -81,6 +81,7 @@
   |30|[TecDoc](https://web.tecalliance.net/tecdoc/qa/parts/search?brands=21&groups=298#@brc/search:Brand%2520and%2520product%2520group%2520search;brands:21;groups:298)|
   |36|[UAC](https://uacparts.com/)|
   |39|[OEMGenuineParts](https://toyota.oempartsonline.com/search?search_str=Resonator)|
+  |40|[HeadlightsDepot](https://www.headlightsdepot.com/catalog/fog-lights?product_list_limit=71&product_list_order=name)|
 
 ### 二、理论基础
 
