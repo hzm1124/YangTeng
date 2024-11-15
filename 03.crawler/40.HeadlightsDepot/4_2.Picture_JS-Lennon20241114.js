@@ -15,7 +15,9 @@ async function get_picture(url_index) {
             link.click();
             document.body.removeChild(link);
             URL.revokeObjectURL(link.href);
-            console.log(`[True] - [Page ${url_index}]`);
+
+            let now = new Date();
+            console.log(`[True] - [Page ${url_index}] - [${now.getFullYear()}/${now.getMonth() + 1}/${now.getDate()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}]`);
         }
         else {
             get_picture(url_index);

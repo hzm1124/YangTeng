@@ -15,7 +15,9 @@ for(let p = 1; p <= page; p++) {
 	        link.click();
 	        document.body.removeChild(link);
 	        URL.revokeObjectURL(link.href);
-	        console.log(`[True] - [Page ${p}]`);
+
+            let now = new Date();
+			console.log(`[True] - [Page ${p}] - [${now.getFullYear()}/${now.getMonth() + 1}/${now.getDate()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}]`);
 		}
 		else {
 			console.log(`[False] - [Page ${p}]`);
