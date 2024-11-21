@@ -18,7 +18,7 @@ for(let i = 1; i <= list_url.length; i++) {
             URL.revokeObjectURL(link.href);
 
             let now = new Date();
-            console.log(`[True] - [Page ${i}] - [${now.getFullYear()}/${now.getMonth() + 1}/${now.getDate()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}]`);
+            console.log(`[True] - [剩余${list_url.length - i}条] - [${now.getFullYear()}/${now.getMonth() + 1}/${now.getDate()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] - ${i}. ${list_url[i - 1]}`);
         }
         else {
             console.log(`[False] - [Page ${i}]`);

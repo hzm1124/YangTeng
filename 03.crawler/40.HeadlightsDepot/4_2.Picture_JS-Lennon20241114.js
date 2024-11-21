@@ -17,7 +17,7 @@ async function get_picture(url_index) {
             URL.revokeObjectURL(link.href);
 
             let now = new Date();
-            console.log(`[True] - [Page ${url_index}] - [${now.getFullYear()}/${now.getMonth() + 1}/${now.getDate()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}]`);
+            console.log(`[True] - [剩余${list_url.length - url_index}条] - [${now.getFullYear()}/${now.getMonth() + 1}/${now.getDate()} ${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] - ${url_index}. ${list_url[url_index - 1]}`);
         }
         else {
             get_picture(url_index);

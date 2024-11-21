@@ -82,6 +82,7 @@
   |36|[UAC](https://uacparts.com/)|
   |39|[OEMGenuineParts](https://toyota.oempartsonline.com/search?search_str=Resonator)|
   |40|[HeadlightsDepot](https://www.headlightsdepot.com/catalog/fog-lights?product_list_limit=71&product_list_order=name)|
+  |41|[MesseFrankfurt](https://automechanika-shanghai.hk.messefrankfurt.com/shanghai/zh-cn/exhibitor-search.html)|
 
 ### 二、理论基础
 
