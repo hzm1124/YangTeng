@@ -85,6 +85,10 @@
   |41|[MesseFrankfurt](https://automechanika-shanghai.hk.messefrankfurt.com/shanghai/zh-cn/exhibitor-search.html)|
   |42|[RainX<sup>[oversea]</sup>](https://www.rainx.com/)|
   |43|[Genuine<sup>[oversea]</sup>](https://www.hondapartsnow.com/)|
+- 严禁在不使用代理池的情况下爬取任何网站！
+- 严禁在不使用代理池的情况下爬取任何网站！！
+- 严禁在不使用代理池的情况下爬取任何网站！！！
+- 上标“<sup>`[oversea]`</sup>”表示需要使用海外代理，非常繁琐、非常贵……
 
 ### 二、理论基础
 
