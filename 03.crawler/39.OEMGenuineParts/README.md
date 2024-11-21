@@ -1,7 +1,7 @@
 # 1. About
 
-- [x] eg 1: [Resonator > Toyota](https://toyota.oempartsonline.com/search?search_str=Resonator)
-- [x] eg 2: [Resonator > Nissan](https://nissan.oempartsonline.com/search?search_str=Resonator)
+- [x] eg 1: [Resonator > Toyota<sup>[oversea]</sup>](https://toyota.oempartsonline.com/search?search_str=Resonator)
+- [x] eg 2: [Resonator > Nissan<sup>[oversea]</sup>](https://nissan.oempartsonline.com/search?search_str=Resonator)
 
 - - -
 
