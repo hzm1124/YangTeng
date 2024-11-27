@@ -85,6 +85,7 @@
   |41|[MesseFrankfurt](https://automechanika-shanghai.hk.messefrankfurt.com/shanghai/zh-cn/exhibitor-search.html)|
   |42|[RainX<sup>[oversea]</sup>](https://www.rainx.com/)|
   |43|[Genuine<sup>[oversea]</sup>](https://www.hondapartsnow.com/)|
+  |44|[TPMS<sup>[oversea]</sup>](https://www.tpms.com/TPMS-Sensors-by-Make-s/1.htm)|
 - 严禁在不使用代理池的情况下爬取任何网站！
 - 严禁在不使用代理池的情况下爬取任何网站！！
 - 严禁在不使用代理池的情况下爬取任何网站！！！
