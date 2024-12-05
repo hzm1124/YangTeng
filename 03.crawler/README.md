@@ -78,7 +78,7 @@
   |18|[Auveco](https://www.auveco.com/products/assortments/cabinetandcompartmentbinassortments)|
   |24|[Gates](https://www.gates.com/us/en/search.html?searchType=product&text=Positive+Crankcase+Ventilation+%28PCV%29+Hose)|
   |26|[Moog](https://www.moogparts.com/find-my-part.html)|
-  |30|[TecDoc](https://web.tecalliance.net/tecdoc/qa/parts/search?brands=21&groups=298#@brc/search:Brand%2520and%2520product%2520group%2520search;brands:21;groups:298)|
+  |30|[TecDoc<sup>[oversea]</sup>](https://web.tecalliance.net/tecdoc/qa/parts/search?brands=21&groups=298#@brc/search:Brand%2520and%2520product%2520group%2520search;brands:21;groups:298)|
   |36|[UAC](https://uacparts.com/)|
   |39|[OEMPartsOnline<sup>[oversea]</sup>](https://toyota.oempartsonline.com/search?search_str=Resonator)|
   |40|[HeadlightsDepot<sup>[oversea]</sup>](https://www.headlightsdepot.com/catalog/fog-lights?product_list_limit=71&product_list_order=name)|
