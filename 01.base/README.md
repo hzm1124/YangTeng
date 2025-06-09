@@ -21,41 +21,41 @@
 
 ### 一、Python下载和安装
 
-1. 打开Python的官方网址[Welcome to Python.org](https://www.python.org/)<br />![alt pic.png](./pic/file_1-1.1.png)
+1. 打开Python的官方网址[Welcome to Python.org](https://www.python.org/)<br />![alt pic.png](./pic/file_1/1.1.png)
 
-2. 根据实际需要下载相应的“安装程序”（一般选择Windows installer (64-bit)）<br />![alt pic.png](./pic/file_1-1.2.png)
+2. 根据实际需要下载相应的“安装程序”（一般选择Windows installer (64-bit)）<br />![alt pic.png](./pic/file_1/1.2.png)
 
-3. 运行下载好的“安装程序”，确认选中下方的复选框，然后点击“Install Now”<br />![alt pic.png](./pic/file_1-1.3.png)
+3. 运行下载好的“安装程序”，确认选中下方的复选框，然后点击“Install Now”<br />![alt pic.png](./pic/file_1/1.3.png)
 
-4. 点击“Disable path length limit”取消路径长度限制<br />![alt pic.png](./pic/file_1-1.4.png)
+4. 点击“Disable path length limit”取消路径长度限制<br />![alt pic.png](./pic/file_1/1.4.png)
 
-5. 快捷键“WIN+R”打开系统的“运行”窗口，输入“cmd”打开“命令提示符”窗口<br />![alt pic.png](./pic/file_1-1.5.png)
+5. 快捷键“WIN+R”打开系统的“运行”窗口，输入“cmd”打开“命令提示符”窗口<br />![alt pic.png](./pic/file_1/1.5.png)
 
-6. 输入“python --version”查看是否安装成功<br />![alt pic.png](./pic/file_1-1.6.png)
+6. 输入“python --version”查看是否安装成功<br />![alt pic.png](./pic/file_1/1.6.png)
 
 ### 二、虚拟环境
 
-1. 输入“pip install virtualenv”下载安装“虚拟环境库”<br />![alt pic.png](./pic/file_1-2.1.png)
+1. 输入“pip install virtualenv”下载安装“虚拟环境库”<br />![alt pic.png](./pic/file_1/2.1.png)
 
-2. 选定一个路径，然后打开“命令提示符”窗口<br />![alt pic.png](./pic/file_1-2.2.png)
+2. 选定一个路径，然后打开“命令提示符”窗口<br />![alt pic.png](./pic/file_1/2.2.png)
 
-3. 输入“virtualenv venv”创建一个名为“venv”的虚拟环境<br />![alt pic.png](./pic/file_1-2.3.1.png)<br />![alt pic.png](./pic/file_1-2.3.2.png)
+3. 输入“virtualenv venv”创建一个名为“venv”的虚拟环境<br />![alt pic.png](./pic/file_1/2.3.1.png)<br />![alt pic.png](./pic/file_1/2.3.2.png)
 
-4. 进入虚拟环境的路径，然后打开“命令提示符”窗口<br />![alt pic.png](./pic/file_1-2.4.png)
+4. 进入虚拟环境的路径，然后打开“命令提示符”窗口<br />![alt pic.png](./pic/file_1/2.4.png)
 
-5. 输入“.\Scripts\activate.bat”激活虚拟环境<br />![alt pic.png](./pic/file_1-2.5.png)
+5. 输入“.\Scripts\activate.bat”激活虚拟环境<br />![alt pic.png](./pic/file_1/2.5.png)
 
-6. 命令提示符”窗口增加了“venv”前缀，表示当前处于名为“venv”的Python环境，即虚拟环境激活成功<br />![alt pic.png](./pic/file_1-2.6.png)
+6. 命令提示符”窗口增加了“venv”前缀，表示当前处于名为“venv”的Python环境，即虚拟环境激活成功<br />![alt pic.png](./pic/file_1/2.6.png)
 
 ### 三、Jupyter Notebook
 
-- 在虚拟环境中输入“pip install notebook”下载安装“Jupyter Notebook库”<br />![alt pic.png](./pic/file_1-3.1.png)<br />![alt pic.png](./pic/file_1-3.2.png)
+- 在虚拟环境中输入“pip install notebook”下载安装“Jupyter Notebook库”<br />![alt pic.png](./pic/file_1/3.1.png)<br />![alt pic.png](./pic/file_1/3.2.png)
 
 ### 四、每次使用
 
-1. 激活虚拟环境<br />![alt pic.png](./pic/file_1-4.1.1.png)<br />![alt pic.png](./pic/file_1-4.1.2.png)
+1. 激活虚拟环境<br />![alt pic.png](./pic/file_1/4.1.1.png)<br />![alt pic.png](./pic/file_1/4.1.2.png)
 
-2. 输入“jupyter notebook”打开Jupyter Notebook<br />![alt pic.png](./pic/file_1-4.2.1.png)<br />![alt pic.png](./pic/file_1-4.2.2.png)<br />![alt pic.png](./pic/file_1-4.2.3.png)
+2. 输入“jupyter notebook”打开Jupyter Notebook<br />![alt pic.png](./pic/file_1/4.2.1.png)<br />![alt pic.png](./pic/file_1/4.2.2.png)<br />![alt pic.png](./pic/file_1/4.2.3.png)
 
 - - -
 
