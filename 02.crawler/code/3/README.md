@@ -11,7 +11,7 @@
 ## 1. Item_Number
 
 - Url: https://www.ebay.com/sch/i.html?_dkr=1&iconV2Request=true&_blrs=recall_filtering&_ssn=scitoo-autoparts&store_cat=0&store_name=cnbatteries&_oac=1&_nkw=ac+compressor&_stpos=91710&_fcid=1&_sop=15
-- Picture:<br />![alt pic.png](./pic/3/01.png)
+- Picture:<br />![alt pic.png](../../pic/3/01.png)
 - Field:
   - **page**: `1`
   - **page_url**: `'https://www.ebay.com/sch/i.html?_dkr=1&iconV2Request=true&_blrs=recall_filtering&_ssn=scitoo-autoparts&store_cat=0&store_name=cnbatteries&_oac=1&_nkw=ac+compressor&_stpos=91710&_fcid=1&_sop=15&_ipg=240&_pgn=1&_ul=US'`
@@ -21,7 +21,7 @@
 ## 3. Url
 
 - Url: https://www.ebay.com/itm/256756876675?_ul=US&_stpos=91710&orig_cvip=true
-- Picture:<br />![alt pic.png](./pic/3/03.png)
+- Picture:<br />![alt pic.png](../../pic/3/03.png)
 - Field:
   - **default_no**: `1`
   - **market**: `'EBAY-US'`
@@ -33,7 +33,7 @@
 ## 4. Part
 
 - Url: https://www.ebay.com/itm/256756876675?_ul=US&_stpos=91710&orig_cvip=true
-- Picture:<br />![alt pic.png](./pic/3/04.1.png)<br />![alt pic.png](./pic/3/04.2.png)<br />![alt pic.png](./pic/3/04.3.png)
+- Picture:<br />![alt pic.png](../../pic/3/04.1.png)<br />![alt pic.png](../../pic/3/04.2.png)<br />![alt pic.png](../../pic/3/04.3.png)
 - Field:
   - **json_delivery**: `'{"0": "Standard Shipping", "1": "Estimated between Thu, Jun 12 and Mon, Jun 16", "2": "Shipping: Free shipping"}'`
   - **json_location**: `'{"0": "Ontario, California, United States"}'`
@@ -54,7 +54,7 @@
 ## 5. Compatibility
 
 - Url: https://www.ebay.com/itm/256756876675?_ul=US&_stpos=91710&orig_cvip=true
-- Picture:<br />![alt pic.png](./pic/3/05.png)
+- Picture:<br />![alt pic.png](../../pic/3/05.png)
 - Field:
   - **compatibility_page**: `1`
   - **compatibility_url**: `'https://www.dormanproducts.com/itemdetailapp.aspx?ProductID=76729&PartType=Radiator+Fan+Assembly&start=0&num=50'`
@@ -69,4 +69,4 @@
 ## 6. Picture
 
 - Url: https://i.ebayimg.com/images/g/w~QAAOSw7tFnZQPw/s-l500.jpg
-- Picture:<br />![alt pic.png](./pic/3/06.png)
+- Picture:<br />![alt pic.png](../../pic/3/06.png)

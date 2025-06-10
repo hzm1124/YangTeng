@@ -11,7 +11,7 @@
 ## 1. Page
 
 - Url: https://www.dormanproducts.com/gsearch.aspx?type=keyword&origin=keyword&parttype=Radiator%2520Fan%2520Assembly&start=0&num=100
-- Picture:<br />![alt pic.png](./pic/2/01.png)
+- Picture:<br />![alt pic.png](../../pic/2/01.png)
 - Field:
   - **sku_count**: `750`
   - **page_count**: `8`
@@ -21,7 +21,7 @@
 ## 2. Url
 
 - Url: https://www.dormanproducts.com/gsearch.aspx?type=keyword&origin=keyword&parttype=Radiator%2520Fan%2520Assembly&start=0&num=100
-- Picture:<br />![alt pic.png](./pic/2/02.png)
+- Picture:<br />![alt pic.png](../../pic/2/02.png)
 - Field:
   - **no**: `1`
   - **url**: `'https://www.dormanproducts.com/p-76729-621-916.aspx?parttype=Radiator%2520Fan%2520Assembly&origin=keyword'`
@@ -29,7 +29,7 @@
 ## 3. Part
 
 - Url: https://www.dormanproducts.com/p-76729-621-916.aspx?parttype=Radiator%2520Fan%2520Assembly&origin=keyword
-- Picture:<br />![alt pic.png](./pic/2/03.1.png)<br />![alt pic.png](./pic/2/03.2.png)
+- Picture:<br />![alt pic.png](../../pic/2/03.1.png)<br />![alt pic.png](../../pic/2/03.2.png)
 - Field:
   - **type_**: `'Radiator Fan Assembly'`
   - **json_src**: `'{"0": "https://static.dormanproducts.com/images/product/medium/621-916-001.JPG", "1": "https://static.dormanproducts.com/images/product/medium/621-916-009.JPG"}'`
@@ -45,7 +45,7 @@
 ## 4. Compatibility
 
 - Url: https://www.dormanproducts.com/itemdetailapp.aspx?ProductID=76729&PartType=Radiator+Fan+Assembly&start=0&num=50
-- Picture:<br />![alt pic.png](./pic/2/04.png)
+- Picture:<br />![alt pic.png](../../pic/2/04.png)
 - Field:
   - **compatibility_page**: `1`
   - **compatibility_url**: `'https://www.dormanproducts.com/itemdetailapp.aspx?ProductID=76729&PartType=Radiator+Fan+Assembly&start=0&num=50'`
@@ -60,4 +60,4 @@
 ## 5. Picture
 
 - Url: https://static.dormanproducts.com/images/product/medium/621-916-001.JPG
-- Picture:<br />![alt pic.png](./pic/2/05.png)
+- Picture:<br />![alt pic.png](../../pic/2/05.png)
