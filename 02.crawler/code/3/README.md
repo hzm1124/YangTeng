@@ -24,6 +24,7 @@
 - Picture:<br />![alt pic.png](../../pic/3/03.png)
 - Field:
   - **default_no**: `1`
+  - **join_indn**: `'256756876675;1'`
   - **market**: `'EBAY-US'`
   - **country**: `'US'`
   - **language**: `'en'`
