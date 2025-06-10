@@ -15,7 +15,7 @@
 ## 1. Url
 
 - Url: https://www.rockauto.com/en/parts/melling,timing+chain+&+component+kit,5756
-- Picture:<br />![alt pic.png](../.../../pic/1/01.png)
+- Picture:<br />![alt pic.png](../../pic/1/01.png)
 - Field:
   - **type_**: `'Timing Chain & Component Kit'`
   - **group**: `'Engine'`
