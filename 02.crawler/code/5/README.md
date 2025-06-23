@@ -37,7 +37,7 @@
 ## 3. Part
 
 - Url: https://ecatalog.smpcorp.com/V2/STD/api/part/partselect?part=CCR-3&func=PART
-- Picture:<br />![alt pic.png](../../pic/5/03.1.png)
+- Picture:<br />![alt pic.png](../../pic/5/03.png)
 - Field:
   - **vehicle**: `'Kia Sephia (01-94)\nKia Spectra (04-00)\nKia Sportage (00-95)'`
   - **json_specification**: `'{"Connector Gender": "Female", "Terminal Quantity": "2", "Terminal Gender": "Male", "Terminal Type": "Blade", "Warranty": "3 years/36,000 mile"}'`
