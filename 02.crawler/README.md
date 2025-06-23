@@ -9,6 +9,8 @@
 - [3. eBay](#3-ebay)
 - [3. eBay-Compatibility](#3-ebay-compatibility)
 - [4. Cardone](#4-cardone)
+- [5. Standard](#5-standard)
+- [9. FourSeasons](#5-fourseasons)
 - [51. OnlineCarParts-2](#51-onlinecarparts-2)
 
 - - -
@@ -74,6 +76,20 @@
 
 1. [Example](https://www.cardone.com/motors/wiper-and-washer/windshield-wiper-motor/?pageSize=96&sort=name&page=1)<br />![alt pic.png](./pic/4/01.png)
 2. [Detail](./code/4)
+
+- - -
+
+## 5. [Standard](https://www.standardbrand.com/en)
+
+1. [Example](https://www.standardbrand.com/en/ecatalog?part=Clutch%20Starter%20Safety%20Switch&type=p)<br />![alt pic.png](./pic/5/01.png)
+2. [Detail](./code/5)
+
+- - -
+
+## 9. [FourSeasons](https://www.4s.com/en)
+
+1. [Example](https://www.4s.com/en/ecatalog?part=HVAC%20door%20actuator&type=p&search=s)<br />![alt pic.png](./pic/9/01.png)
+2. [Detail](./code/9)
 
 - - -
 
