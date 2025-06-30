@@ -12,6 +12,7 @@
 - [5. Standard](#5-standard)
 - [9. FourSeasons](#5-fourseasons)
 - [51. OnlineCarParts-2](#51-onlinecarparts-2)
+- [52. DongCheDi](#52-dongchedi)
 
 - - -
 
@@ -100,7 +101,10 @@
 
 - - -
 
+## 52. [DongCheDi](https://www.dongchedi.com/)
 
+1. [Example](https://www.dongchedi.com/auto/library-brand/x)<br />![alt pic.png](./pic/52/01.png)
+2. [Detail](./code/52)
 
 - - -
 
