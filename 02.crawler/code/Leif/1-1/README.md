@@ -8,7 +8,7 @@
 ## 1. Part
 
 - Url: https://www.rockauto.com/en/parts/STANDARD%20MOTOR%20PRODUCTS,UF575,Leif,7060
-- Picture:<br />![alt pic.png](./pic/01.png)
+- Picture:<br />![alt pic.png](../../../pic/Leif/1-1/01.png)
 - Field:
   - **url**: `'https://www.rockauto.com/en/parts/STANDARD MOTOR PRODUCTS,UF575,Leif,7060'`
   - **part_code**: `'2415560'`
@@ -24,7 +24,7 @@
 ## 2. Compatibility
 
 - Url: https://www.rockauto.com/en/parts/STANDARD%20MOTOR%20PRODUCTS,UF575,Leif,7060
-- Picture:<br />![alt pic.png](./pic/02.png)
+- Picture:<br />![alt pic.png](../../../pic/Leif/1-1/02.png)
 - Field:
   - **compatibility_no**: `1`
   - **make**: `'AUDI'`
